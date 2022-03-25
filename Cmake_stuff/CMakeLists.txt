@@ -25,6 +25,7 @@ add_custom_target(copy_resources ALL COMMAND ${CMAKE_COMMAND}
 file(GLOB_RECURSE SOURCES fizhandchips/*.cpp fizhandchips/*.h)
 add_executable(FIZHANDCHIPS ${SOURCES} )
 target_include_directories(FIZHANDCHIPS SYSTEM PRIVATE ${SFML_INCS})
+target_link_libraries(FIZHANDCHIPS sfml-graphics)
 set_target_properties(FIZHANDCHIPS 
     PROPERTIES VS_DEBUGGER_WORKING_DIRECTORY
     ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/$(Configuration)
