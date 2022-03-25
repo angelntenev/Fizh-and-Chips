@@ -3,23 +3,24 @@
 #include <iostream>
 #include <math.h>
 #include <string>
+#include "crosshair.h"
+#include "entity.h"
+#include "game.h"
 using namespace std;
 using namespace sf;
 
 //Size of screen
-const float screenWidth = 800.f, screenHeight = 600.f;
 const Vector2f screenVec = Vector2f(screenWidth, screenHeight);
-sf::RenderWindow window(sf::VideoMode(screenWidth, screenHeight), "Fizh & Chips");
 
 
-//Player Controls for moving crosshair
-const Keyboard::Key controls[4] =
-{
-    Keyboard::W, Keyboard::S, Keyboard::A, Keyboard::D
-};
+//Generate crosshair
+sf::Texture spritesheet;
+Crosshair* crosshair = new Crosshair();
+
 
 void Load()
 {
+    spritesheet.loadFromFile("res/Crosshair.png");
 
 }
 
@@ -30,12 +31,38 @@ void Reset()
 
 void Update(RenderWindow& window)
 {
+    static Clock clock;
+    float dt = clock.restart().asSeconds();
 
+
+
+    sf::Event event;
+    while (window.pollEvent(event))
+    {
+        if (event.type == sf::Event::Closed)
+        {
+            window.close();
+            return;
+        }
+    }
+
+    if (Keyboard::isKeyPressed(Keyboard::Escape))
+    {
+        window.close();
+    }
+
+
+
+    crosshair->Update(dt);
+
+    //cout << crosshair->reachPosition().x << endl;
+
+   
 }
 
 void Render(RenderWindow& window)
 {
-    
+    window.draw(*crosshair);
 }
 
 int main()
@@ -44,7 +71,7 @@ int main()
     Load();
     while (window.isOpen())
     {
-        window.clear();
+        window.clear(sf::Color::Blue);
         Update(window);
         Render(window);
         window.display();

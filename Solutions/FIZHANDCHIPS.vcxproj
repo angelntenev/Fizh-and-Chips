@@ -321,6 +321,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\crosshair.cpp" />
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\crosshair.h" />
+    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\entity.cpp" />
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\entity.h" />
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\game.h" />
     <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\main.cpp" />
   </ItemGroup>
   <ItemGroup>

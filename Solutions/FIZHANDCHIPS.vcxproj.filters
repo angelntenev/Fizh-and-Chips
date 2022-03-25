@@ -1,14 +1,34 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\crosshair.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\entity.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\crosshair.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\entity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
     <CustomBuild Include="D:\Fizh &amp; chips project\Cmake_stuff\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{00B55782-0272-3FC9-8258-0E726B4E886A}</UniqueIdentifier>
+    </Filter>
     <Filter Include="Source Files">
       <UniqueIdentifier>{1DD9A7AF-BE4D-3CFC-A5C8-66006F076C84}</UniqueIdentifier>
     </Filter>
