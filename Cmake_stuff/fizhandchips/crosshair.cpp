@@ -18,7 +18,7 @@ Crosshair::Crosshair() : _speed(1000), Entity(IntRect(Vector2(0, 0), Vector2(32,
     setOrigin(Vector2f(16, 16));
     Crosshair::setPosition(Vector2f(screenWidth * .5f, screenHeight * .5f));
 }
-
+//
 //Moving crosshair in four directions based on keys
 void Crosshair::Update(float dt)
 {
