@@ -20,7 +20,7 @@ Crosshair::Crosshair() : _speed(1000), Entity(IntRect(Vector2(0, 0), Vector2(32,
 }
 //
 //Moving crosshair in four directions based on keys
-void Crosshair::Update(float dt)
+void Crosshair::Update(float& dt)
 {
     Entity::Update(dt);
 
@@ -53,21 +53,8 @@ void Crosshair::Update(float dt)
             direction_x++;
         }
     }
-    
 
-   // if (Crosshair::reachPosition().x < screenWidth && Crosshair::reachPosition().x > 0)
-    
-        
-        Crosshair::move(Vector2f(direction_x * _speed * dt, direction_y * _speed * dt));
-    
-  
-
-
-
-
-  
-
-
+    Crosshair::move(Vector2f(direction_x * _speed * dt, direction_y * _speed * dt));
 }
 
 //Crosshair::Crosshair()  : Entity(IntRect(Vector2(0, 0), Vector2(32, 32))) {

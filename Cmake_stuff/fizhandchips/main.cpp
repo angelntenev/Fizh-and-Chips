@@ -6,6 +6,7 @@
 #include "crosshair.h"
 #include "entity.h"
 #include "game.h"
+#include "fish.h"
 using namespace std;
 using namespace sf;
 
@@ -17,11 +18,16 @@ const Vector2f screenVec = Vector2f(screenWidth, screenHeight);
 sf::Texture spritesheet;
 Crosshair* crosshair = new Crosshair();
 
+sf::Texture spritesheet2;
+
+//Generate Fish
+Fish* fish = new Fish();
 
 void Load()
 {
     spritesheet.loadFromFile("res/Crosshair.png");
-
+    spritesheet2.loadFromFile("res/Fish.png");
+    fish->setTexture(spritesheet2);
 }
 
 void Reset()
@@ -54,15 +60,15 @@ void Update(RenderWindow& window)
 
 
     crosshair->Update(dt);
+    fish->Update(dt);
+    //cout << fish->getRandomPos().x << endl;
 
-    //cout << crosshair->reachPosition().x << endl;
-
-   
 }
 
 void Render(RenderWindow& window)
 {
     window.draw(*crosshair);
+    window.draw(*fish);
 }
 
 int main()
@@ -78,3 +84,5 @@ int main()
     }
     return 0;
 }
+
+

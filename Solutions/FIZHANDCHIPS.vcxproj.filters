@@ -7,6 +7,9 @@
     <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\entity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\fish.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -16,6 +19,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\entity.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\fish.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\game.h">

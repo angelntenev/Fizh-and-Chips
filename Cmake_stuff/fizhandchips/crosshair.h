@@ -8,6 +8,6 @@ private:
 	float _speed;
 public:
 	Crosshair();
-	void Update(float dt) override;
+	void Update(float& dt) override;
 
 };

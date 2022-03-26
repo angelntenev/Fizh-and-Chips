@@ -13,7 +13,7 @@ public:
 	Entity() = delete;
 	virtual ~Entity() = default;
 
-	virtual void Update(float dt);
+	virtual void Update(float& dt);
 
 	const sf::Vector2f reachPosition();
 };

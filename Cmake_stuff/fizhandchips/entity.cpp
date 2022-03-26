@@ -21,7 +21,7 @@ Entity::Entity(IntRect ir) : sf::Sprite()
 const Vector2f Entity::reachPosition() { return getPosition(); }
 
 
-void Entity::Update(float dt) {
+void Entity::Update(float& dt) {
 
 
 }
