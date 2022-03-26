@@ -21,13 +21,17 @@ Crosshair* crosshair = new Crosshair();
 sf::Texture spritesheet2;
 
 //Generate Fish
+std::vector<Fish*> fishes;
 Fish* fish = new Fish();
 
 void Load()
 {
     spritesheet.loadFromFile("res/Crosshair.png");
     spritesheet2.loadFromFile("res/Fish.png");
+    //fish->setTexture(spritesheet2);
+
     fish->setTexture(spritesheet2);
+    fishes.push_back(fish);
 }
 
 void Reset()
@@ -39,8 +43,7 @@ void Update(RenderWindow& window)
 {
     static Clock clock;
     float dt = clock.restart().asSeconds();
-
-
+    
 
     sf::Event event;
     while (window.pollEvent(event))
@@ -60,7 +63,10 @@ void Update(RenderWindow& window)
 
 
     crosshair->Update(dt);
-    fish->Update(dt);
+    for (auto& fish : fishes)
+    {
+        fish->Update(dt);
+    }
     //cout << fish->getRandomPos().x << endl;
 
 }
@@ -68,7 +74,10 @@ void Update(RenderWindow& window)
 void Render(RenderWindow& window)
 {
     window.draw(*crosshair);
-    window.draw(*fish);
+    for (const auto& fish : fishes)
+    {
+        window.draw(*fish);
+    }
 }
 
 int main()
@@ -84,5 +93,7 @@ int main()
     }
     return 0;
 }
+
+
 
 
