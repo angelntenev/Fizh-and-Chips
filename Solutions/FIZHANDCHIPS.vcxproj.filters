@@ -13,6 +13,9 @@
     <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\manager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\crosshair.h">
@@ -25,6 +28,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\manager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

@@ -329,6 +329,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\fish.h" />
     <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\game.h" />
     <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\main.cpp" />
+    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\manager.cpp" />
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\manager.h" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="D:\Fizh &amp; chips project\Solutions\ZERO_CHECK.vcxproj">

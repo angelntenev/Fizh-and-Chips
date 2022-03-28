@@ -10,11 +10,10 @@ using namespace std;
 using namespace sf;
 
 sf::Vector2f startPoint;
-float distanceX, distanceY;
-int state;
-bool direction;
 
-Fish::Fish() : speed(100), Entity(IntRect(Vector2(0, 0), Vector2(32, 32)))
+
+
+Fish::Fish() : speed(100), Entity(IntRect(Vector2(32, 0), Vector2(32, 32)))
 {
     setOrigin(Vector2f(16, 16));
     startPoint = Fish::getRandomPos();

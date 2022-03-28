@@ -10,6 +10,9 @@ private:
 	float speed;
 	sf::Vector2f destination;
 	const sf::Vector2f getRandomPos();
+	float distanceX, distanceY;
+	int state;
+	bool direction;
 public:
 	Fish();
 	void Update(float& dt) override;

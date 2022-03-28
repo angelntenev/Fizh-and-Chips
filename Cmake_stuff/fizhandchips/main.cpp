@@ -7,6 +7,7 @@
 #include "entity.h"
 #include "game.h"
 #include "fish.h"
+#include "manager.h"
 using namespace std;
 using namespace sf;
 
@@ -18,20 +19,17 @@ const Vector2f screenVec = Vector2f(screenWidth, screenHeight);
 sf::Texture spritesheet;
 Crosshair* crosshair = new Crosshair();
 
-sf::Texture spritesheet2;
 
-//Generate Fish
-std::vector<Fish*> fishes;
-Fish* fish = new Fish();
+//Generate manager
+Manager* gameManager = new Manager();
+
+
+
+//Fish* fish1 = new Fish();
 
 void Load()
 {
     spritesheet.loadFromFile("res/Crosshair.png");
-    spritesheet2.loadFromFile("res/Fish.png");
-    //fish->setTexture(spritesheet2);
-
-    fish->setTexture(spritesheet2);
-    fishes.push_back(fish);
 }
 
 void Reset()
@@ -61,23 +59,23 @@ void Update(RenderWindow& window)
     }
 
 
-
+    gameManager->Update(dt);
     crosshair->Update(dt);
-    for (auto& fish : fishes)
-    {
-        fish->Update(dt);
-    }
-    //cout << fish->getRandomPos().x << endl;
+    //fish1->Update(dt);
 
 }
 
 void Render(RenderWindow& window)
 {
-    window.draw(*crosshair);
-    for (const auto& fish : fishes)
+    
+    for (const auto fish : gameManager->getFish())
     {
         window.draw(*fish);
     }
+    auto p = gameManager->getText();
+    window.draw(p);
+    //window.draw(*fish1);
+    window.draw(*crosshair);
 }
 
 int main()
