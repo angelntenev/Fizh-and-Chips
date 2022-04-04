@@ -7,14 +7,13 @@
 #include "manager.h"
 #include "game.h"
 #include "fish.h"
-#include "carnivore.h"
-#include "fallingObjects.h"
 using namespace std;
 using namespace sf;
 
 
 //Generate crosshair
 Crosshair* crosshair = new Crosshair();
+
 
 
 const Keyboard::Key controls[11] =
@@ -28,7 +27,7 @@ const Keyboard::Key controls[11] =
 };
 
 
-Manager::Manager() : chipsScore(10000)
+Manager::Manager() : chipsScore(100)
 {
     font.loadFromFile("res/SupermercadoOne-Regular.ttf");
     scoreText.setFont(font);
@@ -39,17 +38,13 @@ Manager::Manager() : chipsScore(10000)
     //fish->setTexture(spritesheet);
     Fish* fish = new Fish();
     fishes.push_back(fish);
-
-    Carnivore* carnivore = new Carnivore();
-    carnivores.push_back(carnivore);
-
+    
 }
 
 void Manager::Update(float& dt)
 {
     crosshair->Update(dt);
 
-    
 
     scoreText.setString(std::to_string(chipsScore));
     if (Keyboard::isKeyPressed(controls[1]))
@@ -58,15 +53,6 @@ void Manager::Update(float& dt)
         {
             Fish* fish = new Fish();
             fishes.push_back(fish);
-        }
-    }
-
-    if (Keyboard::isKeyPressed(controls[2]))
-    {
-        if ((chipsScore - 1000) > 0)
-        {
-            Carnivore* carnivore = new Carnivore();
-            carnivores.push_back(carnivore);
         }
     }
 
@@ -80,18 +66,18 @@ void Manager::Update(float& dt)
     {
         fish->Update(dt);
     }
-    //cout << fishes.size() << " ";
+    cout << fishes.size() << " ";
 
-    for (auto& consumable : foodObjects)
-    {
-        consumable->Update(dt);
-    }
 
-    for (auto& carnivore : carnivores)
+    for (int i = foodObjects.size() - 1; i >= 0; i--)
     {
-        carnivore->Update(dt);
+        foodObjects[i]->Update(dt);
+        if (foodObjects[i]->_fordeletion)
+        {
+            delete foodObjects[i];
+            foodObjects.erase(foodObjects.begin() + i);
+        }
     }
-    cout << carnivores.size() << " ";
 }
 
 void Manager::changeScore(int a)
@@ -110,11 +96,6 @@ std::vector<Fish*> Manager::getFish()
     return fishes;
 }
 
-std::vector<Carnivore*> Manager::getCarnivore()
-{
-    return carnivores;
-}
-
 
 void Manager::Render(RenderWindow& window)
 {
@@ -122,16 +103,11 @@ void Manager::Render(RenderWindow& window)
     {
         window.draw(*fish);
     }
-
-    for (const auto carnivore : carnivores)
-    {
-        window.draw(*carnivore);
-    }
     
     window.draw(*crosshair);
     window.draw(scoreText);
-    //window.draw(*fish1);
-    for (const auto consumable : foodObjects)
+    //window.draw(*fish);
+    for (const auto& consumable : foodObjects)
     {
         window.draw(*consumable);
     }

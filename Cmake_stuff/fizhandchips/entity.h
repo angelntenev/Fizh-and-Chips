@@ -8,7 +8,11 @@ class Entity : public sf::Sprite{
 protected:
 	sf::IntRect _sprite;
 	//Entity(std::unique_ptr<sf::RectangleShape> shp);
+	bool _alive;       // should be updated
+	bool _visible;     // should be rendered
+
 public:
+	bool _fordeletion = false; // should be deleted
 	explicit Entity(sf::IntRect ir);
 	Entity() = delete;
 	virtual ~Entity() = default;
