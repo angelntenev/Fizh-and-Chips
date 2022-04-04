@@ -21,7 +21,7 @@ sf::Texture spritesheet;
 
 
 //Generate manager
-Manager* gameManager = new Manager();
+shared_ptr<Manager> gameManager = make_shared<Manager>();
 
 
 
