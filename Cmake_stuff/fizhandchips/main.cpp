@@ -7,7 +7,7 @@
 #include "entity.h"
 #include "game.h"
 #include "fish.h"
-#include "carnivore.h"
+//#include "carnivore.h"
 #include "manager.h"
 using namespace std;
 using namespace sf;
