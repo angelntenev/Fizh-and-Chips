@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{404FB05D-A21E-3E73-8CE9-38593F582A1E}</ProjectGuid>
+    <ProjectGuid>{45237938-D342-3B5F-B317-F02761A6379E}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
@@ -105,11 +105,11 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\carlo\source\repos\FizhandChips\Cmake_stuff\lib\sfml\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Fizh ^&amp; chips project/Cmake_stuff/lib/sfml/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/carlo/source/repos/FizhandChips/Cmake_stuff/lib/sfml/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Fizh &amp; chips project/Cmake_stuff" "-BD:/Fizh &amp; chips project/Solutions" --check-stamp-file "D:/Fizh &amp; chips project/Solutions/lib/sfml/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/carlo/source/repos/FizhandChips/Cmake_stuff -BC:/Users/carlo/source/repos/FizhandChips/Solutions --check-stamp-file C:/Users/carlo/source/repos/FizhandChips/Solutions/lib/sfml/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -117,12 +117,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.22\Templates\CPackConfig.cmake.in;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\cmake\Config.cmake;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\cmake\SFMLConfig.cmake.in;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\cmake\SFMLConfigDependencies.cmake.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Fizh &amp; chips project\Solutions\lib\sfml\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.22\Templates\CPackConfig.cmake.in;C:\Users\carlo\source\repos\FizhandChips\Cmake_stuff\lib\sfml\cmake\Config.cmake;C:\Users\carlo\source\repos\FizhandChips\Cmake_stuff\lib\sfml\cmake\SFMLConfig.cmake.in;C:\Users\carlo\source\repos\FizhandChips\Cmake_stuff\lib\sfml\cmake\SFMLConfigDependencies.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\carlo\source\repos\FizhandChips\Solutions\lib\sfml\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Fizh ^&amp; chips project/Cmake_stuff/lib/sfml/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/carlo/source/repos/FizhandChips/Cmake_stuff/lib/sfml/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Fizh &amp; chips project/Cmake_stuff" "-BD:/Fizh &amp; chips project/Solutions" --check-stamp-file "D:/Fizh &amp; chips project/Solutions/lib/sfml/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/carlo/source/repos/FizhandChips/Cmake_stuff -BC:/Users/carlo/source/repos/FizhandChips/Solutions --check-stamp-file C:/Users/carlo/source/repos/FizhandChips/Solutions/lib/sfml/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -130,12 +130,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.22\Templates\CPackConfig.cmake.in;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\cmake\Config.cmake;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\cmake\SFMLConfig.cmake.in;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\cmake\SFMLConfigDependencies.cmake.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Fizh &amp; chips project\Solutions\lib\sfml\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.22\Templates\CPackConfig.cmake.in;C:\Users\carlo\source\repos\FizhandChips\Cmake_stuff\lib\sfml\cmake\Config.cmake;C:\Users\carlo\source\repos\FizhandChips\Cmake_stuff\lib\sfml\cmake\SFMLConfig.cmake.in;C:\Users\carlo\source\repos\FizhandChips\Cmake_stuff\lib\sfml\cmake\SFMLConfigDependencies.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\carlo\source\repos\FizhandChips\Solutions\lib\sfml\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Fizh ^&amp; chips project/Cmake_stuff/lib/sfml/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/carlo/source/repos/FizhandChips/Cmake_stuff/lib/sfml/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Fizh &amp; chips project/Cmake_stuff" "-BD:/Fizh &amp; chips project/Solutions" --check-stamp-file "D:/Fizh &amp; chips project/Solutions/lib/sfml/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/carlo/source/repos/FizhandChips/Cmake_stuff -BC:/Users/carlo/source/repos/FizhandChips/Solutions --check-stamp-file C:/Users/carlo/source/repos/FizhandChips/Solutions/lib/sfml/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -143,12 +143,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.22\Templates\CPackConfig.cmake.in;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\cmake\Config.cmake;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\cmake\SFMLConfig.cmake.in;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\cmake\SFMLConfigDependencies.cmake.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Fizh &amp; chips project\Solutions\lib\sfml\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.22\Templates\CPackConfig.cmake.in;C:\Users\carlo\source\repos\FizhandChips\Cmake_stuff\lib\sfml\cmake\Config.cmake;C:\Users\carlo\source\repos\FizhandChips\Cmake_stuff\lib\sfml\cmake\SFMLConfig.cmake.in;C:\Users\carlo\source\repos\FizhandChips\Cmake_stuff\lib\sfml\cmake\SFMLConfigDependencies.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\carlo\source\repos\FizhandChips\Solutions\lib\sfml\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Fizh ^&amp; chips project/Cmake_stuff/lib/sfml/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/carlo/source/repos/FizhandChips/Cmake_stuff/lib/sfml/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Fizh &amp; chips project/Cmake_stuff" "-BD:/Fizh &amp; chips project/Solutions" --check-stamp-file "D:/Fizh &amp; chips project/Solutions/lib/sfml/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/carlo/source/repos/FizhandChips/Cmake_stuff -BC:/Users/carlo/source/repos/FizhandChips/Solutions --check-stamp-file C:/Users/carlo/source/repos/FizhandChips/Solutions/lib/sfml/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -156,42 +156,42 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.22\Templates\CPackConfig.cmake.in;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\cmake\Config.cmake;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\cmake\SFMLConfig.cmake.in;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\cmake\SFMLConfigDependencies.cmake.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Fizh &amp; chips project\Solutions\lib\sfml\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\BasicConfigVersion-SameMajorVersion.cmake.in;C:\Program Files\CMake\share\cmake-3.22\Modules\CMakePackageConfigHelpers.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CPack.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CPackComponent.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckIncludeFile.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckIncludeFileCXX.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\CheckTypeSize.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\GNUInstallDirs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\WriteBasicConfigVersionFile.cmake;C:\Program Files\CMake\share\cmake-3.22\Templates\CPackConfig.cmake.in;C:\Users\carlo\source\repos\FizhandChips\Cmake_stuff\lib\sfml\cmake\Config.cmake;C:\Users\carlo\source\repos\FizhandChips\Cmake_stuff\lib\sfml\cmake\SFMLConfig.cmake.in;C:\Users\carlo\source\repos\FizhandChips\Cmake_stuff\lib\sfml\cmake\SFMLConfigDependencies.cmake.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\carlo\source\repos\FizhandChips\Solutions\lib\sfml\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\Fizh &amp; chips project\Solutions\ZERO_CHECK.vcxproj">
-      <Project>{2E42D8FD-8508-3445-81CD-E1B200D13171}</Project>
+    <ProjectReference Include="C:\Users\carlo\source\repos\FizhandChips\Solutions\ZERO_CHECK.vcxproj">
+      <Project>{E3CBB6C8-7879-38D9-8422-367FF67A823B}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="D:\Fizh &amp; chips project\Solutions\lib\sfml\src\SFML\Audio\sfml-audio.vcxproj">
-      <Project>{969A6443-E4D6-3166-8443-22AD66758124}</Project>
+    <ProjectReference Include="C:\Users\carlo\source\repos\FizhandChips\Solutions\lib\sfml\src\SFML\Audio\sfml-audio.vcxproj">
+      <Project>{9B431462-E5D4-3FC8-A1C5-19901C700F6E}</Project>
       <Name>sfml-audio</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Fizh &amp; chips project\Solutions\lib\sfml\src\SFML\Graphics\sfml-graphics.vcxproj">
-      <Project>{879BC9C6-0E6A-3398-848B-E12E8029DAC5}</Project>
+    <ProjectReference Include="C:\Users\carlo\source\repos\FizhandChips\Solutions\lib\sfml\src\SFML\Graphics\sfml-graphics.vcxproj">
+      <Project>{1E69280A-175A-3628-95DD-0DA128776C17}</Project>
       <Name>sfml-graphics</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Fizh &amp; chips project\Solutions\lib\sfml\src\SFML\Main\sfml-main.vcxproj">
-      <Project>{CACF4972-CCBA-3444-9D98-100029F50B0F}</Project>
+    <ProjectReference Include="C:\Users\carlo\source\repos\FizhandChips\Solutions\lib\sfml\src\SFML\Main\sfml-main.vcxproj">
+      <Project>{2A3DE230-D1BB-3C62-ADF2-BE861CB0897D}</Project>
       <Name>sfml-main</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Fizh &amp; chips project\Solutions\lib\sfml\src\SFML\Network\sfml-network.vcxproj">
-      <Project>{0BC07ACA-6C57-3548-9F77-F23FC04BB413}</Project>
+    <ProjectReference Include="C:\Users\carlo\source\repos\FizhandChips\Solutions\lib\sfml\src\SFML\Network\sfml-network.vcxproj">
+      <Project>{8E61B3FD-8EBD-3C57-AC23-96BE773EC76E}</Project>
       <Name>sfml-network</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Fizh &amp; chips project\Solutions\lib\sfml\src\SFML\System\sfml-system.vcxproj">
-      <Project>{FFC221F3-1782-34DC-9BDD-C8075DCA2187}</Project>
+    <ProjectReference Include="C:\Users\carlo\source\repos\FizhandChips\Solutions\lib\sfml\src\SFML\System\sfml-system.vcxproj">
+      <Project>{1ED114D0-313B-3579-95E3-894D646B9BD0}</Project>
       <Name>sfml-system</Name>
     </ProjectReference>
-    <ProjectReference Include="D:\Fizh &amp; chips project\Solutions\lib\sfml\src\SFML\Window\sfml-window.vcxproj">
-      <Project>{37A1F9AD-5E96-359E-A029-DCC9B3DFC740}</Project>
+    <ProjectReference Include="C:\Users\carlo\source\repos\FizhandChips\Solutions\lib\sfml\src\SFML\Window\sfml-window.vcxproj">
+      <Project>{636CC00D-5B3C-3702-827B-982A6CEEBDBC}</Project>
       <Name>sfml-window</Name>
     </ProjectReference>
   </ItemGroup>

@@ -7,6 +7,8 @@
 #include "entity.h"
 #include "game.h"
 #include "fish.h"
+#include "carnivore.h"
+
 using namespace std;
 using namespace sf;
 
@@ -24,14 +26,23 @@ sf::Texture spritesheet2;
 std::vector<Fish*> fishes;
 Fish* fish = new Fish();
 
+
+//Generate Carnivore
+std::vector<Carnivore*> carnivores;
+Carnivore* carnivore = new Carnivore();
+
 void Load()
 {
     spritesheet.loadFromFile("res/Crosshair.png");
     spritesheet2.loadFromFile("res/Fish.png");
+    
     //fish->setTexture(spritesheet2);
 
     fish->setTexture(spritesheet2);
     fishes.push_back(fish);
+
+    carnivore->setTexture(spritesheet2);
+    carnivores.push_back(carnivore);
 }
 
 void Reset()
@@ -69,6 +80,12 @@ void Update(RenderWindow& window)
     }
     //cout << fish->getRandomPos().x << endl;
 
+
+    for (auto& carnivore : carnivores)
+    {
+        carnivore->Update(dt);
+    }
+
 }
 
 void Render(RenderWindow& window)
@@ -77,6 +94,11 @@ void Render(RenderWindow& window)
     for (const auto& fish : fishes)
     {
         window.draw(*fish);
+    }
+
+    for (const auto& carnivore : carnivores)
+    {
+        window.draw(*carnivore);
     }
 }
 

@@ -1,42 +1,36 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\crosshair.cpp">
+    <ClCompile Include="C:\Users\carlo\source\repos\FizhandChips\Cmake_stuff\fizhandchips\crosshair.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\entity.cpp">
+    <ClCompile Include="C:\Users\carlo\source\repos\FizhandChips\Cmake_stuff\fizhandchips\entity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\fish.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\main.cpp">
+    <ClCompile Include="C:\Users\carlo\source\repos\FizhandChips\Cmake_stuff\fizhandchips\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\crosshair.h">
+    <ClInclude Include="C:\Users\carlo\source\repos\FizhandChips\Cmake_stuff\fizhandchips\crosshair.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\entity.h">
+    <ClInclude Include="C:\Users\carlo\source\repos\FizhandChips\Cmake_stuff\fizhandchips\entity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\fish.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\game.h">
+    <ClInclude Include="C:\Users\carlo\source\repos\FizhandChips\Cmake_stuff\fizhandchips\game.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Fizh &amp; chips project\Cmake_stuff\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\carlo\source\repos\FizhandChips\Cmake_stuff\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{00B55782-0272-3FC9-8258-0E726B4E886A}</UniqueIdentifier>
+      <UniqueIdentifier>{8B777F1E-1B30-3695-9F10-88DCDD0C420D}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{1DD9A7AF-BE4D-3CFC-A5C8-66006F076C84}</UniqueIdentifier>
+      <UniqueIdentifier>{9D77ED7D-8974-36B4-9044-7DE2FDD2540B}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
