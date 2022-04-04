@@ -7,6 +7,7 @@
 #include "entity.h"
 #include "game.h"
 #include "fish.h"
+#include "carnivore.h"
 #include "manager.h"
 using namespace std;
 using namespace sf;
@@ -22,6 +23,7 @@ sf::Texture spritesheet;
 
 //Generate manager
 Manager* gameManager = new Manager();
+
 
 
 
@@ -75,6 +77,9 @@ int main()
 {
     RenderWindow window(VideoMode(screenWidth, screenHeight), "Fizh & Chips");
     Load();
+
+   
+
     while (window.isOpen())
     {
         window.clear(sf::Color::Blue);
