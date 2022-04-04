@@ -57,6 +57,11 @@ void Crosshair::Update(float& dt)
     Crosshair::move(Vector2f(direction_x * _speed * dt, direction_y * _speed * dt));
 }
 
+Crosshair Crosshair::getCrosshair()
+{
+    return Crosshair();
+}
+
 //Crosshair::Crosshair()  : Entity(IntRect(Vector2(0, 0), Vector2(32, 32))) {
 //    //setOrigin(Vector2f(16, 16));
 //    //setPosition({ screenWidth / 2, screenHeight / 2 });

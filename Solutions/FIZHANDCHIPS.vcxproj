@@ -325,6 +325,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
     <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\crosshair.h" />
     <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\entity.cpp" />
     <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\entity.h" />
+    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\fallingObjects.cpp" />
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\fallingObjects.h" />
     <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\fish.cpp" />
     <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\fish.h" />
     <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\game.h" />

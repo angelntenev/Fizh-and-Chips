@@ -7,20 +7,23 @@
 #include "manager.h"
 #include "game.h"
 #include "fish.h"
+#include "fallingObjects.h"
 using namespace std;
 using namespace sf;
 
 
+//Generate crosshair
+Crosshair* crosshair = new Crosshair();
 
 
-const Keyboard::Key controls[10] =
+const Keyboard::Key controls[11] =
 {
     Keyboard::Num0,
     Keyboard::Num1, Keyboard::Num2,
     Keyboard::Num3, Keyboard::Num4,
     Keyboard::Num5, Keyboard::Num6,
     Keyboard::Num7, Keyboard::Num8,
-    Keyboard::Num9
+    Keyboard::Num9, Keyboard::Space
 };
 
 
@@ -35,10 +38,14 @@ Manager::Manager() : chipsScore(100)
     //fish->setTexture(spritesheet);
     Fish* fish = new Fish();
     fishes.push_back(fish);
+
 }
 
 void Manager::Update(float& dt)
 {
+    crosshair->Update(dt);
+
+
     scoreText.setString(std::to_string(chipsScore));
     if (Keyboard::isKeyPressed(controls[1]))
     {
@@ -49,11 +56,22 @@ void Manager::Update(float& dt)
         }
     }
 
+    if (Keyboard::isKeyPressed(controls[10]))
+    {
+        Consumable* food = new Consumable(true, crosshair->getPosition());
+        foodObjects.push_back(food);
+    }
+
     for (auto& fish : fishes)
     {
         fish->Update(dt);
     }
     cout << fishes.size() << " ";
+
+    for (auto& consumable : foodObjects)
+    {
+        consumable->Update(dt);
+    }
 }
 
 void Manager::changeScore(int a)
@@ -70,4 +88,21 @@ sf::Text Manager::getText()
 std::vector<Fish*> Manager::getFish()
 {
     return fishes;
+}
+
+
+void Manager::Render(RenderWindow& window)
+{
+    for (const auto fish : fishes)
+    {
+        window.draw(*fish);
+    }
+    
+    window.draw(*crosshair);
+    window.draw(scoreText);
+    //window.draw(*fish1);
+    for (const auto consumable : foodObjects)
+    {
+        window.draw(*consumable);
+    }
 }

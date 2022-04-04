@@ -3,6 +3,7 @@
 
 #include <SFML/Graphics.hpp>
 #include "fish.h"
+#include "fallingObjects.h"
 
 class Manager
 {
@@ -11,6 +12,7 @@ protected:
 	sf::Text scoreText;
 	sf::Font font;
 	std::vector<Fish*> fishes;
+	std::vector<Consumable*> foodObjects;
 	sf::Texture spritesheet2;
 public:
 	Manager();
@@ -18,4 +20,5 @@ public:
 	void changeScore(int a);
 	sf::Text getText();
 	std::vector<Fish*> getFish();
+	void Render(sf::RenderWindow& window);
 };

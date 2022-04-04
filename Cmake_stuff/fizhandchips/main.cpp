@@ -17,7 +17,7 @@ const Vector2f screenVec = Vector2f(screenWidth, screenHeight);
 
 //Generate crosshair
 sf::Texture spritesheet;
-Crosshair* crosshair = new Crosshair();
+
 
 
 //Generate manager
@@ -60,7 +60,7 @@ void Update(RenderWindow& window)
 
 
     gameManager->Update(dt);
-    crosshair->Update(dt);
+
     //fish1->Update(dt);
 
 }
@@ -68,14 +68,7 @@ void Update(RenderWindow& window)
 void Render(RenderWindow& window)
 {
     
-    for (const auto fish : gameManager->getFish())
-    {
-        window.draw(*fish);
-    }
-    auto p = gameManager->getText();
-    window.draw(p);
-    //window.draw(*fish1);
-    window.draw(*crosshair);
+    gameManager->Render(window);
 }
 
 int main()
