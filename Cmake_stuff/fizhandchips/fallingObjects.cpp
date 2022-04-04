@@ -7,6 +7,7 @@
 #include <SFML/Window.hpp>
 #include <stdlib.h>
 #include "fallingObjects.h"
+
 using namespace std;
 using namespace sf;
 
@@ -15,7 +16,7 @@ Consumable::Consumable(bool _isCollectable, Vector2f startLoc) : fallSpeed(20), 
 	setCollectable(_isCollectable);
 	setOrigin(Vector2f(16, 16));
 	setPosition(startLoc);
-
+	timeOnFloor = 5;
 }
 
 
@@ -34,4 +35,21 @@ void Consumable::Update(float& dt)
 	Entity::Update(dt);
 
 	Consumable::move(Vector2f(0, dt * fallSpeed));
+
+	if (Consumable::getPosition().y >= 780.f)
+	{
+		setfallSpeed(0);
+		timeOnFloor -= dt;
+		if (timeOnFloor <= 0)
+		{
+			_fordeletion = true;
+		}
+	}
+
+	
+}
+
+Consumable::~Consumable()
+{
+
 }

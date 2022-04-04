@@ -7,13 +7,13 @@
 #include "manager.h"
 #include "game.h"
 #include "fish.h"
-#include "fallingObjects.h"
 using namespace std;
 using namespace sf;
 
 
 //Generate crosshair
 Crosshair* crosshair = new Crosshair();
+
 
 
 const Keyboard::Key controls[11] =
@@ -38,7 +38,7 @@ Manager::Manager() : chipsScore(100)
     //fish->setTexture(spritesheet);
     Fish* fish = new Fish();
     fishes.push_back(fish);
-
+    
 }
 
 void Manager::Update(float& dt)
@@ -68,9 +68,15 @@ void Manager::Update(float& dt)
     }
     cout << fishes.size() << " ";
 
-    for (auto& consumable : foodObjects)
+
+    for (int i = foodObjects.size() - 1; i >= 0; i--)
     {
-        consumable->Update(dt);
+        foodObjects[i]->Update(dt);
+        if (foodObjects[i]->_fordeletion)
+        {
+            delete foodObjects[i];
+            foodObjects.erase(foodObjects.begin() + i);
+        }
     }
 }
 
@@ -100,8 +106,8 @@ void Manager::Render(RenderWindow& window)
     
     window.draw(*crosshair);
     window.draw(scoreText);
-    //window.draw(*fish1);
-    for (const auto consumable : foodObjects)
+    //window.draw(*fish);
+    for (const auto& consumable : foodObjects)
     {
         window.draw(*consumable);
     }
