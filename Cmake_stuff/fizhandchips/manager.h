@@ -16,6 +16,7 @@ protected:
 	//std::vector<Carnivore*> carnivores;
 	std::vector<Consumable*> foodObjects;
 	sf::Texture spritesheet2;
+	float buyTimer = 0.1, feedTimer = 0.1;
 public:
 	Manager();
 	void Update(float& dt);

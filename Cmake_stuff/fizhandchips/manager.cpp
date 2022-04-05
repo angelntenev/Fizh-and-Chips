@@ -49,22 +49,40 @@ void Manager::Update(float& dt)
     scoreText.setString(std::to_string(chipsScore));
     if (Keyboard::isKeyPressed(controls[1]))
     {
-        if ((chipsScore - 10) > 0)
+        if (buyTimer >= 0.1)
         {
-            Fish* fish = new Fish();
-            fishes.push_back(fish);
+            if ((chipsScore - 10) > 0)
+            {
+                Fish* fish = new Fish();
+                fishes.push_back(fish);
+            }
+            buyTimer = 0;
         }
     }
+    buyTimer += dt;
 
     if (Keyboard::isKeyPressed(controls[10]))
     {
-        Consumable* food = new Consumable(true, crosshair->getPosition());
-        foodObjects.push_back(food);
+        if (feedTimer >= 0.1)
+        {
+            Consumable* food = new Consumable(false, crosshair->getPosition());
+            foodObjects.push_back(food);
+            feedTimer = 0;
+        }
     }
+    feedTimer += dt;
 
     for (auto& fish : fishes)
     {
         fish->Update(dt);
+        for (int i = foodObjects.size() - 1; i >= 0; i--)
+        {
+            if (fish->getMouth().getGlobalBounds().findIntersection(foodObjects[i]->getGlobalBounds()))
+            {
+                delete foodObjects[i];
+                foodObjects.erase(foodObjects.begin() + i);
+            }
+        }
     }
     cout << fishes.size() << " ";
 
@@ -102,6 +120,7 @@ void Manager::Render(RenderWindow& window)
     for (const auto fish : fishes)
     {
         window.draw(*fish);
+        window.draw(fish->getMouth());
     }
     
     window.draw(*crosshair);
