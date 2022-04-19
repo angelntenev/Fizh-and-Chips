@@ -13,7 +13,6 @@ protected:
 	sf::Text scoreText;
 	sf::Font font;
 	std::vector<Fish*> fishes;
-	//std::vector<Carnivore*> carnivores;
 	std::vector<Consumable*> foodObjects;
 	sf::Texture spritesheet2;
 	float buyTimer = 0.1, feedTimer = 0.1;
@@ -21,8 +20,9 @@ public:
 	Manager();
 	void Update(float& dt);
 	void changeScore(int a);
+	float closestPoint(Vector2f obj1, Vector2f obj2);
+	void moveToClosestPoint(Fish& fish);
 	sf::Text getText();
 	std::vector<Fish*> getFish();
-	//std::vector < Carnivore*> getCarnivore();
 	void Render(sf::RenderWindow& window);
 };

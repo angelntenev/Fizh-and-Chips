@@ -1,6 +1,7 @@
 // manager.cpp
 
 #include <iostream>
+#include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <iostream>
@@ -9,6 +10,10 @@
 #include "fish.h"
 using namespace std;
 using namespace sf;
+
+
+//Temp audio
+
 
 
 //Generate crosshair
@@ -38,7 +43,12 @@ Manager::Manager() : chipsScore(100)
     //fish->setTexture(spritesheet);
     Fish* fish = new Fish();
     fishes.push_back(fish);
-    
+    Fish* fish2 = new Fish();
+    fishes.push_back(fish2);
+    //temp audio
+    //SoundBuffer buffer;
+    //buffer.loadFromFile("C:/Users/Angel/Documents/Sound recordings/Recording.wav");
+    //sound.setBuffer(buffer);
 }
 
 void Manager::Update(float& dt)
@@ -74,17 +84,31 @@ void Manager::Update(float& dt)
 
     for (auto& fish : fishes)
     {
-        fish->Update(dt);
-        for (int i = foodObjects.size() - 1; i >= 0; i--)
+        if (fish->isHungry == false)
         {
-            if (fish->getMouth().getGlobalBounds().findIntersection(foodObjects[i]->getGlobalBounds()))
+            fish->Update(dt);
+        }
+        else
+        {
+            if (foodObjects.size() > 0)
             {
-                delete foodObjects[i];
-                foodObjects.erase(foodObjects.begin() + i);
+                moveToClosestPoint(*fish);
+            }
+            //cout << fish->destination.x << endl;
+            fish->Update(dt);
+            for (int i = foodObjects.size() - 1; i >= 0; i--)
+            {
+                if (fish->getMouth().getGlobalBounds().findIntersection(foodObjects[i]->getGlobalBounds()))
+                {
+                    //sound.play();
+                    delete foodObjects[i];
+                    foodObjects.erase(foodObjects.begin() + i);
+                    fish->resetHungerTimer();
+                    fish->fishReset();
+                }
             }
         }
     }
-    cout << fishes.size() << " ";
 
 
     for (int i = foodObjects.size() - 1; i >= 0; i--)
@@ -114,6 +138,37 @@ std::vector<Fish*> Manager::getFish()
     return fishes;
 }
 
+float Manager::closestPoint(Vector2f obj1, Vector2f obj2)
+{
+    float sum1 = obj1.x + obj1.y;
+    float sum2 = obj2.x + obj2.y;
+    if (sum1 > sum2)
+    {
+        return sum1 - sum2;
+    }
+    else
+    {
+        return sum2 - sum1;
+    }
+}
+
+void Manager::moveToClosestPoint(Fish& fish)
+{
+    float smallestDiff = 2401;
+    for (int i = 0; i < foodObjects.size(); i++)
+    {
+        
+        if (smallestDiff > Manager::closestPoint(fish.reachPosition(), foodObjects[i]->reachPosition()))
+        {
+            fish.destination = foodObjects[i]->reachPosition();
+            smallestDiff = Manager::closestPoint(fish.reachPosition(), foodObjects[i]->reachPosition());
+            //cout << smallestDiff << endl;
+        }
+    }
+    fish.startPoint = fish.reachPosition();
+    fish.setBothDirection();
+    fish.SpeedUP();
+}
 
 void Manager::Render(RenderWindow& window)
 {

@@ -19,7 +19,6 @@ Consumable::Consumable(bool _isCollectable, Vector2f startLoc) : fallSpeed(20), 
 	timeOnFloor = 5;
 }
 
-
 void Consumable::setCollectable(bool _isCollectable)
 {
 	Consumable::collectable = _isCollectable;

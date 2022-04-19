@@ -10,19 +10,17 @@ class Fish : public Entity
 {
 private:
 	float speed;
-	sf::Vector2f destination;
-	const sf::Vector2f getRandomPos();
-	float distanceX, distanceY;
-	int state;
 	bool direction;
-	bool isHungry = false;
-	float idle;
-	float hungertimer = 10;
+	float hungerTimer = 5;
 	RectangleShape mouthPiece;
 public:
 	Fish();
 	void Update(float& dt) override;
-	void Reset();
-	void setDirection();
 	RectangleShape getMouth();
+	void setBothDirection();
+	void moveTowardsWithMouth(sf::Vector2f& destination, float& speed, float& dt);
+	void fishReset();
+	void resetHungerTimer();
+	void SpeedUP();
+	bool isHungry = false;
 };
