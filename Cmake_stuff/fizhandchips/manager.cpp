@@ -1,13 +1,14 @@
 // manager.cpp
 
 #include <iostream>
-#include <SFML/Audio.hpp>
+
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
 #include <iostream>
 #include "manager.h"
 #include "game.h"
 #include "fish.h"
+
 using namespace std;
 using namespace sf;
 
@@ -43,12 +44,10 @@ Manager::Manager() : chipsScore(100)
     //fish->setTexture(spritesheet);
     Fish* fish = new Fish();
     fishes.push_back(fish);
-    Fish* fish2 = new Fish();
-    fishes.push_back(fish2);
     //temp audio
-    //SoundBuffer buffer;
-    //buffer.loadFromFile("C:/Users/Angel/Documents/Sound recordings/Recording.wav");
-    //sound.setBuffer(buffer);
+    buffer.loadFromFile("res/Recording.ogg");
+    sound.setBuffer(buffer);
+    
 }
 
 void Manager::Update(float& dt)
@@ -75,7 +74,7 @@ void Manager::Update(float& dt)
     {
         if (feedTimer >= 0.1)
         {
-            Consumable* food = new Consumable(false, crosshair->getPosition());
+            Consumable* food = new Consumable(false, crosshair->getPosition(), 64, 0);
             foodObjects.push_back(food);
             feedTimer = 0;
         }
@@ -84,29 +83,58 @@ void Manager::Update(float& dt)
 
     for (auto& fish : fishes)
     {
+        if (fish->getCoinCounter() < 0 && fish->getSizeGrowth() > 0)
+        {
+            fish->resetCoinCounter();
+            Consumable* coin = new Consumable(true, fish->reachPosition(), 96, 0);
+            currencyObjects.push_back(coin);
+        }
         if (fish->isHungry == false)
         {
             fish->Update(dt);
         }
         else
         {
+            fish->setHungryFish();
             if (foodObjects.size() > 0)
             {
                 moveToClosestPoint(*fish);
             }
-            //cout << fish->destination.x << endl;
-            fish->Update(dt);
             for (int i = foodObjects.size() - 1; i >= 0; i--)
             {
                 if (fish->getMouth().getGlobalBounds().findIntersection(foodObjects[i]->getGlobalBounds()))
                 {
-                    //sound.play();
-                    delete foodObjects[i];
-                    foodObjects.erase(foodObjects.begin() + i);
-                    fish->resetHungerTimer();
-                    fish->fishReset();
+                    
+                    if (fish->isHungry == true)
+                    {
+                        fish->fishReset();
+                        fish->giveXP();
+                        fish->setFullFish();
+                        sound.play();
+                        delete foodObjects[i];
+                        foodObjects.erase(foodObjects.begin() + i);
+                    }
+
+                    if (fish->getXP() > 40)
+                    {
+                        if (fish->getXP() > 100)
+                        {
+                            fish->Grow2();
+                            fish->setSizeGrowth(1);
+                        }
+                        else
+                        {
+                            fish->Grow1();
+                            fish->setSizeGrowth(1);
+                        }
+                        
+                    }
+                    
+                    
+                    
                 }
             }
+            fish->Update(dt);
         }
     }
 
@@ -118,6 +146,16 @@ void Manager::Update(float& dt)
         {
             delete foodObjects[i];
             foodObjects.erase(foodObjects.begin() + i);
+        }
+    }
+
+    for (int i = currencyObjects.size() - 1; i >= 0; i--)
+    {
+        currencyObjects[i]->Update(dt);
+        if (currencyObjects[i]->_fordeletion || crosshair->getGlobalBounds().findIntersection(currencyObjects[i]->getGlobalBounds()))
+        {
+            delete currencyObjects[i];
+            currencyObjects.erase(currencyObjects.begin() + i);
         }
     }
 }
@@ -184,5 +222,9 @@ void Manager::Render(RenderWindow& window)
     for (const auto& consumable : foodObjects)
     {
         window.draw(*consumable);
+    }
+    for (auto& coin : currencyObjects)
+    {
+        window.draw(*coin);
     }
 }

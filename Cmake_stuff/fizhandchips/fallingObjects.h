@@ -15,7 +15,7 @@ protected:
 	bool collectable;
 	float timeOnFloor;
 public:
-	Consumable(bool _isCollectable, sf::Vector2f startLoc);
+	Consumable(bool _isCollectable, sf::Vector2f startLoc, int pos1, int pos2);
 	void Update(float& dt) override;
 	void setfallSpeed(float speed);
 	void setCollectable(bool _isCollectable);

@@ -2,9 +2,12 @@
 #pragma once
 
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio/SoundBuffer.hpp>
+#include <SFML/Audio/Sound.hpp>
+#include <SFML/Audio/Music.hpp>
 #include "fish.h"
-//#include "carnivore.h"
 #include "fallingObjects.h"
+
 
 class Manager
 {
@@ -14,8 +17,12 @@ protected:
 	sf::Font font;
 	std::vector<Fish*> fishes;
 	std::vector<Consumable*> foodObjects;
+	std::vector<Consumable*> currencyObjects;
 	sf::Texture spritesheet2;
 	float buyTimer = 0.1, feedTimer = 0.1;
+	SoundBuffer buffer;
+	Sound sound;
+	Music music;
 public:
 	Manager();
 	void Update(float& dt);

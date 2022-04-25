@@ -30,6 +30,7 @@ void Fish::Update(float& dt)
 {
     Entity::Update(dt);
     hungerTimer -= dt;
+    coinCounter -= dt;
     if (hungerTimer > 0)
     {
         Fish::moveTowardsWithMouth(destination, speed, dt);
@@ -56,7 +57,15 @@ void Fish::setBothDirection()
 
         state = 1;
         direction = true;
-        Fish::setScale(Vector2f(1, 1));
+        if (scaleX < 0)
+        {
+            scaleX = scaleX * (-1);
+        }
+        if (scaleY < 0)
+        {
+            scaleY = scaleY * (-1);
+        }
+        Fish::setScale(Vector2f(scaleX, scaleY));
         mouthPiece.setPosition(Vector2f(Fish::getPosition().x + 7, Fish::getPosition().y + 2));
     }
     else if (startPoint.x < destination.x && startPoint.y > destination.y)
@@ -66,7 +75,15 @@ void Fish::setBothDirection()
 
         state = 2;
         direction = true;
-        Fish::setScale(Vector2f(1, 1));
+        if (scaleX < 0)
+        {
+            scaleX = scaleX * (-1);
+        }
+        if (scaleY < 0)
+        {
+            scaleY = scaleY * (-1);
+        }
+        Fish::setScale(Vector2f(scaleX, scaleY));
         mouthPiece.setPosition(Vector2f(Fish::getPosition().x + 7, Fish::getPosition().y + 2));
     }
     else if (startPoint.x > destination.x && startPoint.y < destination.y)
@@ -76,7 +93,15 @@ void Fish::setBothDirection()
 
         state = 3;
         direction = false;
-        Fish::setScale(Vector2f(-1, 1));
+        if (scaleX > 0)
+        {
+            scaleX = scaleX * (-1);
+        }
+        if (scaleY < 0)
+        {
+            scaleY = scaleY * (-1);
+        }
+        Fish::setScale(Vector2f(scaleX, scaleY));
         mouthPiece.setPosition(Vector2f(Fish::getPosition().x - 7, Fish::getPosition().y + 2));
     }
     else if (startPoint.x > destination.x && startPoint.y > destination.y)
@@ -85,7 +110,15 @@ void Fish::setBothDirection()
         distanceY = startPoint.y - destination.y;
         state = 4;
         direction = false;
-        Fish::setScale(Vector2f(-1, 1));
+        if (scaleX > 0)
+        {
+            scaleX = scaleX * (-1);
+        }
+        if (scaleY < 0)
+        {
+            scaleY = scaleY * (-1);
+        }
+        Fish::setScale(Vector2f(scaleX, scaleY));
         mouthPiece.setPosition(Vector2f(Fish::getPosition().x - 7, Fish::getPosition().y + 2));
     }
 
@@ -100,56 +133,147 @@ void Fish::moveTowardsWithMouth(Vector2f& destination, float& speed, float& dt)
         switch (state)
         {
         case 1:
-            Fish::move(Vector2f(startDistanceX * (speed * dt), startDistanceY * (speed * dt)));
-            Fish::mouthPiece.move(Vector2f(startDistanceX * (speed * dt), startDistanceY * (speed * dt)));
-            distanceX = distanceX - (startDistanceX * (speed * dt));
-            distanceY = distanceY - (startDistanceY * (speed * dt));
+                Fish::move(Vector2f(startDistanceX * (speed * dt), startDistanceY * (speed * dt)));
+                distanceX = distanceX - (startDistanceX * (speed * dt));
+                Fish::mouthPiece.move(Vector2f(startDistanceX * (speed * dt), startDistanceY * (speed * dt)));
+                distanceY = distanceY - (startDistanceY * (speed * dt));
             break;
         case 2:
-            Fish::move(Vector2f(startDistanceX * (speed * dt), startDistanceY * ((-speed) * dt)));
-            Fish::mouthPiece.move(Vector2f(startDistanceX * (speed * dt), startDistanceY * ((-speed) * dt)));
-            distanceX = distanceX - (startDistanceX * (speed * dt));
-            distanceY = distanceY - (startDistanceY * (speed * dt));
+                Fish::move(Vector2f(startDistanceX * (speed * dt), startDistanceY * ((-speed) * dt)));
+                distanceX = distanceX - (startDistanceX * (speed * dt));
+                Fish::mouthPiece.move(Vector2f(startDistanceX * (speed * dt), startDistanceY * ((-speed) * dt)));
+                distanceY = distanceY - (startDistanceY * (speed * dt));
             break;
         case 3:
-            Fish::move(Vector2f(startDistanceX * ((-speed) * dt), startDistanceY * (speed * dt)));
-            Fish::mouthPiece.move(Vector2f(startDistanceX * ((-speed) * dt), startDistanceY * (speed * dt)));
-            distanceX = distanceX - (startDistanceX * (speed * dt));
-            distanceY = distanceY - (startDistanceY * (speed * dt));
+                Fish::move(Vector2f(startDistanceX * ((-speed) * dt), startDistanceY * (speed * dt)));
+                distanceX = distanceX - (startDistanceX * (speed * dt));
+                Fish::mouthPiece.move(Vector2f(startDistanceX * ((-speed) * dt), startDistanceY * (speed * dt)));
+                distanceY = distanceY - (startDistanceY * (speed * dt));
             break;
         case 4:
-            Fish::move(Vector2f(startDistanceX * ((-speed) * dt), startDistanceY * ((-speed) * dt)));
-            Fish::mouthPiece.move(Vector2f(startDistanceX * ((-speed) * dt), startDistanceY * ((-speed) * dt)));
-            distanceX = distanceX - (startDistanceX * (speed * dt));
-            distanceY = distanceY - (startDistanceY * (speed * dt));
+                Fish::move(Vector2f(startDistanceX * ((-speed) * dt), startDistanceY * ((-speed) * dt)));
+                distanceX = distanceX - (startDistanceX * (speed * dt));
+                Fish::mouthPiece.move(Vector2f(startDistanceX * ((-speed) * dt), startDistanceY * ((-speed) * dt)));
+                distanceY = distanceY - (startDistanceY * (speed * dt));
             break;
         }
     }
     else
     {
         idle -= dt;
+        Fish::setScale(Vector2f(scaleX, scaleY));
         if (idle < 0)
         {
             fishReset();
         }
     }
+    cout << scaleX << endl;
 }
 
 void Fish::fishReset()
 {
     startPoint = Entity::reachPosition();
     destination = Entity::getRandomPos();
-    setBothDirection();
-    idle = getRandomNumber(3,6);
+    Fish::setBothDirection();
+    resetHungerTimer();
+    idle = getRandomNumber(2,5);
 }
 
 void Fish::resetHungerTimer()
 {
-    hungerTimer = 20;
+    hungerTimer = 5;
     isHungry = false;
 }
 
 void Fish::SpeedUP()
 {
     speed = 1;
+}
+
+float Fish::getCoinCounter()
+{
+    return coinCounter;
+}
+
+void Fish::resetCoinCounter()
+{
+    coinCounter = getRandomNumber(8, 12);
+}
+
+int Fish::getSizeGrowth()
+{
+    return size;
+}
+
+void Fish::setSizeGrowth(int _size)
+{
+    size = _size;
+}
+
+int Fish::getXP()
+{
+    return xp;
+}
+
+void Fish::giveXP()
+{
+    xp += getRandomNumber(8, 11);
+}
+
+void Fish::Grow1()
+{
+    if (scaleX < 0)
+    {
+        scaleX = -1.5;
+    }
+    else
+    {
+        scaleX = 1.5;
+    }
+    if (scaleY < 0)
+    {
+        scaleY = -1.5;
+    }
+    else
+    {
+        scaleY = 1.5;
+    }
+}
+
+void Fish::Grow2()
+{
+    if (scaleX < 0)
+    {
+        scaleX = 2;
+    }
+    else
+    {
+        scaleX = 2;
+    }
+    if (scaleY < 2)
+    {
+        scaleY = 2;
+    }
+    else
+    {
+        scaleY = 2;
+    }
+}
+
+void Fish::setHungryFish()
+{
+    _sprite = IntRect(Vector2(128, 0), Vector2(32, 32));
+    setTextureRect(_sprite);
+}
+
+void Fish::setFullFish()
+{
+    _sprite = IntRect(Vector2(32, 0), Vector2(32, 32));
+    setTextureRect(_sprite);
+}
+
+void Fish::setDeadFish()
+{
+    _sprite = IntRect(Vector2(160, 0), Vector2(32, 32));
+    setTextureRect(_sprite);
 }

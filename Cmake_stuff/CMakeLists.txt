@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.11)
 # Require modern C++
-set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 project(Cmake_stuff)
@@ -25,7 +25,7 @@ add_custom_target(copy_resources ALL COMMAND ${CMAKE_COMMAND}
 file(GLOB_RECURSE SOURCES fizhandchips/*.cpp fizhandchips/*.h)
 add_executable(FIZHANDCHIPS ${SOURCES} )
 target_include_directories(FIZHANDCHIPS SYSTEM PRIVATE ${SFML_INCS})
-target_link_libraries(FIZHANDCHIPS sfml-graphics)
+target_link_libraries(FIZHANDCHIPS sfml-graphics sfml-audio)
 set_target_properties(FIZHANDCHIPS 
     PROPERTIES VS_DEBUGGER_WORKING_DIRECTORY
     ${CMAKE_RUNTIME_OUTPUT_DIRECTORY}/$(Configuration)

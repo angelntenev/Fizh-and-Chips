@@ -11,7 +11,7 @@
 using namespace std;
 using namespace sf;
 
-Consumable::Consumable(bool _isCollectable, Vector2f startLoc) : fallSpeed(20), Entity(IntRect(Vector2(64, 0), Vector2(32, 32)))
+Consumable::Consumable(bool _isCollectable, Vector2f startLoc, int pos1, int pos2) : fallSpeed(20), Entity(IntRect(Vector2(pos1, pos2), Vector2(32, 32)))
 {
 	setCollectable(_isCollectable);
 	setOrigin(Vector2f(16, 16));
@@ -52,3 +52,6 @@ Consumable::~Consumable()
 {
 
 }
+
+
+
