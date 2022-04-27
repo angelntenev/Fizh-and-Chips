@@ -40,13 +40,9 @@ Manager::Manager() : chipsScore(100)
     scoreText.setCharacterSize(24);
     scoreText.setString(std::to_string(chipsScore));
     scoreText.setPosition(Vector2f(screenWidth - 100, 20));
-    //spritesheet.loadFromFile("res/Fish.png");
-    //fish->setTexture(spritesheet);
     Fish* fish = new Fish();
     fishes.push_back(fish);
-    //temp audio
-    buffer.loadFromFile("res/Recording.ogg");
-    sound.setBuffer(buffer);
+    
     
 }
 
@@ -60,10 +56,12 @@ void Manager::Update(float& dt)
     {
         if (buyTimer >= 0.1)
         {
-            if ((chipsScore - 10) > 0)
+            if ((chipsScore - 100) >= 0)
             {
                 Fish* fish = new Fish();
                 fishes.push_back(fish);
+                addChips(-100);
+                scoreText.setString(std::to_string(chipsScore));
             }
             buyTimer = 0;
         }
@@ -74,7 +72,7 @@ void Manager::Update(float& dt)
     {
         if (feedTimer >= 0.1)
         {
-            Consumable* food = new Consumable(false, crosshair->getPosition(), 64, 0);
+            Consumable* food = new Consumable(false, crosshair->getPosition(), 64, 0, 0);
             foodObjects.push_back(food);
             feedTimer = 0;
         }
@@ -85,9 +83,18 @@ void Manager::Update(float& dt)
     {
         if (fish->getCoinCounter() < 0 && fish->getSizeGrowth() > 0)
         {
-            fish->resetCoinCounter();
-            Consumable* coin = new Consumable(true, fish->reachPosition(), 96, 0);
-            currencyObjects.push_back(coin);
+            if (fish->getSizeGrowth() == 2)
+            {
+                fish->resetCoinCounter();
+                Consumable* coin = new Consumable(true, fish->reachPosition(), 96, 0, 20);
+                currencyObjects.push_back(coin);
+            }
+            else if (fish->getSizeGrowth() == 1)
+            {
+                fish->resetCoinCounter();
+                Consumable* coin = new Consumable(true, fish->reachPosition(), 96, 0, 10);
+                currencyObjects.push_back(coin);
+            }
         }
         if (fish->isHungry == false)
         {
@@ -95,44 +102,51 @@ void Manager::Update(float& dt)
         }
         else
         {
-            fish->setHungryFish();
-            if (foodObjects.size() > 0)
+            if (fish->getHungerTimer() > -15)
             {
-                moveToClosestPoint(*fish);
-            }
-            for (int i = foodObjects.size() - 1; i >= 0; i--)
-            {
-                if (fish->getMouth().getGlobalBounds().findIntersection(foodObjects[i]->getGlobalBounds()))
+                fish->setHungryFish();
+                if (foodObjects.size() > 0)
                 {
-                    
-                    if (fish->isHungry == true)
-                    {
-                        fish->fishReset();
-                        fish->giveXP();
-                        fish->setFullFish();
-                        sound.play();
-                        delete foodObjects[i];
-                        foodObjects.erase(foodObjects.begin() + i);
-                    }
-
-                    if (fish->getXP() > 40)
-                    {
-                        if (fish->getXP() > 100)
-                        {
-                            fish->Grow2();
-                            fish->setSizeGrowth(1);
-                        }
-                        else
-                        {
-                            fish->Grow1();
-                            fish->setSizeGrowth(1);
-                        }
-                        
-                    }
-                    
-                    
-                    
+                    moveToClosestPoint(*fish);
                 }
+                for (int i = foodObjects.size() - 1; i >= 0; i--)
+                {
+                    if (fish->getMouth().getGlobalBounds().findIntersection(foodObjects[i]->getGlobalBounds()))
+                    {
+
+                        if (fish->isHungry == true)
+                        {
+                            fish->fishReset();
+                            fish->giveXP();
+                            fish->setFullFish();
+                            delete foodObjects[i];
+                            foodObjects.erase(foodObjects.begin() + i);
+                            fish->playGulp();
+                        }
+
+                        if (fish->getXP() > 40)
+                        {
+                            if (fish->getXP() > 100)
+                            {
+                                fish->Grow2();
+                                fish->setSizeGrowth(2);
+                            }
+                            else
+                            {
+                                fish->Grow1();
+                                fish->setSizeGrowth(1);
+                            }
+
+                        }
+
+
+
+                    }
+                }
+            }
+            else if (fish->getHungerTimer() < -15)
+            {
+                fish->_fordeletion = true;
             }
             fish->Update(dt);
         }
@@ -152,12 +166,28 @@ void Manager::Update(float& dt)
     for (int i = currencyObjects.size() - 1; i >= 0; i--)
     {
         currencyObjects[i]->Update(dt);
-        if (currencyObjects[i]->_fordeletion || crosshair->getGlobalBounds().findIntersection(currencyObjects[i]->getGlobalBounds()))
+        if (currencyObjects[i]->_fordeletion)
         {
             delete currencyObjects[i];
             currencyObjects.erase(currencyObjects.begin() + i);
         }
+        else if (crosshair->getGlobalBounds().findIntersection(currencyObjects[i]->getGlobalBounds()))
+        {
+            addChips(currencyObjects[i]->getValue());
+            delete currencyObjects[i];
+            currencyObjects.erase(currencyObjects.begin() + i);
+        }
     }
+
+    for (int i = fishes.size() - 1; i >= 0; i--)
+    {
+        if (fishes[i]->_fordeletion == true)
+        {
+            delete fishes[i];
+            fishes.erase(fishes.begin() + i);
+        }
+    }
+
 }
 
 void Manager::changeScore(int a)
@@ -227,4 +257,19 @@ void Manager::Render(RenderWindow& window)
     {
         window.draw(*coin);
     }
+}
+
+int Manager::getChips()
+{
+    return chipsScore;
+}
+
+void Manager::setChips(int chips)
+{
+    Manager::chipsScore = chips;
+}
+
+void Manager::addChips(int chips)
+{
+    Manager::chipsScore += chips;
 }

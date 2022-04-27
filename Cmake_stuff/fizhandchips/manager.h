@@ -20,9 +20,6 @@ protected:
 	std::vector<Consumable*> currencyObjects;
 	sf::Texture spritesheet2;
 	float buyTimer = 0.1, feedTimer = 0.1;
-	SoundBuffer buffer;
-	Sound sound;
-	Music music;
 public:
 	Manager();
 	void Update(float& dt);
@@ -31,5 +28,8 @@ public:
 	void moveToClosestPoint(Fish& fish);
 	sf::Text getText();
 	std::vector<Fish*> getFish();
+	int getChips();
+	void setChips(int chips);
+	void addChips(int chips);
 	void Render(sf::RenderWindow& window);
 };

@@ -11,12 +11,13 @@
 using namespace std;
 using namespace sf;
 
-Consumable::Consumable(bool _isCollectable, Vector2f startLoc, int pos1, int pos2) : fallSpeed(20), Entity(IntRect(Vector2(pos1, pos2), Vector2(32, 32)))
+Consumable::Consumable(bool _isCollectable, Vector2f startLoc, int pos1, int pos2, int value) : fallSpeed(20), Entity(IntRect(Vector2(pos1, pos2), Vector2(32, 32)))
 {
 	setCollectable(_isCollectable);
 	setOrigin(Vector2f(16, 16));
 	setPosition(startLoc);
 	timeOnFloor = 5;
+	setValue(value);
 }
 
 void Consumable::setCollectable(bool _isCollectable)
@@ -46,6 +47,16 @@ void Consumable::Update(float& dt)
 	}
 
 	
+}
+
+void Consumable::setValue(int value)
+{
+	Consumable::value = value;
+}
+
+int Consumable::getValue()
+{
+	return value;
 }
 
 Consumable::~Consumable()

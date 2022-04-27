@@ -3,7 +3,9 @@
 #include "entity.h"
 #include <SFML/Graphics.hpp>
 #include <SFML/Window.hpp>
-
+#include <SFML/Audio/SoundBuffer.hpp>
+#include <SFML/Audio/Sound.hpp>
+#include <SFML/Audio/Music.hpp>
 
 using namespace sf;
 
@@ -14,10 +16,12 @@ private:
 	int xp = 0;
 	float speed;
 	bool direction;
-	float hungerTimer = 20;
+	float hungerTimer = 5;
 	float coinCounter = 3;
 	RectangleShape mouthPiece;
 	float scaleX = 1, scaleY = 1;
+	SoundBuffer buffer;
+	Sound sound;
 public:
 	Fish();
 	void Update(float& dt) override;
@@ -39,4 +43,8 @@ public:
 	void setHungryFish();
 	void setFullFish();
 	void setDeadFish();
+	void sinkToDeath();
+	void playGulp();
+	void resetSpeed();
+	float getHungerTimer();
 };

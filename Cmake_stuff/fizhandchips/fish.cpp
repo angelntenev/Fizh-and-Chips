@@ -24,6 +24,8 @@ Fish::Fish() : speed(0.25), Entity(IntRect(Vector2(32, 0), Vector2(32, 32)))
     mouthPiece.setPosition(mouthPos);
     mouthPiece.setSize(mouthSize);
     mouthPiece.setFillColor(Color::White);
+    buffer.loadFromFile("res/Recording.ogg");
+    sound.setBuffer(buffer);
 }
 
 void Fish::Update(float& dt)
@@ -35,12 +37,21 @@ void Fish::Update(float& dt)
     {
         Fish::moveTowardsWithMouth(destination, speed, dt);
     }
+    if (hungerTimer < -5)
+    {
+        setDeadFish();
+    }
     else
     {
         Fish::moveTowardsWithMouth(destination, speed, dt);
         
         isHungry = true;
     }
+
+    //if (Fish::getPosition().y >= 780.f)
+    //{
+    //    speed = 0;
+    //}
 }
 
 RectangleShape Fish::getMouth()
@@ -167,7 +178,6 @@ void Fish::moveTowardsWithMouth(Vector2f& destination, float& speed, float& dt)
             fishReset();
         }
     }
-    cout << scaleX << endl;
 }
 
 void Fish::fishReset()
@@ -181,7 +191,7 @@ void Fish::fishReset()
 
 void Fish::resetHungerTimer()
 {
-    hungerTimer = 5;
+    hungerTimer = 1;
     isHungry = false;
 }
 
@@ -197,7 +207,7 @@ float Fish::getCoinCounter()
 
 void Fish::resetCoinCounter()
 {
-    coinCounter = getRandomNumber(8, 12);
+    coinCounter = getRandomNumber(16, 22);
 }
 
 int Fish::getSizeGrowth()
@@ -276,4 +286,19 @@ void Fish::setDeadFish()
 {
     _sprite = IntRect(Vector2(160, 0), Vector2(32, 32));
     setTextureRect(_sprite);
+}
+
+void Fish::playGulp()
+{
+    sound.play();
+}
+
+void Fish::resetSpeed()
+{
+    speed = 0.25;
+}
+
+float Fish::getHungerTimer()
+{
+    return hungerTimer;
 }
