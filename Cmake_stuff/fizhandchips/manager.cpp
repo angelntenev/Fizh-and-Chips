@@ -66,6 +66,22 @@ void Manager::Update(float& dt)
             buyTimer = 0;
         }
     }
+    scoreText.setString(std::to_string(chipsScore));
+    if (Keyboard::isKeyPressed(controls[2]))
+    {
+        if (buyTimer >= 0.1)
+        {
+            if ((chipsScore - 5) >= 0)
+            {
+                Fish* shark = new Fish();
+                shark->setSharkSprite();
+                sharks.push_back(shark);
+                addChips(-5);
+                scoreText.setString(std::to_string(chipsScore));
+            }
+            buyTimer = 0;
+        }
+    }
     buyTimer += dt;
 
     if (Keyboard::isKeyPressed(controls[10]))
@@ -102,9 +118,12 @@ void Manager::Update(float& dt)
         }
         else
         {
-            if (fish->getHungerTimer() > -15)
+            if (fish->getHungerTimer() < 5)
             {
-                fish->setHungryFish();
+                if (fish->getHungerTimer() < 0)
+                {
+                    fish->setHungryFish();
+                }
                 if (foodObjects.size() > 0)
                 {
                     moveToClosestPoint(*fish);
@@ -117,6 +136,7 @@ void Manager::Update(float& dt)
                         if (fish->isHungry == true)
                         {
                             fish->fishReset();
+                            fish->resetHungerTimer();
                             fish->giveXP();
                             fish->setFullFish();
                             delete foodObjects[i];
@@ -153,6 +173,59 @@ void Manager::Update(float& dt)
     }
 
 
+    //Shark update
+    for (auto& shark : sharks)
+    {
+        if (shark->getCoinCounter() < 0)
+        {
+            shark->resetCoinCounter();
+            Consumable* coin = new Consumable(true, shark->reachPosition(), 96, 0, 50);
+            currencyObjects.push_back(coin);
+        }
+        if (shark->isHungry == false)
+        {
+            shark->Update(dt);
+        }
+        else
+        {
+            if (shark->getHungerTimer() < 5)
+            {
+                if (shark->getHungerTimer() < 0)
+                {
+                    //setHungryShark
+                    //fish->setHungryFish();
+                }
+                if (fishes.size() > 0)
+                {
+                    moveToClosestFish(*shark);
+                }
+                for (int i = fishes.size() - 1; i >= 0; i--)
+                {
+                    if (shark->getMouth().getGlobalBounds().findIntersection(fishes[i]->getGlobalBounds()))
+                    {
+
+                        if (shark->isHungry == true)
+                        {
+                            shark->fishReset();
+                            shark->resetHungerTimer();
+                            //fish->setFullFish();
+                            delete fishes[i];
+                            fishes.erase(fishes.begin() + i);
+                            shark->playGulp();
+                        }
+
+                    }
+                }
+            }
+            if (shark->getHungerTimer() < -15)
+            {
+                shark->_fordeletion = true;
+            }
+            shark->Update(dt);
+        }
+    }
+
+
     for (int i = foodObjects.size() - 1; i >= 0; i--)
     {
         foodObjects[i]->Update(dt);
@@ -185,6 +258,15 @@ void Manager::Update(float& dt)
         {
             delete fishes[i];
             fishes.erase(fishes.begin() + i);
+        }
+    }
+
+    for (int i = sharks.size() - 1; i >= 0; i--)
+    {
+        if (sharks[i]->_fordeletion == true)
+        {
+            delete sharks[i];
+            sharks.erase(sharks.begin() + i);
         }
     }
 
@@ -238,12 +320,35 @@ void Manager::moveToClosestPoint(Fish& fish)
     fish.SpeedUP();
 }
 
+void Manager::moveToClosestFish(Fish& fish)
+{
+    float smallestDiff = 2401;
+    for (int i = 0; i < fishes.size(); i++)
+    {
+
+        if (smallestDiff > Manager::closestPoint(fish.reachPosition(), fishes[i]->reachPosition()))
+        {
+            fish.destination = fishes[i]->reachPosition();
+            smallestDiff = Manager::closestPoint(fish.reachPosition(), fishes[i]->reachPosition());
+            //cout << smallestDiff << endl;
+        }
+    }
+    fish.startPoint = fish.reachPosition();
+    fish.setBothDirection();
+    fish.SpeedUP();
+}
+
 void Manager::Render(RenderWindow& window)
 {
     for (const auto fish : fishes)
     {
         window.draw(*fish);
         window.draw(fish->getMouth());
+    }
+    for (const auto shark : sharks)
+    {
+        window.draw(*shark);
+        window.draw(shark->getMouth());
     }
     
     window.draw(*crosshair);

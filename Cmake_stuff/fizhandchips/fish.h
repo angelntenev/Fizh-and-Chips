@@ -16,7 +16,7 @@ private:
 	int xp = 0;
 	float speed;
 	bool direction;
-	float hungerTimer = 5;
+	float hungerTimer = 20;
 	float coinCounter = 3;
 	RectangleShape mouthPiece;
 	float scaleX = 1, scaleY = 1;
@@ -46,5 +46,6 @@ public:
 	void sinkToDeath();
 	void playGulp();
 	void resetSpeed();
+	void setSharkSprite();
 	float getHungerTimer();
 };

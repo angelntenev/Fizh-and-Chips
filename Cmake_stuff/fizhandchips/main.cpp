@@ -18,7 +18,8 @@ const Vector2f screenVec = Vector2f(screenWidth, screenHeight);
 
 //Generate crosshair
 sf::Texture spritesheet;
-
+sf::Texture spritesheetShark;
+sf::Texture shootTexture;
 
 
 //Generate manager
@@ -32,6 +33,8 @@ shared_ptr<Manager> gameManager = make_shared<Manager>();
 void Load()
 {
     spritesheet.loadFromFile("res/Crosshair.png");
+    spritesheetShark.loadFromFile("res/Shark.png");
+    shootTexture.loadFromFile("res/Attack.png");
 }
 
 void Reset()

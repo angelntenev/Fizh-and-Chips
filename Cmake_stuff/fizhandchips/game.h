@@ -6,4 +6,6 @@
 #include "fish.h"
 
 extern sf::Texture spritesheet;
+extern sf::Texture spritesheetShark;
+extern sf::Texture shootTexture;
 const float screenWidth = 1600.f, screenHeight = 800.f;

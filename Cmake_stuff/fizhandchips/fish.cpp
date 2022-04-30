@@ -37,7 +37,7 @@ void Fish::Update(float& dt)
     {
         Fish::moveTowardsWithMouth(destination, speed, dt);
     }
-    if (hungerTimer < -5)
+    if (hungerTimer < -10)
     {
         setDeadFish();
     }
@@ -47,7 +47,7 @@ void Fish::Update(float& dt)
         
         isHungry = true;
     }
-
+    cout << hungerTimer << endl;
     //if (Fish::getPosition().y >= 780.f)
     //{
     //    speed = 0;
@@ -185,13 +185,12 @@ void Fish::fishReset()
     startPoint = Entity::reachPosition();
     destination = Entity::getRandomPos();
     Fish::setBothDirection();
-    resetHungerTimer();
     idle = getRandomNumber(2,5);
 }
 
 void Fish::resetHungerTimer()
 {
-    hungerTimer = 1;
+    hungerTimer = 20;
     isHungry = false;
 }
 
@@ -296,6 +295,13 @@ void Fish::playGulp()
 void Fish::resetSpeed()
 {
     speed = 0.25;
+}
+
+void Fish::setSharkSprite()
+{
+    _sprite = IntRect(Vector2(0, 0), Vector2(128, 64));
+    setTexture(spritesheetShark);
+    setTextureRect(_sprite);
 }
 
 float Fish::getHungerTimer()

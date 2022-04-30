@@ -18,6 +18,7 @@ protected:
 	std::vector<Fish*> fishes;
 	std::vector<Consumable*> foodObjects;
 	std::vector<Consumable*> currencyObjects;
+	std::vector<Fish*> sharks;
 	sf::Texture spritesheet2;
 	float buyTimer = 0.1, feedTimer = 0.1;
 public:
@@ -26,6 +27,7 @@ public:
 	void changeScore(int a);
 	float closestPoint(Vector2f obj1, Vector2f obj2);
 	void moveToClosestPoint(Fish& fish);
+	void moveToClosestFish(Fish& fish);
 	sf::Text getText();
 	std::vector<Fish*> getFish();
 	int getChips();
