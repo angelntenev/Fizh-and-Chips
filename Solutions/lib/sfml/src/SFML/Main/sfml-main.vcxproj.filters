@@ -1,16 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Main\MainWin32.cpp">
+    <ClCompile Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src\SFML\Main\MainWin32.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Main\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src\SFML\Main\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{1DD9A7AF-BE4D-3CFC-A5C8-66006F076C84}</UniqueIdentifier>
+      <UniqueIdentifier>{947628C3-4943-3D6A-B919-7F0ADA005E4E}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
