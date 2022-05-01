@@ -47,6 +47,7 @@ public:
 	void sinkToDeath();
 	void playGulp();
 	void resetSpeed();
+	void setSpeed(float _speed);
 	void setSharkSprite();
 	void setBossEnemySprite();
 	float getHungerTimer();

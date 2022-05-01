@@ -19,6 +19,7 @@ using namespace sf;
 
 //Generate crosshair
 Crosshair* crosshair = new Crosshair();
+IntRect crossTarget;
 
 
 
@@ -46,8 +47,6 @@ Manager::Manager() : chipsScore(999999999)
     scoreText.setPosition(Vector2f(screenWidth - 100, 20));
     Fish* fish = new Fish();
     fishes.push_back(fish);
-
-
     Fish* BossEnemy = new Fish();
     BossEnemy->setBossEnemySprite();
    // bossEnemy.push_back(BossEnemy);
@@ -99,7 +98,7 @@ void Manager::Update(float& dt)
 
 
     //Each 10 seconds the boss enemie appears
-    if (bossTime >= 2000)
+    if (bossTime >= 10)
     {
 
         bossTime = -dt;
@@ -107,6 +106,8 @@ void Manager::Update(float& dt)
 
         Fish* BossEnemy = new Fish();
         BossEnemy->setBossEnemySprite();
+        BossEnemy->setOrigin(Vector2f(32.f, 32.f));
+        BossEnemy->setSpeed(0.1);
         bossEnemy.push_back(BossEnemy);
 
         //enemieXist = true;
@@ -289,8 +290,6 @@ void Manager::Update(float& dt)
     for (auto& BossEnemy : bossEnemy)
     {
 
-
-        BossEnemy->isHungry == true;
         if (bossTime < 0)
         {
             Fish* BossEnemy = new Fish();
@@ -298,58 +297,31 @@ void Manager::Update(float& dt)
             bossEnemy.push_back(BossEnemy);
         }
 
-
-
-
-
-
-        moveToClosestFish(*BossEnemy);
-        moveToClosestShark(*BossEnemy);
+        BossEnemy->Update(dt);
 
 
         for (int i = fishes.size() - 1; i >= 0; i--)
         {
-            if (BossEnemy->getMouth().getGlobalBounds().findIntersection(fishes[i]->getGlobalBounds()))
+            if (BossEnemy->getGlobalBounds().findIntersection(fishes[i]->getGlobalBounds()))
             {
-
-                if (BossEnemy->isHungry == true)
-                {
-                    BossEnemy->fishReset();
-                    // BossEnemy->resetHungerTimer();
-                     //fish->setFullFish();
-                    delete fishes[i];
-                    fishes.erase(fishes.begin() + i);
                     BossEnemy->playGulp();
-                }
-
-                // BossEnemy->Update(dt);
-
+                    fishes[i]->_fordeletion = true;
             }
         }
 
         for (int s = sharks.size() - 1; s >= 0; s--)
         {
-            if (BossEnemy->getMouth().getGlobalBounds().findIntersection(sharks[s]->getGlobalBounds()))
+            if (BossEnemy->getGlobalBounds().findIntersection(sharks[s]->getGlobalBounds()))
             {
 
-                if (BossEnemy->isHungry == true)
-                {
-                    BossEnemy->fishReset();
-                    // BossEnemy->resetHungerTimer();
-                     //fish->setFullFish();
-                    delete sharks[s];
-                    sharks.erase(sharks.begin() + s);
-                    BossEnemy->playGulp();
-                }
-                //  BossEnemy->Update(dt);
+                BossEnemy->playGulp();
+                sharks[s]->_fordeletion = true;
 
             }
 
 
         }
 
-
-        BossEnemy->Update(dt);
 
 
     }

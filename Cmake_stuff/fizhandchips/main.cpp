@@ -21,7 +21,7 @@ sf::Texture spritesheet;
 sf::Texture spritesheetShark;
 sf::Texture spritesheetBossEnemy;
 sf::Texture shootTexture;
-
+sf::Texture target;
 sf::Texture spritesheetBackground;
 
 //Generate manager
@@ -39,6 +39,7 @@ void Load()
     spritesheetBossEnemy.loadFromFile("res/BossEnemy.png");
     shootTexture.loadFromFile("res/Attack.png");
     spritesheetBackground.loadFromFile("res/fizhBackground.png");
+    target.loadFromFile("res/fizhBackground.png");
 
    
 }

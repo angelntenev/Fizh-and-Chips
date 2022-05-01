@@ -291,6 +291,11 @@ void Fish::resetSpeed()
     speed = 0.25;
 }
 
+void Fish::setSpeed(float _speed)
+{
+    speed = _speed;
+}
+
 void Fish::setSharkSprite()
 {
     _sprite = IntRect(Vector2(0, 0), Vector2(128, 64));
