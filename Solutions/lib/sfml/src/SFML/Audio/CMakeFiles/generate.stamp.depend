@@ -2,7 +2,7 @@
 C:/Program Files/CMake/share/cmake-3.22/Modules/FindOpenAL.cmake
 C:/Program Files/CMake/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake
 C:/Program Files/CMake/share/cmake-3.22/Modules/FindPackageMessage.cmake
-C:/fizhchips/Cmake_stuff/lib/sfml/cmake/Modules/FindFLAC.cmake
-C:/fizhchips/Cmake_stuff/lib/sfml/cmake/Modules/FindVORBIS.cmake
-C:/fizhchips/Cmake_stuff/lib/sfml/src/SFML/Audio/CMakeLists.txt
-C:/fizhchips/Cmake_stuff/lib/sfml/tools/windows/resource.rc.in
+D:/Fizh & chips project/Cmake_stuff/lib/sfml/cmake/Modules/FindFLAC.cmake
+D:/Fizh & chips project/Cmake_stuff/lib/sfml/cmake/Modules/FindVORBIS.cmake
+D:/Fizh & chips project/Cmake_stuff/lib/sfml/src/SFML/Audio/CMakeLists.txt
+D:/Fizh & chips project/Cmake_stuff/lib/sfml/tools/windows/resource.rc.in

@@ -61,7 +61,7 @@ void Manager::Update(float& dt)
 {
     crosshair->Update(dt);
 
- 
+
     scoreText.setString(std::to_string(chipsScore));
     if (Keyboard::isKeyPressed(controls[1]))
     {
@@ -85,6 +85,7 @@ void Manager::Update(float& dt)
             if ((chipsScore - 5) >= 0)
             {
                 Fish* shark = new Fish();
+                shark->setOrigin(Vector2f(64.f, 32.f));
                 shark->setSharkSprite();
                 sharks.push_back(shark);
                 addChips(-5);
@@ -94,40 +95,40 @@ void Manager::Update(float& dt)
         }
     }
     buyTimer += dt;
-   // bossTime += dt;
-  
-   
-   //Each 10 seconds the boss enemie appears
-        if (bossTime >= 20)
-        {
-
-            bossTime =-dt;
+    // bossTime += dt;
 
 
-            Fish* BossEnemy = new Fish();
-            BossEnemy->setBossEnemySprite();
-            bossEnemy.push_back(BossEnemy);
+    //Each 10 seconds the boss enemie appears
+    if (bossTime >= 2000)
+    {
 
-               //enemieXist = true;
+        bossTime = -dt;
 
-            
-        }
-    
+
+        Fish* BossEnemy = new Fish();
+        BossEnemy->setBossEnemySprite();
+        bossEnemy.push_back(BossEnemy);
+
+        //enemieXist = true;
+
+
+    }
+
     buyTimer += dt;
     bossTime += dt;
-    
 
-          
-        
-    
+
+
+
+
 
     if (Keyboard::isKeyPressed(controls[10]))
     {
         if (feedTimer >= 0.15)
         {
-            Consumable* food = new Consumable(false, crosshair->getPosition(), 64, 0, 0);
-            foodObjects.push_back(food);
-            feedTimer = 0;
+            //Consumable* food = new Consumable(false, crosshair->getPosition(), 64, 0, 0);
+            //foodObjects.push_back(food);
+            //feedTimer = 0;
             //Consumable* food = new Consumable(false, crosshair->getPosition(), 64, 0, 0);
             //foodObjects.push_back(food);
             feedTimer = 0;
@@ -178,7 +179,7 @@ void Manager::Update(float& dt)
                 {
                     fish->setHungryFish();
 
-                    
+
                 }
                 if (foodObjects.size() > 0)
                 {
@@ -233,7 +234,7 @@ void Manager::Update(float& dt)
     for (auto& shark : sharks)
     {
 
-      
+
         if (shark->getCoinCounter() < 0)
         {
             shark->resetCoinCounter();
@@ -287,7 +288,7 @@ void Manager::Update(float& dt)
     //Updates Boss
     for (auto& BossEnemy : bossEnemy)
     {
-             
+
 
         BossEnemy->isHungry == true;
         if (bossTime < 0)
@@ -295,14 +296,13 @@ void Manager::Update(float& dt)
             Fish* BossEnemy = new Fish();
             BossEnemy->setBossEnemySprite();
             bossEnemy.push_back(BossEnemy);
-           // cout << "WOOOOOOOOOOOOOOOOOOOOOOOOOORKSiooiiiiiiiiiiiiiiiiiiiiiiiiiii" << endl;
         }
 
-       
 
 
 
-     
+
+
         moveToClosestFish(*BossEnemy);
         moveToClosestShark(*BossEnemy);
 
@@ -315,18 +315,18 @@ void Manager::Update(float& dt)
                 if (BossEnemy->isHungry == true)
                 {
                     BossEnemy->fishReset();
-                   // BossEnemy->resetHungerTimer();
-                    //fish->setFullFish();
+                    // BossEnemy->resetHungerTimer();
+                     //fish->setFullFish();
                     delete fishes[i];
                     fishes.erase(fishes.begin() + i);
                     BossEnemy->playGulp();
                 }
 
-               // BossEnemy->Update(dt);
+                // BossEnemy->Update(dt);
 
             }
         }
-        
+
         for (int s = sharks.size() - 1; s >= 0; s--)
         {
             if (BossEnemy->getMouth().getGlobalBounds().findIntersection(sharks[s]->getGlobalBounds()))
@@ -341,17 +341,17 @@ void Manager::Update(float& dt)
                     sharks.erase(sharks.begin() + s);
                     BossEnemy->playGulp();
                 }
-              //  BossEnemy->Update(dt);
+                //  BossEnemy->Update(dt);
 
             }
 
 
         }
-        
-       
-           BossEnemy->Update(dt);
-            
-        
+
+
+        BossEnemy->Update(dt);
+
+
     }
 
 
@@ -418,7 +418,6 @@ void Manager::Update(float& dt)
     }
 
 
-}
     for (int i = bullets.size() - 1; i >= 0; i--)
     {
         if (bullets[i]->_fordeletion == true)
@@ -427,7 +426,6 @@ void Manager::Update(float& dt)
             bullets.erase(bullets.begin() + i);
         }
     }
-
 }
 
 void Manager::changeScore(int a)
@@ -470,12 +468,10 @@ void Manager::moveToClosestPoint(Fish& fish)
         {
             fish.destination = foodObjects[i]->reachPosition();
             smallestDiff = Manager::closestPoint(fish.reachPosition(), foodObjects[i]->reachPosition());
-            //cout << smallestDiff << endl;
         }
     }
     fish.startPoint = fish.reachPosition();
     fish.setBothDirection();
-    fish.SpeedUP();
 }
 
 void Manager::moveToClosestFish(Fish& fish)
@@ -488,12 +484,10 @@ void Manager::moveToClosestFish(Fish& fish)
         {
             fish.destination = fishes[i]->reachPosition();
             smallestDiff = Manager::closestPoint(fish.reachPosition(), fishes[i]->reachPosition());
-            //cout << smallestDiff << endl;
         }
     }
     fish.startPoint = fish.reachPosition();
     fish.setBothDirection();
-    fish.SpeedUP();
 }
 
 
@@ -507,12 +501,10 @@ void Manager::moveToClosestShark(Fish& shark)
         {
             shark.destination = sharks[i]->reachPosition();
             smallestDiff = Manager::closestPoint(shark.reachPosition(), sharks[i]->reachPosition());
-            //cout << smallestDiff << endl;
         }
     }
     shark.startPoint = shark.reachPosition();
     shark.setBothDirection();
-    shark.SpeedUP();
 }
 
 void Manager::Render(RenderWindow& window)

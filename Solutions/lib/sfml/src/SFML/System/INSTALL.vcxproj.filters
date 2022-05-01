@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\fizhchips\Solutions\CMakeFiles\2050b1abd973ec8ceccb47da923429ad\INSTALL_force.rule">
+    <CustomBuild Include="D:\Fizh &amp; chips project\Solutions\CMakeFiles\90ac7d449f46ba3740bef436d6bd9632\INSTALL_force.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{5E0F640D-4733-3082-A2C5-E560B5BDBD0C}</UniqueIdentifier>
+      <UniqueIdentifier>{A396926B-F7C1-32DC-BD96-BDD98C42D490}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

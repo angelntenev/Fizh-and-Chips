@@ -47,7 +47,6 @@ void Fish::Update(float& dt)
         
         isHungry = true;
     }
-    cout << hungerTimer << endl;
     //if (Fish::getPosition().y >= 780.f)
     //{
     //    speed = 0;
@@ -192,11 +191,6 @@ void Fish::resetHungerTimer()
 {
     hungerTimer = 20;
     isHungry = false;
-}
-
-void Fish::SpeedUP()
-{
-    speed = 2;
 }
 
 float Fish::getCoinCounter()
