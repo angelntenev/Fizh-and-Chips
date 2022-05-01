@@ -15,7 +15,7 @@ private:
 	bool shot = false;
 public:
 	void Update(float& dt) override;
-	Anim();
+	Anim(Vector2f loc);
 	void setLoc(Vector2f loc);
 	void resetShot();
 };

@@ -20,6 +20,7 @@ protected:
 	std::vector<Consumable*> foodObjects;
 	std::vector<Consumable*> currencyObjects;
 	std::vector<Fish*> sharks;
+	std::vector<Anim*> bullets;
 	sf::Texture spritesheet2;
 	float buyTimer = 0.1, feedTimer = 0.1;
 public:

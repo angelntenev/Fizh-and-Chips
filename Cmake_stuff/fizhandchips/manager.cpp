@@ -19,7 +19,7 @@ using namespace sf;
 
 //Generate crosshair
 Crosshair* crosshair = new Crosshair();
-Anim* _bullet = new Anim();
+
 
 
 
@@ -86,13 +86,13 @@ void Manager::Update(float& dt)
 
     if (Keyboard::isKeyPressed(controls[10]))
     {
-        if (feedTimer >= 0.1)
+        if (feedTimer >= 0.15)
         {
             //Consumable* food = new Consumable(false, crosshair->getPosition(), 64, 0, 0);
             //foodObjects.push_back(food);
-            //feedTimer = 0;
-            _bullet->resetShot();
-            _bullet->setLoc(crosshair->getPosition());
+            feedTimer = 0;
+            Anim* _bullet = new Anim(crosshair->getPosition());
+            bullets.push_back(_bullet);
         }
     }
     feedTimer += dt;
@@ -228,7 +228,10 @@ void Manager::Update(float& dt)
         }
     }
 
-    _bullet->Update(dt);
+    for (auto& bullet : bullets)
+    {
+        bullet->Update(dt);
+    }
 
     for (int i = foodObjects.size() - 1; i >= 0; i--)
     {
@@ -271,6 +274,15 @@ void Manager::Update(float& dt)
         {
             delete sharks[i];
             sharks.erase(sharks.begin() + i);
+        }
+    }
+
+    for (int i = bullets.size() - 1; i >= 0; i--)
+    {
+        if (bullets[i]->_fordeletion == true)
+        {
+            delete bullets[i];
+            bullets.erase(bullets.begin() + i);
         }
     }
 
@@ -354,8 +366,10 @@ void Manager::Render(RenderWindow& window)
         window.draw(*shark);
         window.draw(shark->getMouth());
     }
-    
-    window.draw(*_bullet);
+    for (const auto bullet : bullets)
+    {
+        window.draw(*bullet);
+    }
     
     window.draw(*crosshair);
     window.draw(scoreText);

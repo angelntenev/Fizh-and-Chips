@@ -13,7 +13,6 @@ protected:
 	//Entity(std::unique_ptr<sf::RectangleShape> shp);
 	bool _alive;       // should be updated
 	bool _visible;     // should be rendered
-
 	float distanceX, distanceY;
 	float startDistanceX, startDistanceY;
 	int state;
