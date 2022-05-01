@@ -7,6 +7,7 @@
 #include <SFML/Audio/Music.hpp>
 #include "fish.h"
 #include "fallingObjects.h"
+#include "animations.h"
 
 
 class Manager

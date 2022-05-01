@@ -47,7 +47,6 @@ void Fish::Update(float& dt)
         
         isHungry = true;
     }
-    cout << hungerTimer << endl;
     //if (Fish::getPosition().y >= 780.f)
     //{
     //    speed = 0;

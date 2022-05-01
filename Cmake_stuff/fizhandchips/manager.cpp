@@ -19,6 +19,7 @@ using namespace sf;
 
 //Generate crosshair
 Crosshair* crosshair = new Crosshair();
+Anim* _bullet = new Anim();
 
 
 
@@ -42,7 +43,6 @@ Manager::Manager() : chipsScore(100)
     scoreText.setPosition(Vector2f(screenWidth - 100, 20));
     Fish* fish = new Fish();
     fishes.push_back(fish);
-    
     
 }
 
@@ -88,9 +88,11 @@ void Manager::Update(float& dt)
     {
         if (feedTimer >= 0.1)
         {
-            Consumable* food = new Consumable(false, crosshair->getPosition(), 64, 0, 0);
-            foodObjects.push_back(food);
-            feedTimer = 0;
+            //Consumable* food = new Consumable(false, crosshair->getPosition(), 64, 0, 0);
+            //foodObjects.push_back(food);
+            //feedTimer = 0;
+            _bullet->resetShot();
+            _bullet->setLoc(crosshair->getPosition());
         }
     }
     feedTimer += dt;
@@ -167,6 +169,7 @@ void Manager::Update(float& dt)
             else if (fish->getHungerTimer() < -15)
             {
                 fish->_fordeletion = true;
+                
             }
             fish->Update(dt);
         }
@@ -225,6 +228,7 @@ void Manager::Update(float& dt)
         }
     }
 
+    _bullet->Update(dt);
 
     for (int i = foodObjects.size() - 1; i >= 0; i--)
     {
@@ -350,6 +354,8 @@ void Manager::Render(RenderWindow& window)
         window.draw(*shark);
         window.draw(shark->getMouth());
     }
+    
+    window.draw(*_bullet);
     
     window.draw(*crosshair);
     window.draw(scoreText);
