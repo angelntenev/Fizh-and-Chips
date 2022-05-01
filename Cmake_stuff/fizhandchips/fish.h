@@ -17,6 +17,7 @@ private:
 	float speed;
 	bool direction;
 	float hungerTimer = 20;
+	float bossTime = 3;
 	float coinCounter = 3;
 	RectangleShape mouthPiece;
 	float scaleX = 1, scaleY = 1;
@@ -47,5 +48,8 @@ public:
 	void playGulp();
 	void resetSpeed();
 	void setSharkSprite();
+	void setBossEnemySprite();
 	float getHungerTimer();
+
+
 };

@@ -47,6 +47,7 @@ void Fish::Update(float& dt)
         
         isHungry = true;
     }
+    cout << hungerTimer << endl;
     //if (Fish::getPosition().y >= 780.f)
     //{
     //    speed = 0;
@@ -195,7 +196,7 @@ void Fish::resetHungerTimer()
 
 void Fish::SpeedUP()
 {
-    speed = 1;
+    speed = 2;
 }
 
 float Fish::getCoinCounter()
@@ -303,7 +304,16 @@ void Fish::setSharkSprite()
     setTextureRect(_sprite);
 }
 
+void Fish::setBossEnemySprite()
+{
+    _sprite = IntRect(Vector2(0, 0), Vector2(64, 64));
+    setTexture(spritesheetBossEnemy);
+    setTextureRect(_sprite);
+}
+
 float Fish::getHungerTimer()
 {
     return hungerTimer;
 }
+
+
