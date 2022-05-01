@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{969A6443-E4D6-3166-8443-22AD66758124}</ProjectGuid>
+    <ProjectGuid>{B20D9643-F9AD-395F-A979-AF1293784EBA}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
@@ -59,25 +59,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Fizh &amp; chips project\Solutions\bin\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\fizhchips\Solutions\bin\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sfml-audio.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sfml-audio-d-3</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Fizh &amp; chips project\Solutions\bin\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\fizhchips\Solutions\bin\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sfml-audio.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sfml-audio-3</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Fizh &amp; chips project\Solutions\bin\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\fizhchips\Solutions\bin\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">sfml-audio.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">sfml-audio-3</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Fizh &amp; chips project\Solutions\bin\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\fizhchips\Solutions\bin\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">sfml-audio.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">sfml-audio-3</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers\minimp3;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers\AL;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\fizhchips\Cmake_stuff\lib\sfml\include;C:\fizhchips\Cmake_stuff\lib\sfml\src;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers\minimp3;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers\AL;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -104,10 +104,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;OV_EXCLUDE_STATIC_CALLBACKS;FLAC__NO_DLL;CMAKE_INTDIR=\"Debug\";SFML_AUDIO_EXPORTS</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers\minimp3;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers\AL;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\fizhchips\Cmake_stuff\lib\sfml\include;C:\fizhchips\Cmake_stuff\lib\sfml\src;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers\minimp3;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers\AL;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers\minimp3;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers\AL;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\fizhchips\Cmake_stuff\lib\sfml\include;C:\fizhchips\Cmake_stuff\lib\sfml\src;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers\minimp3;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers\AL;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -115,13 +115,13 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>..\..\..\lib\Debug\sfml-system-d.lib;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\openal32.lib;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\vorbisenc.lib;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\vorbisfile.lib;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\vorbis.lib;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\ogg.lib;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\flac.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\..\..\lib\Debug\sfml-system-d.lib;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\openal32.lib;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\vorbisenc.lib;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\vorbisfile.lib;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\vorbis.lib;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\ogg.lib;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\flac.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/Fizh &amp; chips project/Solutions/lib/sfml/lib/Debug/sfml-audio-d.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/Fizh &amp; chips project/Solutions/lib/sfml/lib/Debug/sfml-audio.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/fizhchips/Solutions/lib/sfml/lib/Debug/sfml-audio-d.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/fizhchips/Solutions/lib/sfml/lib/Debug/sfml-audio.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -130,7 +130,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers\minimp3;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers\AL;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\fizhchips\Cmake_stuff\lib\sfml\include;C:\fizhchips\Cmake_stuff\lib\sfml\src;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers\minimp3;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers\AL;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -148,10 +148,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;OV_EXCLUDE_STATIC_CALLBACKS;FLAC__NO_DLL;CMAKE_INTDIR=\"Release\";SFML_AUDIO_EXPORTS</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers\minimp3;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers\AL;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\fizhchips\Cmake_stuff\lib\sfml\include;C:\fizhchips\Cmake_stuff\lib\sfml\src;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers\minimp3;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers\AL;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers\minimp3;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers\AL;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\fizhchips\Cmake_stuff\lib\sfml\include;C:\fizhchips\Cmake_stuff\lib\sfml\src;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers\minimp3;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers\AL;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -159,13 +159,13 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>..\..\..\lib\Release\sfml-system.lib;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\openal32.lib;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\vorbisenc.lib;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\vorbisfile.lib;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\vorbis.lib;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\ogg.lib;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\flac.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\..\..\lib\Release\sfml-system.lib;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\openal32.lib;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\vorbisenc.lib;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\vorbisfile.lib;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\vorbis.lib;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\ogg.lib;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\flac.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/Fizh &amp; chips project/Solutions/lib/sfml/lib/Release/sfml-audio.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/Fizh &amp; chips project/Solutions/lib/sfml/lib/Release/sfml-audio.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/fizhchips/Solutions/lib/sfml/lib/Release/sfml-audio.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/fizhchips/Solutions/lib/sfml/lib/Release/sfml-audio.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -174,7 +174,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers\minimp3;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers\AL;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\fizhchips\Cmake_stuff\lib\sfml\include;C:\fizhchips\Cmake_stuff\lib\sfml\src;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers\minimp3;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers\AL;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
@@ -192,10 +192,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;OV_EXCLUDE_STATIC_CALLBACKS;FLAC__NO_DLL;CMAKE_INTDIR=\"MinSizeRel\";SFML_AUDIO_EXPORTS</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers\minimp3;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers\AL;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\fizhchips\Cmake_stuff\lib\sfml\include;C:\fizhchips\Cmake_stuff\lib\sfml\src;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers\minimp3;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers\AL;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers\minimp3;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers\AL;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\fizhchips\Cmake_stuff\lib\sfml\include;C:\fizhchips\Cmake_stuff\lib\sfml\src;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers\minimp3;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers\AL;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -203,13 +203,13 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>..\..\..\lib\MinSizeRel\sfml-system.lib;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\openal32.lib;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\vorbisenc.lib;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\vorbisfile.lib;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\vorbis.lib;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\ogg.lib;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\flac.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\..\..\lib\MinSizeRel\sfml-system.lib;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\openal32.lib;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\vorbisenc.lib;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\vorbisfile.lib;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\vorbis.lib;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\ogg.lib;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\flac.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/Fizh &amp; chips project/Solutions/lib/sfml/lib/MinSizeRel/sfml-audio.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/Fizh &amp; chips project/Solutions/lib/sfml/lib/MinSizeRel/sfml-audio.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/fizhchips/Solutions/lib/sfml/lib/MinSizeRel/sfml-audio.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/fizhchips/Solutions/lib/sfml/lib/MinSizeRel/sfml-audio.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -218,7 +218,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers\minimp3;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers\AL;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\fizhchips\Cmake_stuff\lib\sfml\include;C:\fizhchips\Cmake_stuff\lib\sfml\src;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers\minimp3;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers\AL;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -235,10 +235,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;OV_EXCLUDE_STATIC_CALLBACKS;FLAC__NO_DLL;CMAKE_INTDIR=\"RelWithDebInfo\";SFML_AUDIO_EXPORTS</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers\minimp3;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers\AL;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\fizhchips\Cmake_stuff\lib\sfml\include;C:\fizhchips\Cmake_stuff\lib\sfml\src;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers\minimp3;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers\AL;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers\minimp3;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers\AL;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\fizhchips\Cmake_stuff\lib\sfml\include;C:\fizhchips\Cmake_stuff\lib\sfml\src;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers\minimp3;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers\AL;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\headers;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -246,13 +246,13 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>..\..\..\lib\RelWithDebInfo\sfml-system.lib;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\openal32.lib;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\vorbisenc.lib;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\vorbisfile.lib;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\vorbis.lib;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\ogg.lib;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\flac.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\..\..\lib\RelWithDebInfo\sfml-system.lib;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\openal32.lib;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\vorbisenc.lib;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\vorbisfile.lib;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\vorbis.lib;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\ogg.lib;C:\fizhchips\Cmake_stuff\lib\sfml\extlibs\libs-msvc-universal\x64\flac.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/Fizh &amp; chips project/Solutions/lib/sfml/lib/RelWithDebInfo/sfml-audio.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/Fizh &amp; chips project/Solutions/lib/sfml/lib/RelWithDebInfo/sfml-audio.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/fizhchips/Solutions/lib/sfml/lib/RelWithDebInfo/sfml-audio.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/fizhchips/Solutions/lib/sfml/lib/RelWithDebInfo/sfml-audio.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -260,11 +260,11 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\CMakeLists.txt">
+    <CustomBuild Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Fizh ^&amp; chips project/Cmake_stuff/lib/sfml/src/SFML/Audio/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/fizhchips/Cmake_stuff/lib/sfml/src/SFML/Audio/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Fizh &amp; chips project/Cmake_stuff" "-BD:/Fizh &amp; chips project/Solutions" --check-stamp-file "D:/Fizh &amp; chips project/Solutions/lib/sfml/src/SFML/Audio/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/fizhchips/Cmake_stuff -BC:/fizhchips/Solutions --check-stamp-file C:/fizhchips/Solutions/lib/sfml/src/SFML/Audio/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -272,12 +272,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\FindOpenAL.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageMessage.cmake;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\cmake\Modules\FindFLAC.cmake;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\cmake\Modules\FindVORBIS.cmake;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\tools\windows\resource.rc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Fizh &amp; chips project\Solutions\lib\sfml\src\SFML\Audio\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\FindOpenAL.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageMessage.cmake;C:\fizhchips\Cmake_stuff\lib\sfml\cmake\Modules\FindFLAC.cmake;C:\fizhchips\Cmake_stuff\lib\sfml\cmake\Modules\FindVORBIS.cmake;C:\fizhchips\Cmake_stuff\lib\sfml\tools\windows\resource.rc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\fizhchips\Solutions\lib\sfml\src\SFML\Audio\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Fizh ^&amp; chips project/Cmake_stuff/lib/sfml/src/SFML/Audio/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/fizhchips/Cmake_stuff/lib/sfml/src/SFML/Audio/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Fizh &amp; chips project/Cmake_stuff" "-BD:/Fizh &amp; chips project/Solutions" --check-stamp-file "D:/Fizh &amp; chips project/Solutions/lib/sfml/src/SFML/Audio/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/fizhchips/Cmake_stuff -BC:/fizhchips/Solutions --check-stamp-file C:/fizhchips/Solutions/lib/sfml/src/SFML/Audio/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -285,12 +285,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\FindOpenAL.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageMessage.cmake;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\cmake\Modules\FindFLAC.cmake;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\cmake\Modules\FindVORBIS.cmake;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\tools\windows\resource.rc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Fizh &amp; chips project\Solutions\lib\sfml\src\SFML\Audio\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\FindOpenAL.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageMessage.cmake;C:\fizhchips\Cmake_stuff\lib\sfml\cmake\Modules\FindFLAC.cmake;C:\fizhchips\Cmake_stuff\lib\sfml\cmake\Modules\FindVORBIS.cmake;C:\fizhchips\Cmake_stuff\lib\sfml\tools\windows\resource.rc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\fizhchips\Solutions\lib\sfml\src\SFML\Audio\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Fizh ^&amp; chips project/Cmake_stuff/lib/sfml/src/SFML/Audio/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/fizhchips/Cmake_stuff/lib/sfml/src/SFML/Audio/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Fizh &amp; chips project/Cmake_stuff" "-BD:/Fizh &amp; chips project/Solutions" --check-stamp-file "D:/Fizh &amp; chips project/Solutions/lib/sfml/src/SFML/Audio/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/fizhchips/Cmake_stuff -BC:/fizhchips/Solutions --check-stamp-file C:/fizhchips/Solutions/lib/sfml/src/SFML/Audio/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -298,12 +298,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\FindOpenAL.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageMessage.cmake;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\cmake\Modules\FindFLAC.cmake;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\cmake\Modules\FindVORBIS.cmake;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\tools\windows\resource.rc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Fizh &amp; chips project\Solutions\lib\sfml\src\SFML\Audio\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\FindOpenAL.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageMessage.cmake;C:\fizhchips\Cmake_stuff\lib\sfml\cmake\Modules\FindFLAC.cmake;C:\fizhchips\Cmake_stuff\lib\sfml\cmake\Modules\FindVORBIS.cmake;C:\fizhchips\Cmake_stuff\lib\sfml\tools\windows\resource.rc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\fizhchips\Solutions\lib\sfml\src\SFML\Audio\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Fizh ^&amp; chips project/Cmake_stuff/lib/sfml/src/SFML/Audio/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/fizhchips/Cmake_stuff/lib/sfml/src/SFML/Audio/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Fizh &amp; chips project/Cmake_stuff" "-BD:/Fizh &amp; chips project/Solutions" --check-stamp-file "D:/Fizh &amp; chips project/Solutions/lib/sfml/src/SFML/Audio/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/fizhchips/Cmake_stuff -BC:/fizhchips/Solutions --check-stamp-file C:/fizhchips/Solutions/lib/sfml/src/SFML/Audio/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -311,13 +311,13 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\FindOpenAL.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageMessage.cmake;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\cmake\Modules\FindFLAC.cmake;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\cmake\Modules\FindVORBIS.cmake;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\tools\windows\resource.rc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Fizh &amp; chips project\Solutions\lib\sfml\src\SFML\Audio\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Program Files\CMake\share\cmake-3.22\Modules\FindOpenAL.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files\CMake\share\cmake-3.22\Modules\FindPackageMessage.cmake;C:\fizhchips\Cmake_stuff\lib\sfml\cmake\Modules\FindFLAC.cmake;C:\fizhchips\Cmake_stuff\lib\sfml\cmake\Modules\FindVORBIS.cmake;C:\fizhchips\Cmake_stuff\lib\sfml\tools\windows\resource.rc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\fizhchips\Solutions\lib\sfml\src\SFML\Audio\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\ALCheck.cpp">
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\ALCheck.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -339,8 +339,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\ALCheck.hpp" />
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\AlResource.cpp">
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\ALCheck.hpp" />
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\AlResource.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -362,8 +362,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\Audio\AlResource.hpp" />
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\AudioDevice.cpp">
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\lib\sfml\include\SFML\Audio\AlResource.hpp" />
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\AudioDevice.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -385,9 +385,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\AudioDevice.hpp" />
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\Audio\Export.hpp" />
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\Listener.cpp">
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\AudioDevice.hpp" />
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\lib\sfml\include\SFML\Audio\Export.hpp" />
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\Listener.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -409,8 +409,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\Audio\Listener.hpp" />
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\Music.cpp">
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\lib\sfml\include\SFML\Audio\Listener.hpp" />
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\Music.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -432,8 +432,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\Audio\Music.hpp" />
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\Sound.cpp">
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\lib\sfml\include\SFML\Audio\Music.hpp" />
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\Sound.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -455,8 +455,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\Audio\Sound.hpp" />
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundBuffer.cpp">
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\lib\sfml\include\SFML\Audio\Sound.hpp" />
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundBuffer.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -478,8 +478,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\Audio\SoundBuffer.hpp" />
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundBufferRecorder.cpp">
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\lib\sfml\include\SFML\Audio\SoundBuffer.hpp" />
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundBufferRecorder.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -501,8 +501,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\Audio\SoundBufferRecorder.hpp" />
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\InputSoundFile.cpp">
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\lib\sfml\include\SFML\Audio\SoundBufferRecorder.hpp" />
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\InputSoundFile.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -524,8 +524,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\Audio\InputSoundFile.hpp" />
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\OutputSoundFile.cpp">
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\lib\sfml\include\SFML\Audio\InputSoundFile.hpp" />
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\OutputSoundFile.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -547,8 +547,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\Audio\OutputSoundFile.hpp" />
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundRecorder.cpp">
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\lib\sfml\include\SFML\Audio\OutputSoundFile.hpp" />
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundRecorder.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -570,8 +570,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\Audio\SoundRecorder.hpp" />
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundSource.cpp">
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\lib\sfml\include\SFML\Audio\SoundRecorder.hpp" />
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundSource.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -593,8 +593,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\Audio\SoundSource.hpp" />
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundStream.cpp">
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\lib\sfml\include\SFML\Audio\SoundSource.hpp" />
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundStream.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -616,8 +616,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\Audio\SoundStream.hpp" />
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileFactory.cpp">
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\lib\sfml\include\SFML\Audio\SoundStream.hpp" />
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileFactory.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -639,11 +639,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\Audio\SoundFileFactory.hpp" />
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\Audio\SoundFileFactory.inl" />
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\Audio\SoundFileReader.hpp" />
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileReaderFlac.hpp" />
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileReaderFlac.cpp">
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\lib\sfml\include\SFML\Audio\SoundFileFactory.hpp" />
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\lib\sfml\include\SFML\Audio\SoundFileFactory.inl" />
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\lib\sfml\include\SFML\Audio\SoundFileReader.hpp" />
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileReaderFlac.hpp" />
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileReaderFlac.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -665,8 +665,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileReaderMp3.hpp" />
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileReaderMp3.cpp">
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileReaderMp3.hpp" />
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileReaderMp3.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -688,8 +688,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileReaderOgg.hpp" />
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileReaderOgg.cpp">
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileReaderOgg.hpp" />
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileReaderOgg.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -711,8 +711,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileReaderWav.hpp" />
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileReaderWav.cpp">
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileReaderWav.hpp" />
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileReaderWav.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -734,9 +734,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\Audio\SoundFileWriter.hpp" />
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileWriterFlac.hpp" />
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileWriterFlac.cpp">
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\lib\sfml\include\SFML\Audio\SoundFileWriter.hpp" />
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileWriterFlac.hpp" />
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileWriterFlac.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -758,8 +758,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileWriterOgg.hpp" />
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileWriterOgg.cpp">
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileWriterOgg.hpp" />
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileWriterOgg.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -781,8 +781,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileWriterWav.hpp" />
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileWriterWav.cpp">
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileWriterWav.hpp" />
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\lib\sfml\src\SFML\Audio\SoundFileWriterWav.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -804,17 +804,17 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ResourceCompile Include="D:\Fizh &amp; chips project\Solutions\lib\sfml\src\SFML\Audio\sfml-audio.rc" />
+    <ResourceCompile Include="C:\fizhchips\Solutions\lib\sfml\src\SFML\Audio\sfml-audio.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\Fizh &amp; chips project\Solutions\ZERO_CHECK.vcxproj">
-      <Project>{2E42D8FD-8508-3445-81CD-E1B200D13171}</Project>
+    <ProjectReference Include="C:\fizhchips\Solutions\ZERO_CHECK.vcxproj">
+      <Project>{454BE7B2-1A42-3C3B-B891-49759EC8E446}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="D:\Fizh &amp; chips project\Solutions\lib\sfml\src\SFML\System\sfml-system.vcxproj">
-      <Project>{FFC221F3-1782-34DC-9BDD-C8075DCA2187}</Project>
+    <ProjectReference Include="C:\fizhchips\Solutions\lib\sfml\src\SFML\System\sfml-system.vcxproj">
+      <Project>{FA3580E4-74D8-3608-8207-5DD6C9C74678}</Project>
       <Name>sfml-system</Name>
     </ProjectReference>
   </ItemGroup>
