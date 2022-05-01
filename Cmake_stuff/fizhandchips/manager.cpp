@@ -36,7 +36,7 @@ const Keyboard::Key controls[11] =
 
 
 
-Manager::Manager() : chipsScore(9999999999999900)
+Manager::Manager() : chipsScore(999999999)
 {
     font.loadFromFile("res/SupermercadoOne-Regular.ttf");
     scoreText.setFont(font);
