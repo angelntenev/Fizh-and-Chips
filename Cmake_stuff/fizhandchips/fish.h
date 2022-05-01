@@ -51,6 +51,4 @@ public:
 	void setSharkSprite();
 	void setBossEnemySprite();
 	float getHungerTimer();
-
-
 };
