@@ -19,8 +19,10 @@ const Vector2f screenVec = Vector2f(screenWidth, screenHeight);
 //Generate crosshair
 sf::Texture spritesheet;
 sf::Texture spritesheetShark;
+sf::Texture spritesheetBossEnemy;
 sf::Texture shootTexture;
 
+sf::Texture spritesheetBackground;
 
 //Generate manager
 shared_ptr<Manager> gameManager = make_shared<Manager>();
@@ -34,7 +36,11 @@ void Load()
 {
     spritesheet.loadFromFile("res/Crosshair.png");
     spritesheetShark.loadFromFile("res/Shark.png");
+    spritesheetBossEnemy.loadFromFile("res/BossEnemy.png");
     shootTexture.loadFromFile("res/Attack.png");
+    spritesheetBackground.loadFromFile("res/fizhBackground.png");
+
+   
 }
 
 void Reset()
@@ -74,6 +80,7 @@ void Render(RenderWindow& window)
 {
     
     gameManager->Render(window);
+
 }
 
 int main()
@@ -85,7 +92,7 @@ int main()
 
     while (window.isOpen())
     {
-        window.clear(sf::Color::Blue);
+       window.clear(sf::Color::Blue);
         Update(window);
         Render(window);
         window.display();

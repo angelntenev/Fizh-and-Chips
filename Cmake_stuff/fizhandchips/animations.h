@@ -11,11 +11,7 @@ using namespace sf;
 class Anim : public Entity
 {
 private:
-	Clock clock;
-	bool shot = false;
 public:
-	void Update(float& dt) override;
 	Anim();
-	void setLoc(Vector2f loc);
-	void resetShot();
+	//void setNewTexture();
 };

@@ -19,7 +19,6 @@ using namespace sf;
 
 //Generate crosshair
 Crosshair* crosshair = new Crosshair();
-Anim* _bullet = new Anim();
 
 
 
@@ -34,7 +33,10 @@ const Keyboard::Key controls[11] =
 };
 
 
-Manager::Manager() : chipsScore(100)
+
+
+
+Manager::Manager() : chipsScore(9999999999999900)
 {
     font.loadFromFile("res/SupermercadoOne-Regular.ttf");
     scoreText.setFont(font);
@@ -43,14 +45,22 @@ Manager::Manager() : chipsScore(100)
     scoreText.setPosition(Vector2f(screenWidth - 100, 20));
     Fish* fish = new Fish();
     fishes.push_back(fish);
-    
+
+
+    Fish* BossEnemy = new Fish();
+    BossEnemy->setBossEnemySprite();
+   // bossEnemy.push_back(BossEnemy);
+
+
 }
+
+
 
 void Manager::Update(float& dt)
 {
     crosshair->Update(dt);
 
-
+ 
     scoreText.setString(std::to_string(chipsScore));
     if (Keyboard::isKeyPressed(controls[1]))
     {
@@ -83,22 +93,58 @@ void Manager::Update(float& dt)
         }
     }
     buyTimer += dt;
+   // bossTime += dt;
+  
+   
+   //Each 10 seconds the boss enemie appears
+        if (bossTime >= 20)
+        {
+
+            bossTime =-dt;
+
+
+            Fish* BossEnemy = new Fish();
+            BossEnemy->setBossEnemySprite();
+            bossEnemy.push_back(BossEnemy);
+
+               //enemieXist = true;
+
+            
+        }
+    
+    buyTimer += dt;
+    bossTime += dt;
+    
+
+          
+        
+    
 
     if (Keyboard::isKeyPressed(controls[10]))
     {
         if (feedTimer >= 0.1)
         {
-            //Consumable* food = new Consumable(false, crosshair->getPosition(), 64, 0, 0);
-            //foodObjects.push_back(food);
-            //feedTimer = 0;
-            _bullet->resetShot();
-            _bullet->setLoc(crosshair->getPosition());
+            Consumable* food = new Consumable(false, crosshair->getPosition(), 64, 0, 0);
+            foodObjects.push_back(food);
+            feedTimer = 0;
         }
     }
     feedTimer += dt;
 
+
+
     for (auto& fish : fishes)
     {
+
+        /*
+        if (bossTime > 0)
+        {
+            Fish* BossEnemy = new Fish();
+            BossEnemy->setBossEnemySprite();
+            bossEnemy.push_back(BossEnemy);
+        }
+        */
+
         if (fish->getCoinCounter() < 0 && fish->getSizeGrowth() > 0)
         {
             if (fish->getSizeGrowth() == 2)
@@ -125,6 +171,8 @@ void Manager::Update(float& dt)
                 if (fish->getHungerTimer() < 0)
                 {
                     fish->setHungryFish();
+
+                    
                 }
                 if (foodObjects.size() > 0)
                 {
@@ -169,7 +217,6 @@ void Manager::Update(float& dt)
             else if (fish->getHungerTimer() < -15)
             {
                 fish->_fordeletion = true;
-                
             }
             fish->Update(dt);
         }
@@ -179,6 +226,8 @@ void Manager::Update(float& dt)
     //Shark update
     for (auto& shark : sharks)
     {
+
+      
         if (shark->getCoinCounter() < 0)
         {
             shark->resetCoinCounter();
@@ -228,7 +277,82 @@ void Manager::Update(float& dt)
         }
     }
 
-    _bullet->Update(dt);
+
+    //Updates Boss
+    for (auto& BossEnemy : bossEnemy)
+    {
+             
+
+        BossEnemy->isHungry == true;
+        if (bossTime < 0)
+        {
+            Fish* BossEnemy = new Fish();
+            BossEnemy->setBossEnemySprite();
+            bossEnemy.push_back(BossEnemy);
+           // cout << "WOOOOOOOOOOOOOOOOOOOOOOOOOORKSiooiiiiiiiiiiiiiiiiiiiiiiiiiii" << endl;
+        }
+
+       
+
+
+
+     
+        moveToClosestFish(*BossEnemy);
+        moveToClosestShark(*BossEnemy);
+
+
+        for (int i = fishes.size() - 1; i >= 0; i--)
+        {
+            if (BossEnemy->getMouth().getGlobalBounds().findIntersection(fishes[i]->getGlobalBounds()))
+            {
+
+                if (BossEnemy->isHungry == true)
+                {
+                    BossEnemy->fishReset();
+                   // BossEnemy->resetHungerTimer();
+                    //fish->setFullFish();
+                    delete fishes[i];
+                    fishes.erase(fishes.begin() + i);
+                    BossEnemy->playGulp();
+                }
+
+               // BossEnemy->Update(dt);
+
+            }
+        }
+        
+        for (int s = sharks.size() - 1; s >= 0; s--)
+        {
+            if (BossEnemy->getMouth().getGlobalBounds().findIntersection(sharks[s]->getGlobalBounds()))
+            {
+
+                if (BossEnemy->isHungry == true)
+                {
+                    BossEnemy->fishReset();
+                    // BossEnemy->resetHungerTimer();
+                     //fish->setFullFish();
+                    delete sharks[s];
+                    sharks.erase(sharks.begin() + s);
+                    BossEnemy->playGulp();
+                }
+              //  BossEnemy->Update(dt);
+
+            }
+
+
+        }
+        
+       
+           BossEnemy->Update(dt);
+            
+        
+    }
+
+
+
+
+
+
 
     for (int i = foodObjects.size() - 1; i >= 0; i--)
     {
@@ -273,6 +397,16 @@ void Manager::Update(float& dt)
             sharks.erase(sharks.begin() + i);
         }
     }
+
+    for (int i = bossEnemy.size() - 1; i >= 0; i--)
+    {
+        if (bossEnemy[i]->_fordeletion == true)
+        {
+            delete bossEnemy[i];
+            bossEnemy.erase(bossEnemy.begin() + i);
+        }
+    }
+
 
 }
 
@@ -342,6 +476,25 @@ void Manager::moveToClosestFish(Fish& fish)
     fish.SpeedUP();
 }
 
+
+void Manager::moveToClosestShark(Fish& shark)
+{
+    float smallestDiff = 2401;
+    for (int i = 0; i < sharks.size(); i++)
+    {
+
+        if (smallestDiff > Manager::closestPoint(shark.reachPosition(), sharks[i]->reachPosition()))
+        {
+            shark.destination = sharks[i]->reachPosition();
+            smallestDiff = Manager::closestPoint(shark.reachPosition(), sharks[i]->reachPosition());
+            //cout << smallestDiff << endl;
+        }
+    }
+    shark.startPoint = shark.reachPosition();
+    shark.setBothDirection();
+    shark.SpeedUP();
+}
+
 void Manager::Render(RenderWindow& window)
 {
     for (const auto fish : fishes)
@@ -354,8 +507,12 @@ void Manager::Render(RenderWindow& window)
         window.draw(*shark);
         window.draw(shark->getMouth());
     }
-    
-    window.draw(*_bullet);
+
+    for (const auto BossEnemy : bossEnemy)
+    {
+        window.draw(*BossEnemy);
+        window.draw(BossEnemy->getMouth());
+    }
     
     window.draw(*crosshair);
     window.draw(scoreText);
