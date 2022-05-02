@@ -49,6 +49,9 @@ public:
 	void resetSpeed();
 	void setSpeed(float _speed);
 	void setSharkSprite();
+	void setHungryShark();
+	void setSharkNotHungry();
+	void setDeadShark();
 	void setBossEnemySprite();
 	float getHungerTimer();
 };

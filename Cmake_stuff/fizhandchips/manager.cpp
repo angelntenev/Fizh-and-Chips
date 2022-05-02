@@ -24,6 +24,8 @@ IntRect crossTarget;
 
 
 
+
+
 const Keyboard::Key controls[11] =
 {
     Keyboard::Num0,
@@ -50,6 +52,8 @@ Manager::Manager() : chipsScore(999999999)
     Fish* BossEnemy = new Fish();
     BossEnemy->setBossEnemySprite();
    // bossEnemy.push_back(BossEnemy);
+
+    
 
 
 }
@@ -98,7 +102,7 @@ void Manager::Update(float& dt)
 
 
     //Each 10 seconds the boss enemie appears
-    if (bossTime >= 10)
+    if (bossTime >= 50)
     {
 
         bossTime = -dt;
@@ -254,6 +258,7 @@ void Manager::Update(float& dt)
                 {
                     //setHungryShark
                     //fish->setHungryFish();
+                    shark->setHungryShark();
                 }
                 if (fishes.size() > 0)
                 {
@@ -272,6 +277,7 @@ void Manager::Update(float& dt)
                             delete fishes[i];
                             fishes.erase(fishes.begin() + i);
                             shark->playGulp();
+                            shark->setSharkNotHungry();
                         }
 
                     }
@@ -316,6 +322,7 @@ void Manager::Update(float& dt)
 
                 BossEnemy->playGulp();
                 sharks[s]->_fordeletion = true;
+                
 
             }
 
@@ -377,6 +384,7 @@ void Manager::Update(float& dt)
         {
             delete sharks[i];
             sharks.erase(sharks.begin() + i);
+            
         }
     }
 
@@ -460,6 +468,7 @@ void Manager::moveToClosestFish(Fish& fish)
     }
     fish.startPoint = fish.reachPosition();
     fish.setBothDirection();
+
 }
 
 
@@ -473,14 +482,26 @@ void Manager::moveToClosestShark(Fish& shark)
         {
             shark.destination = sharks[i]->reachPosition();
             smallestDiff = Manager::closestPoint(shark.reachPosition(), sharks[i]->reachPosition());
+         
         }
     }
     shark.startPoint = shark.reachPosition();
     shark.setBothDirection();
+   
+    
+    
 }
 
 void Manager::Render(RenderWindow& window)
 {
+   window.draw(*background);
+    
+   
+    for (const auto _decorations : background->decorations)
+    {
+        window.draw(_decorations);
+    }
+
     for (const auto fish : fishes)
     {
         window.draw(*fish);
@@ -513,6 +534,9 @@ void Manager::Render(RenderWindow& window)
     {
         window.draw(*coin);
     }
+
+
+
 }
 
 int Manager::getChips()

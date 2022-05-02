@@ -303,6 +303,27 @@ void Fish::setSharkSprite()
     setTextureRect(_sprite);
 }
 
+void Fish::setHungryShark()
+{
+    _sprite = IntRect(Vector2(128, 0), Vector2(128, 64));
+    setTexture(spritesheetShark);
+    setTextureRect(_sprite);
+}
+
+void Fish::setSharkNotHungry()
+{
+    _sprite = IntRect(Vector2(0, 0), Vector2(128, 64));
+    setTexture(spritesheetShark);
+    setTextureRect(_sprite);
+}
+
+void Fish::setDeadShark()
+{
+    _sprite = IntRect(Vector2(256, 0), Vector2(128, 64));
+    setTexture(spritesheetShark);
+    setTextureRect(_sprite);
+}
+
 void Fish::setBossEnemySprite()
 {
     _sprite = IntRect(Vector2(0, 0), Vector2(64, 64));

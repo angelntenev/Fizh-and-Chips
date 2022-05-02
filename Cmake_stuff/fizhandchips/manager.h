@@ -8,6 +8,7 @@
 #include "fish.h"
 #include "fallingObjects.h"
 #include "animations.h"
+#include "background.h"
 
 
 class Manager
@@ -25,6 +26,7 @@ protected:
 	sf::Texture spritesheet2;
 	float buyTimer = 0.1, feedTimer = 0.1;
 	float bossTime = 9;
+	Background* background = new Background();
 
 
 public:

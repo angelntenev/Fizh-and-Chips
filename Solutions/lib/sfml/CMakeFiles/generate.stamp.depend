@@ -9,7 +9,7 @@ C:/Program Files/CMake/share/cmake-3.22/Modules/CheckTypeSize.cmake
 C:/Program Files/CMake/share/cmake-3.22/Modules/GNUInstallDirs.cmake
 C:/Program Files/CMake/share/cmake-3.22/Modules/WriteBasicConfigVersionFile.cmake
 C:/Program Files/CMake/share/cmake-3.22/Templates/CPackConfig.cmake.in
-D:/Fizh & chips project/Cmake_stuff/lib/sfml/CMakeLists.txt
-D:/Fizh & chips project/Cmake_stuff/lib/sfml/cmake/Config.cmake
-D:/Fizh & chips project/Cmake_stuff/lib/sfml/cmake/SFMLConfig.cmake.in
-D:/Fizh & chips project/Cmake_stuff/lib/sfml/cmake/SFMLConfigDependencies.cmake.in
+C:/fizhchips/Cmake_stuff/lib/sfml/CMakeLists.txt
+C:/fizhchips/Cmake_stuff/lib/sfml/cmake/Config.cmake
+C:/fizhchips/Cmake_stuff/lib/sfml/cmake/SFMLConfig.cmake.in
+C:/fizhchips/Cmake_stuff/lib/sfml/cmake/SFMLConfigDependencies.cmake.in
