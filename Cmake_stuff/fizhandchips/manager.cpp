@@ -19,7 +19,9 @@ using namespace sf;
 
 //Generate crosshair
 Crosshair* crosshair = new Crosshair();
-IntRect crossTarget;
+bool noHunger = true;
+
+
 
 
 
@@ -49,6 +51,8 @@ Manager::Manager() : chipsScore(999999999)
     fishes.push_back(fish);
     Fish* BossEnemy = new Fish();
     BossEnemy->setBossEnemySprite();
+    setTarget();
+    BossEnemy->setSpeed(0.1);
    // bossEnemy.push_back(BossEnemy);
 
 
@@ -60,6 +64,20 @@ void Manager::Update(float& dt)
 {
     crosshair->Update(dt);
 
+    if (inactiveTimer < 0)
+    {
+        inactiveBoss = true;
+    }
+    else
+    {
+        inactiveTimer -= dt;
+    }
+    cout << bossTime << endl;
+
+    if (noHunger == true)
+    {
+        bossTime -= dt;
+    }
 
     scoreText.setString(std::to_string(chipsScore));
     if (Keyboard::isKeyPressed(controls[1]))
@@ -96,27 +114,18 @@ void Manager::Update(float& dt)
     buyTimer += dt;
     // bossTime += dt;
 
+    //boss spawner
 
-    //Each 10 seconds the boss enemie appears
-    if (bossTime >= 10)
-    {
-
-        bossTime = -dt;
-
-
-        Fish* BossEnemy = new Fish();
-        BossEnemy->setBossEnemySprite();
-        BossEnemy->setOrigin(Vector2f(32.f, 32.f));
-        BossEnemy->setSpeed(0.1);
-        bossEnemy.push_back(BossEnemy);
-
-        //enemieXist = true;
-
-
-    }
-
-    buyTimer += dt;
-    bossTime += dt;
+        if (bossTime < 0 && BossEnemy->bossActive == false)
+        {
+            Fish* BossEnemy = new Fish();
+            bossEnemy.push_back(BossEnemy);
+            BossEnemy->setHealth(100);
+            BossEnemy->setBossEnemySprite();
+            BossEnemy->bossActive = true;
+            bossTime = 20;
+            noHunger = false;
+        }
 
 
 
@@ -127,14 +136,19 @@ void Manager::Update(float& dt)
     {
         if (feedTimer >= 0.15)
         {
-            //Consumable* food = new Consumable(false, crosshair->getPosition(), 64, 0, 0);
-            //foodObjects.push_back(food);
-            //feedTimer = 0;
-            //Consumable* food = new Consumable(false, crosshair->getPosition(), 64, 0, 0);
-            //foodObjects.push_back(food);
-            feedTimer = 0;
-            Anim* _bullet = new Anim(crosshair->getPosition());
-            bullets.push_back(_bullet);
+            if (bossEnemy.size() > 0)
+            {
+                feedTimer = 0;
+                Anim* _bullet = new Anim(crosshair->getPosition());
+                bullets.push_back(_bullet);
+            }
+            else
+            {
+                feedTimer = 0;
+                Consumable* food = new Consumable(false, crosshair->getPosition(), 64, 0, 0);
+                foodObjects.push_back(food);
+            }
+            
         }
     }
     feedTimer += dt;
@@ -143,15 +157,6 @@ void Manager::Update(float& dt)
 
     for (auto& fish : fishes)
     {
-
-        /*
-        if (bossTime > 0)
-        {
-            Fish* BossEnemy = new Fish();
-            BossEnemy->setBossEnemySprite();
-            bossEnemy.push_back(BossEnemy);
-        }
-        */
 
         if (fish->getCoinCounter() < 0 && fish->getSizeGrowth() > 0)
         {
@@ -290,39 +295,50 @@ void Manager::Update(float& dt)
     for (auto& BossEnemy : bossEnemy)
     {
 
-        if (bossTime < 0)
+        if (BossEnemy->bossActive == true)
         {
-            Fish* BossEnemy = new Fish();
-            BossEnemy->setBossEnemySprite();
-            bossEnemy.push_back(BossEnemy);
+            BossEnemy->Update(dt);
         }
 
-        BossEnemy->Update(dt);
-
-
-        for (int i = fishes.size() - 1; i >= 0; i--)
+        for (int i = bullets.size() - 1; i >= 0; i--)
         {
-            if (BossEnemy->getGlobalBounds().findIntersection(fishes[i]->getGlobalBounds()))
+            if (bullets[i]->getGlobalBounds().findIntersection(BossEnemy->getGlobalBounds()) && bullets[i]->getHit() == false)
             {
+                bullets[i]->setHit(true);
+                BossEnemy->drainHealth(5);
+                inactiveTimer = 2;
+                inactiveBoss = false;
+            }
+        }
+
+        //if boss is not hurt by shots, eat fish
+        if (inactiveBoss == true)
+        {
+            for (int i = fishes.size() - 1; i >= 0; i--)
+            {
+                if (BossEnemy->getGlobalBounds().findIntersection(fishes[i]->getGlobalBounds()))
+                {
                     BossEnemy->playGulp();
                     fishes[i]->_fordeletion = true;
+                }
             }
-        }
 
-        for (int s = sharks.size() - 1; s >= 0; s--)
-        {
-            if (BossEnemy->getGlobalBounds().findIntersection(sharks[s]->getGlobalBounds()))
+            for (int s = sharks.size() - 1; s >= 0; s--)
             {
+                if (BossEnemy->getGlobalBounds().findIntersection(sharks[s]->getGlobalBounds()))
+                {
 
-                BossEnemy->playGulp();
-                sharks[s]->_fordeletion = true;
+                    BossEnemy->playGulp();
+                    sharks[s]->_fordeletion = true;
 
+                }
             }
-
-
         }
 
-
+        if (BossEnemy->getHealth() <= 0)
+        {
+            BossEnemy->_fordeletion = true;
+        }
 
     }
 
@@ -386,6 +402,8 @@ void Manager::Update(float& dt)
         {
             delete bossEnemy[i];
             bossEnemy.erase(bossEnemy.begin() + i);
+            noHunger = true;
+            BossEnemy->bossActive = false;
         }
     }
 
@@ -501,7 +519,7 @@ void Manager::Render(RenderWindow& window)
     {
         window.draw(*bullet);
     }
-    
+    window.draw(crossTarget);
     window.draw(*crosshair);
     window.draw(scoreText);
     //window.draw(*fish);
@@ -528,4 +546,22 @@ void Manager::setChips(int chips)
 void Manager::addChips(int chips)
 {
     Manager::chipsScore += chips;
+}
+
+void Manager::setTarget()
+{
+    crossTarget.setTextureRect(IntRect(Vector2(0, 0), Vector2(64, 64)));
+    crossTarget.setOrigin(Vector2f(32.f, 32.f));
+    crossTarget.setTexture(target);
+    crossTarget.setPosition(Vector2f(-100.f, -100.f));
+}
+
+void Manager::putTargetAway()
+{
+    crossTarget.setPosition(Vector2f(-100.f, -100.f));
+}
+
+void Manager::placeTarget(Vector2f loc)
+{
+    crossTarget.setPosition(loc);
 }

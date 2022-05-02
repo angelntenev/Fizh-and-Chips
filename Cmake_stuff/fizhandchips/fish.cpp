@@ -31,7 +31,10 @@ Fish::Fish() : speed(0.25), Entity(IntRect(Vector2(32, 0), Vector2(32, 32)))
 void Fish::Update(float& dt)
 {
     Entity::Update(dt);
-    hungerTimer -= dt;
+    if (noHunger == true)
+    {
+        hungerTimer -= dt;
+    }
     coinCounter -= dt;
     if (hungerTimer > 0)
     {
@@ -44,13 +47,8 @@ void Fish::Update(float& dt)
     else
     {
         Fish::moveTowardsWithMouth(destination, speed, dt);
-        
         isHungry = true;
     }
-    //if (Fish::getPosition().y >= 780.f)
-    //{
-    //    speed = 0;
-    //}
 }
 
 RectangleShape Fish::getMouth()
@@ -308,6 +306,22 @@ void Fish::setBossEnemySprite()
     _sprite = IntRect(Vector2(0, 0), Vector2(64, 64));
     setTexture(spritesheetBossEnemy);
     setTextureRect(_sprite);
+    setOrigin(Vector2f(32.f, 32.f));
+}
+
+void Fish::drainHealth(int damage)
+{
+    health -= damage;
+}
+
+void Fish::setHealth(int NewHealth)
+{
+    health = NewHealth;
+}
+
+int Fish::getHealth()
+{
+    return health;
 }
 
 float Fish::getHungerTimer()

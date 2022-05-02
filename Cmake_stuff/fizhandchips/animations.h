@@ -13,9 +13,12 @@ class Anim : public Entity
 private:
 	Clock clock;
 	bool shot = false;
+	bool hit = false;
 public:
 	void Update(float& dt) override;
 	Anim(Vector2f loc);
 	void setLoc(Vector2f loc);
 	void resetShot();
+	bool getHit();
+	void setHit(bool hitResult);
 };

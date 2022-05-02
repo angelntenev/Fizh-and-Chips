@@ -39,7 +39,7 @@ void Load()
     spritesheetBossEnemy.loadFromFile("res/BossEnemy.png");
     shootTexture.loadFromFile("res/Attack.png");
     spritesheetBackground.loadFromFile("res/fizhBackground.png");
-    target.loadFromFile("res/fizhBackground.png");
+    target.loadFromFile("res/Target.png");
 
    
 }

@@ -49,3 +49,13 @@ void Anim::resetShot()
 	_sprite.left = 0;
 	shot = false;
 }
+
+bool Anim::getHit()
+{
+	return hit;
+}
+
+void Anim::setHit(bool hitResult)
+{
+	hit = hitResult;
+}

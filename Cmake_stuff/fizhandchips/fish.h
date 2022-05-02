@@ -12,6 +12,7 @@ using namespace sf;
 class Fish : public Entity
 {
 private:
+	int health = 1;
 	int size = 0;
 	int xp = 0;
 	float speed;
@@ -25,6 +26,7 @@ private:
 	Sound sound;
 public:
 	Fish();
+	bool bossActive = false;
 	void Update(float& dt) override;
 	RectangleShape getMouth();
 	void setBothDirection();
@@ -50,5 +52,8 @@ public:
 	void setSpeed(float _speed);
 	void setSharkSprite();
 	void setBossEnemySprite();
+	void drainHealth(int damage);
+	void setHealth(int newHealth);
+	int getHealth();
 	float getHungerTimer();
 };

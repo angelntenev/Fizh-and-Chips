@@ -24,8 +24,14 @@ protected:
 	std::vector<Anim*> bullets;
 	sf::Texture spritesheet2;
 	float buyTimer = 0.1, feedTimer = 0.1;
-	float bossTime = 9;
-
+	float bossTime = 10;
+	Sprite crossTarget;
+	void setTarget();
+	void putTargetAway();
+	void placeTarget(Vector2f loc);
+	Fish* BossEnemy = new Fish();
+	bool inactiveBoss = false;
+	float inactiveTimer = 2;
 
 public:
 	Manager();
