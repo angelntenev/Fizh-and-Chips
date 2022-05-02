@@ -8,6 +8,7 @@
 #include "manager.h"
 #include "game.h"
 #include "fish.h"
+#include "background.h"
 
 using namespace std;
 using namespace sf;
@@ -40,7 +41,7 @@ const Keyboard::Key controls[11] =
 
 
 
-Manager::Manager() : chipsScore(999999999)
+Manager::Manager() : chipsScore(80000000)
 {
     font.loadFromFile("res/SupermercadoOne-Regular.ttf");
     scoreText.setFont(font);
@@ -55,7 +56,6 @@ Manager::Manager() : chipsScore(999999999)
     BossEnemy->setSpeed(0.1);
    // bossEnemy.push_back(BossEnemy);
 
-    
 
 
 }
@@ -86,13 +86,37 @@ void Manager::Update(float& dt)
     {
         if (buyTimer >= 0.1)
         {
-            if ((chipsScore - 100) >= 0)
+            if ((chipsScore - decorationPrice) >= 0)
             {
                 Fish* fish = new Fish();
                 fishes.push_back(fish);
                 addChips(-100);
                 scoreText.setString(std::to_string(chipsScore));
             }
+            buyTimer = 0;
+        }
+    }
+    scoreText.setString(std::to_string(chipsScore));
+    if (Keyboard::isKeyPressed(controls[6]))
+    {
+        if (buyTimer >= 0.1)
+        {
+            int count = 0;
+            for (auto& _decorations : background->decorations)
+            {
+                if (_decorations.active == false)
+                {
+                    if ((chipsScore - decorationPrice) >= 0)
+                    {
+                        _decorations.active = true;
+                        addChips(-decorationPrice);
+                        scoreText.setString(std::to_string(chipsScore));
+                        decorationPrice = decorationPrice + (decorationPrice/2);
+                        break;
+                    }
+                }
+            }
+            
             buyTimer = 0;
         }
     }
@@ -150,7 +174,7 @@ void Manager::Update(float& dt)
                 Consumable* food = new Consumable(false, crosshair->getPosition(), 64, 0, 0);
                 foodObjects.push_back(food);
             }
-            
+
         }
     }
     feedTimer += dt;
@@ -181,6 +205,7 @@ void Manager::Update(float& dt)
         }
         else
         {
+            
             if (fish->getHungerTimer() < 5)
             {
                 if (fish->getHungerTimer() < 0)
@@ -229,7 +254,11 @@ void Manager::Update(float& dt)
                     }
                 }
             }
-            else if (fish->getHungerTimer() < -15)
+            if (fish->getHungerTimer() < -10)
+            {
+                fish->setDeadFish();
+            }
+            if (fish->getHungerTimer() < -15)
             {
                 fish->_fordeletion = true;
             }
@@ -260,7 +289,6 @@ void Manager::Update(float& dt)
                 if (shark->getHungerTimer() < 0)
                 {
                     //setHungryShark
-                    //fish->setHungryFish();
                     shark->setHungryShark();
                 }
                 if (fishes.size() > 0)
@@ -280,7 +308,6 @@ void Manager::Update(float& dt)
                             delete fishes[i];
                             fishes.erase(fishes.begin() + i);
                             shark->playGulp();
-                            shark->setSharkNotHungry();
                         }
 
                     }
@@ -332,10 +359,12 @@ void Manager::Update(float& dt)
                 if (BossEnemy->getGlobalBounds().findIntersection(sharks[s]->getGlobalBounds()))
                 {
 
-                BossEnemy->playGulp();
-                sharks[s]->_fordeletion = true;
+                    BossEnemy->playGulp();
+                    sharks[s]->_fordeletion = true;
 
+                }
             }
+        }
 
         if (BossEnemy->getHealth() <= 0)
         {
@@ -395,7 +424,6 @@ void Manager::Update(float& dt)
         {
             delete sharks[i];
             sharks.erase(sharks.begin() + i);
-            
         }
     }
 
@@ -420,6 +448,7 @@ void Manager::Update(float& dt)
         }
     }
 }
+
 
 void Manager::changeScore(int a)
 {
@@ -512,7 +541,11 @@ void Manager::Render(RenderWindow& window)
    
     for (const auto _decorations : background->decorations)
     {
-        window.draw(_decorations);
+        if (_decorations.active == true)
+        {
+            window.draw(_decorations);
+        }
+        
     }
 
     for (const auto fish : fishes)

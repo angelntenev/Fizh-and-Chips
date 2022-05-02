@@ -11,7 +11,7 @@ using namespace sf;
 
 
 
-Fish::Fish() : speed(0.25), Entity(IntRect(Vector2(32, 0), Vector2(32, 32)))
+Fish::Fish() : speed(0.45), Entity(IntRect(Vector2(32, 0), Vector2(32, 32)))
 {
     setOrigin(Vector2f(16, 16));
     startPoint = getRandomPos();
@@ -23,7 +23,7 @@ Fish::Fish() : speed(0.25), Entity(IntRect(Vector2(32, 0), Vector2(32, 32)))
     mouthPiece.setOrigin(Vector2f(3, 3));
     mouthPiece.setPosition(mouthPos);
     mouthPiece.setSize(mouthSize);
-    mouthPiece.setFillColor(Color::White);
+    mouthPiece.setFillColor(Color::Transparent);
     buffer.loadFromFile("res/Recording.ogg");
     sound.setBuffer(buffer);
 }
@@ -36,13 +36,18 @@ void Fish::Update(float& dt)
         hungerTimer -= dt;
     }
     coinCounter -= dt;
+    if (hungerTimer < -10)
+    {
+        distanceX = 0;
+        distanceY = 0;
+        if (getPosition().y < 780)
+        {
+            Fish::setPosition(Vector2f(getPosition().x, getPosition().y + 0.03));
+        }
+    }
     if (hungerTimer > 0)
     {
         Fish::moveTowardsWithMouth(destination, speed, dt);
-    }
-    if (hungerTimer < -10)
-    {
-        setDeadFish();
     }
     else
     {

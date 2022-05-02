@@ -1,17 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\fizhchips\Solutions\CMakeFiles\cb39cddfb51dffe947537b9b12558b46\copy_resources.rule">
+    <CustomBuild Include="D:\Fizh &amp; chips project\Solutions\CMakeFiles\04186587b5c5ba4d5e83de259f99cdfe\copy_resources.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\fizhchips\Cmake_stuff\CMakeLists.txt" />
+    <CustomBuild Include="D:\Fizh &amp; chips project\Cmake_stuff\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\fizhchips\Solutions\CMakeFiles\copy_resources" />
+    <None Include="D:\Fizh &amp; chips project\Solutions\CMakeFiles\copy_resources" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{5E0F640D-4733-3082-A2C5-E560B5BDBD0C}</UniqueIdentifier>
+      <UniqueIdentifier>{A396926B-F7C1-32DC-BD96-BDD98C42D490}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -11,12 +11,13 @@ class DecorationSprite : public Sprite
 {
 private:
 
-	bool active = false;
+	
 public:
 	std::vector<DecorationSprite> allDecorations(std::vector<DecorationSprite> _decorations);
 	DecorationSprite(bool rockORseaweed);
 	DecorationSprite getDecoration(Vector2f loc, DecorationSprite decorationSprite, bool isRockOrSeaweed);
 	bool getActive();
-
+	void setActive(bool newActive);
+	bool active = false;
 };
 

@@ -41,3 +41,13 @@ DecorationSprite::DecorationSprite(bool rockORseaweed)
         setOrigin(Vector2f(32, 32));
     }
 }
+
+bool DecorationSprite::getActive()
+{
+    return active;
+}
+
+void DecorationSprite::setActive(bool newActive)
+{
+    active = newActive;
+}
