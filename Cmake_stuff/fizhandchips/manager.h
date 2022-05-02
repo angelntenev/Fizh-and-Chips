@@ -8,6 +8,7 @@
 #include "fish.h"
 #include "fallingObjects.h"
 #include "animations.h"
+#include "background.h"
 
 
 class Manager

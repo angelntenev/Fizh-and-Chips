@@ -1,60 +1,72 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\animations.cpp">
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\fizhandchips\animations.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\crosshair.cpp">
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\fizhandchips\background.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\entity.cpp">
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\fizhandchips\crosshair.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\fallingObjects.cpp">
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\fizhandchips\decorationSprite.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\fish.cpp">
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\fizhandchips\entity.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\main.cpp">
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\fizhandchips\fallingObjects.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\manager.cpp">
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\fizhandchips\fish.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\fizhandchips\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\fizhchips\Cmake_stuff\fizhandchips\manager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\animations.h">
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\fizhandchips\animations.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\crosshair.h">
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\fizhandchips\background.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\entity.h">
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\fizhandchips\crosshair.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\fallingObjects.h">
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\fizhandchips\decorationSprite.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\fish.h">
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\fizhandchips\entity.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\game.h">
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\fizhandchips\fallingObjects.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\manager.h">
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\fizhandchips\fish.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\fizhandchips\game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\fizhchips\Cmake_stuff\fizhandchips\manager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Fizh &amp; chips project\Cmake_stuff\CMakeLists.txt" />
+    <CustomBuild Include="C:\fizhchips\Cmake_stuff\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{00B55782-0272-3FC9-8258-0E726B4E886A}</UniqueIdentifier>
+      <UniqueIdentifier>{A2EFC942-8EDF-32BB-A586-D64C25007B61}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{1DD9A7AF-BE4D-3CFC-A5C8-66006F076C84}</UniqueIdentifier>
+      <UniqueIdentifier>{D1528756-7750-30DC-8B93-0C5225D74DAB}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -23,6 +23,8 @@ sf::Texture spritesheetBossEnemy;
 sf::Texture shootTexture;
 sf::Texture target;
 sf::Texture spritesheetBackground;
+sf::Texture spritesheetSeaWeed;
+sf::Texture spritesheetRock;
 
 //Generate manager
 shared_ptr<Manager> gameManager = make_shared<Manager>();
@@ -39,6 +41,9 @@ void Load()
     spritesheetBossEnemy.loadFromFile("res/BossEnemy.png");
     shootTexture.loadFromFile("res/Attack.png");
     spritesheetBackground.loadFromFile("res/fizhBackground.png");
+    target.loadFromFile("res/fizhBackground.png");
+    spritesheetSeaWeed.loadFromFile("res/seaWEED.png");
+    spritesheetRock.loadFromFile("res/1Rock.png");
     target.loadFromFile("res/Target.png");
 
    

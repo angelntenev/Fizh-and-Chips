@@ -55,6 +55,8 @@ Manager::Manager() : chipsScore(999999999)
     BossEnemy->setSpeed(0.1);
    // bossEnemy.push_back(BossEnemy);
 
+    
+
 
 }
 
@@ -116,16 +118,16 @@ void Manager::Update(float& dt)
 
     //boss spawner
 
-        if (bossTime < 0 && BossEnemy->bossActive == false)
-        {
-            Fish* BossEnemy = new Fish();
-            bossEnemy.push_back(BossEnemy);
-            BossEnemy->setHealth(100);
-            BossEnemy->setBossEnemySprite();
-            BossEnemy->bossActive = true;
-            bossTime = 20;
-            noHunger = false;
-        }
+    if (bossTime < 0 && BossEnemy->bossActive == false)
+    {
+        Fish* BossEnemy = new Fish();
+        bossEnemy.push_back(BossEnemy);
+        BossEnemy->setHealth(100);
+        BossEnemy->setBossEnemySprite();
+        BossEnemy->bossActive = true;
+        bossTime = 20;
+        noHunger = false;
+    }
 
 
 
@@ -259,6 +261,7 @@ void Manager::Update(float& dt)
                 {
                     //setHungryShark
                     //fish->setHungryFish();
+                    shark->setHungryShark();
                 }
                 if (fishes.size() > 0)
                 {
@@ -277,6 +280,7 @@ void Manager::Update(float& dt)
                             delete fishes[i];
                             fishes.erase(fishes.begin() + i);
                             shark->playGulp();
+                            shark->setSharkNotHungry();
                         }
 
                     }
@@ -328,12 +332,10 @@ void Manager::Update(float& dt)
                 if (BossEnemy->getGlobalBounds().findIntersection(sharks[s]->getGlobalBounds()))
                 {
 
-                    BossEnemy->playGulp();
-                    sharks[s]->_fordeletion = true;
+                BossEnemy->playGulp();
+                sharks[s]->_fordeletion = true;
 
-                }
             }
-        }
 
         if (BossEnemy->getHealth() <= 0)
         {
@@ -393,6 +395,7 @@ void Manager::Update(float& dt)
         {
             delete sharks[i];
             sharks.erase(sharks.begin() + i);
+            
         }
     }
 
@@ -478,6 +481,7 @@ void Manager::moveToClosestFish(Fish& fish)
     }
     fish.startPoint = fish.reachPosition();
     fish.setBothDirection();
+
 }
 
 
@@ -491,14 +495,26 @@ void Manager::moveToClosestShark(Fish& shark)
         {
             shark.destination = sharks[i]->reachPosition();
             smallestDiff = Manager::closestPoint(shark.reachPosition(), sharks[i]->reachPosition());
+         
         }
     }
     shark.startPoint = shark.reachPosition();
     shark.setBothDirection();
+   
+    
+    
 }
 
 void Manager::Render(RenderWindow& window)
 {
+   window.draw(*background);
+    
+   
+    for (const auto _decorations : background->decorations)
+    {
+        window.draw(_decorations);
+    }
+
     for (const auto fish : fishes)
     {
         window.draw(*fish);
@@ -531,6 +547,9 @@ void Manager::Render(RenderWindow& window)
     {
         window.draw(*coin);
     }
+
+
+
 }
 
 int Manager::getChips()

@@ -1,29 +1,29 @@
-D:/Fizh & chips project/Solutions/CMakeFiles/copy_resources.dir
-D:/Fizh & chips project/Solutions/CMakeFiles/FIZHANDCHIPS.dir
-D:/Fizh & chips project/Solutions/CMakeFiles/PACKAGE.dir
-D:/Fizh & chips project/Solutions/CMakeFiles/INSTALL.dir
-D:/Fizh & chips project/Solutions/CMakeFiles/ALL_BUILD.dir
-D:/Fizh & chips project/Solutions/CMakeFiles/ZERO_CHECK.dir
-D:/Fizh & chips project/Solutions/lib/sfml/CMakeFiles/PACKAGE.dir
-D:/Fizh & chips project/Solutions/lib/sfml/CMakeFiles/INSTALL.dir
-D:/Fizh & chips project/Solutions/lib/sfml/CMakeFiles/ALL_BUILD.dir
-D:/Fizh & chips project/Solutions/lib/sfml/src/SFML/CMakeFiles/PACKAGE.dir
-D:/Fizh & chips project/Solutions/lib/sfml/src/SFML/CMakeFiles/INSTALL.dir
-D:/Fizh & chips project/Solutions/lib/sfml/src/SFML/System/CMakeFiles/sfml-system.dir
-D:/Fizh & chips project/Solutions/lib/sfml/src/SFML/System/CMakeFiles/PACKAGE.dir
-D:/Fizh & chips project/Solutions/lib/sfml/src/SFML/System/CMakeFiles/INSTALL.dir
-D:/Fizh & chips project/Solutions/lib/sfml/src/SFML/Main/CMakeFiles/sfml-main.dir
-D:/Fizh & chips project/Solutions/lib/sfml/src/SFML/Main/CMakeFiles/PACKAGE.dir
-D:/Fizh & chips project/Solutions/lib/sfml/src/SFML/Main/CMakeFiles/INSTALL.dir
-D:/Fizh & chips project/Solutions/lib/sfml/src/SFML/Window/CMakeFiles/sfml-window.dir
-D:/Fizh & chips project/Solutions/lib/sfml/src/SFML/Window/CMakeFiles/PACKAGE.dir
-D:/Fizh & chips project/Solutions/lib/sfml/src/SFML/Window/CMakeFiles/INSTALL.dir
-D:/Fizh & chips project/Solutions/lib/sfml/src/SFML/Network/CMakeFiles/sfml-network.dir
-D:/Fizh & chips project/Solutions/lib/sfml/src/SFML/Network/CMakeFiles/PACKAGE.dir
-D:/Fizh & chips project/Solutions/lib/sfml/src/SFML/Network/CMakeFiles/INSTALL.dir
-D:/Fizh & chips project/Solutions/lib/sfml/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir
-D:/Fizh & chips project/Solutions/lib/sfml/src/SFML/Graphics/CMakeFiles/PACKAGE.dir
-D:/Fizh & chips project/Solutions/lib/sfml/src/SFML/Graphics/CMakeFiles/INSTALL.dir
-D:/Fizh & chips project/Solutions/lib/sfml/src/SFML/Audio/CMakeFiles/sfml-audio.dir
-D:/Fizh & chips project/Solutions/lib/sfml/src/SFML/Audio/CMakeFiles/PACKAGE.dir
-D:/Fizh & chips project/Solutions/lib/sfml/src/SFML/Audio/CMakeFiles/INSTALL.dir
+C:/fizhchips/Solutions/CMakeFiles/copy_resources.dir
+C:/fizhchips/Solutions/CMakeFiles/FIZHANDCHIPS.dir
+C:/fizhchips/Solutions/CMakeFiles/PACKAGE.dir
+C:/fizhchips/Solutions/CMakeFiles/INSTALL.dir
+C:/fizhchips/Solutions/CMakeFiles/ALL_BUILD.dir
+C:/fizhchips/Solutions/CMakeFiles/ZERO_CHECK.dir
+C:/fizhchips/Solutions/lib/sfml/CMakeFiles/PACKAGE.dir
+C:/fizhchips/Solutions/lib/sfml/CMakeFiles/INSTALL.dir
+C:/fizhchips/Solutions/lib/sfml/CMakeFiles/ALL_BUILD.dir
+C:/fizhchips/Solutions/lib/sfml/src/SFML/CMakeFiles/PACKAGE.dir
+C:/fizhchips/Solutions/lib/sfml/src/SFML/CMakeFiles/INSTALL.dir
+C:/fizhchips/Solutions/lib/sfml/src/SFML/System/CMakeFiles/sfml-system.dir
+C:/fizhchips/Solutions/lib/sfml/src/SFML/System/CMakeFiles/PACKAGE.dir
+C:/fizhchips/Solutions/lib/sfml/src/SFML/System/CMakeFiles/INSTALL.dir
+C:/fizhchips/Solutions/lib/sfml/src/SFML/Main/CMakeFiles/sfml-main.dir
+C:/fizhchips/Solutions/lib/sfml/src/SFML/Main/CMakeFiles/PACKAGE.dir
+C:/fizhchips/Solutions/lib/sfml/src/SFML/Main/CMakeFiles/INSTALL.dir
+C:/fizhchips/Solutions/lib/sfml/src/SFML/Window/CMakeFiles/sfml-window.dir
+C:/fizhchips/Solutions/lib/sfml/src/SFML/Window/CMakeFiles/PACKAGE.dir
+C:/fizhchips/Solutions/lib/sfml/src/SFML/Window/CMakeFiles/INSTALL.dir
+C:/fizhchips/Solutions/lib/sfml/src/SFML/Network/CMakeFiles/sfml-network.dir
+C:/fizhchips/Solutions/lib/sfml/src/SFML/Network/CMakeFiles/PACKAGE.dir
+C:/fizhchips/Solutions/lib/sfml/src/SFML/Network/CMakeFiles/INSTALL.dir
+C:/fizhchips/Solutions/lib/sfml/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir
+C:/fizhchips/Solutions/lib/sfml/src/SFML/Graphics/CMakeFiles/PACKAGE.dir
+C:/fizhchips/Solutions/lib/sfml/src/SFML/Graphics/CMakeFiles/INSTALL.dir
+C:/fizhchips/Solutions/lib/sfml/src/SFML/Audio/CMakeFiles/sfml-audio.dir
+C:/fizhchips/Solutions/lib/sfml/src/SFML/Audio/CMakeFiles/PACKAGE.dir
+C:/fizhchips/Solutions/lib/sfml/src/SFML/Audio/CMakeFiles/INSTALL.dir
