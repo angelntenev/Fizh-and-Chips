@@ -50,7 +50,7 @@ add_library(SFML::System SHARED IMPORTED)
 
 set_target_properties(SFML::System PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_17"
-  INTERFACE_INCLUDE_DIRECTORIES "C:/Users/carlo/source/repos/Fizh-and-Chips/Cmake_stuff/lib/sfml/include"
+  INTERFACE_INCLUDE_DIRECTORIES "D:/Fizh & chips project/Cmake_stuff/lib/sfml/include"
 )
 
 # Create imported target SFML::Main
@@ -58,7 +58,7 @@ add_library(SFML::Main STATIC IMPORTED)
 
 set_target_properties(SFML::Main PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_17"
-  INTERFACE_INCLUDE_DIRECTORIES "C:/Users/carlo/source/repos/Fizh-and-Chips/Cmake_stuff/lib/sfml/include"
+  INTERFACE_INCLUDE_DIRECTORIES "D:/Fizh & chips project/Cmake_stuff/lib/sfml/include"
 )
 
 # Create imported target SFML::Window
@@ -66,7 +66,7 @@ add_library(SFML::Window SHARED IMPORTED)
 
 set_target_properties(SFML::Window PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_17"
-  INTERFACE_INCLUDE_DIRECTORIES "C:/Users/carlo/source/repos/Fizh-and-Chips/Cmake_stuff/lib/sfml/include"
+  INTERFACE_INCLUDE_DIRECTORIES "D:/Fizh & chips project/Cmake_stuff/lib/sfml/include"
   INTERFACE_LINK_LIBRARIES "SFML::System"
 )
 
@@ -82,7 +82,7 @@ add_library(SFML::Network SHARED IMPORTED)
 
 set_target_properties(SFML::Network PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_17"
-  INTERFACE_INCLUDE_DIRECTORIES "C:/Users/carlo/source/repos/Fizh-and-Chips/Cmake_stuff/lib/sfml/include"
+  INTERFACE_INCLUDE_DIRECTORIES "D:/Fizh & chips project/Cmake_stuff/lib/sfml/include"
   INTERFACE_LINK_LIBRARIES "SFML::System"
 )
 
@@ -91,7 +91,7 @@ add_library(SFML::Graphics SHARED IMPORTED)
 
 set_target_properties(SFML::Graphics PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_17"
-  INTERFACE_INCLUDE_DIRECTORIES "C:/Users/carlo/source/repos/Fizh-and-Chips/Cmake_stuff/lib/sfml/include"
+  INTERFACE_INCLUDE_DIRECTORIES "D:/Fizh & chips project/Cmake_stuff/lib/sfml/include"
   INTERFACE_LINK_LIBRARIES "SFML::Window"
 )
 
@@ -99,16 +99,16 @@ set_target_properties(SFML::Graphics PROPERTIES
 add_library(Freetype INTERFACE IMPORTED)
 
 set_target_properties(Freetype PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "C:/Users/carlo/source/repos/Fizh-and-Chips/Cmake_stuff/lib/sfml/extlibs/headers/freetype2"
-  INTERFACE_LINK_LIBRARIES "C:/Users/carlo/source/repos/Fizh-and-Chips/Cmake_stuff/lib/sfml/extlibs/libs-msvc-universal/x64/freetype.lib"
+  INTERFACE_INCLUDE_DIRECTORIES "D:/Fizh & chips project/Cmake_stuff/lib/sfml/extlibs/headers/freetype2"
+  INTERFACE_LINK_LIBRARIES "D:/Fizh & chips project/Cmake_stuff/lib/sfml/extlibs/libs-msvc-universal/x64/freetype.lib"
 )
 
 # Create imported target OpenAL
 add_library(OpenAL INTERFACE IMPORTED)
 
 set_target_properties(OpenAL PROPERTIES
-  INTERFACE_INCLUDE_DIRECTORIES "C:/Users/carlo/source/repos/Fizh-and-Chips/Cmake_stuff/lib/sfml/extlibs/headers/AL"
-  INTERFACE_LINK_LIBRARIES "C:/Users/carlo/source/repos/Fizh-and-Chips/Cmake_stuff/lib/sfml/extlibs/libs-msvc-universal/x64/openal32.lib"
+  INTERFACE_INCLUDE_DIRECTORIES "D:/Fizh & chips project/Cmake_stuff/lib/sfml/extlibs/headers/AL"
+  INTERFACE_LINK_LIBRARIES "D:/Fizh & chips project/Cmake_stuff/lib/sfml/extlibs/libs-msvc-universal/x64/openal32.lib"
 )
 
 # Create imported target VORBIS
@@ -116,8 +116,8 @@ add_library(VORBIS INTERFACE IMPORTED)
 
 set_target_properties(VORBIS PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "OV_EXCLUDE_STATIC_CALLBACKS"
-  INTERFACE_INCLUDE_DIRECTORIES "C:/Users/carlo/source/repos/Fizh-and-Chips/Cmake_stuff/lib/sfml/extlibs/headers;C:/Users/carlo/source/repos/Fizh-and-Chips/Cmake_stuff/lib/sfml/extlibs/headers"
-  INTERFACE_LINK_LIBRARIES "C:/Users/carlo/source/repos/Fizh-and-Chips/Cmake_stuff/lib/sfml/extlibs/libs-msvc-universal/x64/vorbisenc.lib;C:/Users/carlo/source/repos/Fizh-and-Chips/Cmake_stuff/lib/sfml/extlibs/libs-msvc-universal/x64/vorbisfile.lib;C:/Users/carlo/source/repos/Fizh-and-Chips/Cmake_stuff/lib/sfml/extlibs/libs-msvc-universal/x64/vorbis.lib;C:/Users/carlo/source/repos/Fizh-and-Chips/Cmake_stuff/lib/sfml/extlibs/libs-msvc-universal/x64/ogg.lib"
+  INTERFACE_INCLUDE_DIRECTORIES "D:/Fizh & chips project/Cmake_stuff/lib/sfml/extlibs/headers;D:/Fizh & chips project/Cmake_stuff/lib/sfml/extlibs/headers"
+  INTERFACE_LINK_LIBRARIES "D:/Fizh & chips project/Cmake_stuff/lib/sfml/extlibs/libs-msvc-universal/x64/vorbisenc.lib;D:/Fizh & chips project/Cmake_stuff/lib/sfml/extlibs/libs-msvc-universal/x64/vorbisfile.lib;D:/Fizh & chips project/Cmake_stuff/lib/sfml/extlibs/libs-msvc-universal/x64/vorbis.lib;D:/Fizh & chips project/Cmake_stuff/lib/sfml/extlibs/libs-msvc-universal/x64/ogg.lib"
 )
 
 # Create imported target FLAC
@@ -125,8 +125,8 @@ add_library(FLAC INTERFACE IMPORTED)
 
 set_target_properties(FLAC PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "FLAC__NO_DLL"
-  INTERFACE_INCLUDE_DIRECTORIES "C:/Users/carlo/source/repos/Fizh-and-Chips/Cmake_stuff/lib/sfml/extlibs/headers"
-  INTERFACE_LINK_LIBRARIES "C:/Users/carlo/source/repos/Fizh-and-Chips/Cmake_stuff/lib/sfml/extlibs/libs-msvc-universal/x64/flac.lib"
+  INTERFACE_INCLUDE_DIRECTORIES "D:/Fizh & chips project/Cmake_stuff/lib/sfml/extlibs/headers"
+  INTERFACE_LINK_LIBRARIES "D:/Fizh & chips project/Cmake_stuff/lib/sfml/extlibs/libs-msvc-universal/x64/flac.lib"
 )
 
 # Create imported target SFML::Audio
@@ -134,176 +134,176 @@ add_library(SFML::Audio SHARED IMPORTED)
 
 set_target_properties(SFML::Audio PROPERTIES
   INTERFACE_COMPILE_FEATURES "cxx_std_17"
-  INTERFACE_INCLUDE_DIRECTORIES "C:/Users/carlo/source/repos/Fizh-and-Chips/Cmake_stuff/lib/sfml/include"
+  INTERFACE_INCLUDE_DIRECTORIES "D:/Fizh & chips project/Cmake_stuff/lib/sfml/include"
   INTERFACE_LINK_LIBRARIES "SFML::System"
 )
 
 # Import target "SFML::System" for configuration "Debug"
 set_property(TARGET SFML::System APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(SFML::System PROPERTIES
-  IMPORTED_IMPLIB_DEBUG "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/Debug/sfml-system-d.lib"
-  IMPORTED_LOCATION_DEBUG "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/bin/Debug/sfml-system-d-3.dll"
+  IMPORTED_IMPLIB_DEBUG "D:/Fizh & chips project/Solutions/lib/sfml/lib/Debug/sfml-system-d.lib"
+  IMPORTED_LOCATION_DEBUG "D:/Fizh & chips project/Solutions/bin/Debug/sfml-system-d-3.dll"
   )
 
 # Import target "SFML::Main" for configuration "Debug"
 set_property(TARGET SFML::Main APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(SFML::Main PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_DEBUG "CXX"
-  IMPORTED_LOCATION_DEBUG "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/Debug/sfml-main-d.lib"
+  IMPORTED_LOCATION_DEBUG "D:/Fizh & chips project/Solutions/lib/sfml/lib/Debug/sfml-main-d.lib"
   )
 
 # Import target "SFML::Window" for configuration "Debug"
 set_property(TARGET SFML::Window APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(SFML::Window PROPERTIES
-  IMPORTED_IMPLIB_DEBUG "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/Debug/sfml-window-d.lib"
-  IMPORTED_LOCATION_DEBUG "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/bin/Debug/sfml-window-d-3.dll"
+  IMPORTED_IMPLIB_DEBUG "D:/Fizh & chips project/Solutions/lib/sfml/lib/Debug/sfml-window-d.lib"
+  IMPORTED_LOCATION_DEBUG "D:/Fizh & chips project/Solutions/bin/Debug/sfml-window-d-3.dll"
   )
 
 # Import target "SFML::Network" for configuration "Debug"
 set_property(TARGET SFML::Network APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(SFML::Network PROPERTIES
-  IMPORTED_IMPLIB_DEBUG "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/Debug/sfml-network-d.lib"
-  IMPORTED_LOCATION_DEBUG "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/bin/Debug/sfml-network-d-3.dll"
+  IMPORTED_IMPLIB_DEBUG "D:/Fizh & chips project/Solutions/lib/sfml/lib/Debug/sfml-network-d.lib"
+  IMPORTED_LOCATION_DEBUG "D:/Fizh & chips project/Solutions/bin/Debug/sfml-network-d-3.dll"
   )
 
 # Import target "SFML::Graphics" for configuration "Debug"
 set_property(TARGET SFML::Graphics APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(SFML::Graphics PROPERTIES
-  IMPORTED_IMPLIB_DEBUG "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/Debug/sfml-graphics-d.lib"
-  IMPORTED_LOCATION_DEBUG "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/bin/Debug/sfml-graphics-d-3.dll"
+  IMPORTED_IMPLIB_DEBUG "D:/Fizh & chips project/Solutions/lib/sfml/lib/Debug/sfml-graphics-d.lib"
+  IMPORTED_LOCATION_DEBUG "D:/Fizh & chips project/Solutions/bin/Debug/sfml-graphics-d-3.dll"
   )
 
 # Import target "SFML::Audio" for configuration "Debug"
 set_property(TARGET SFML::Audio APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(SFML::Audio PROPERTIES
-  IMPORTED_IMPLIB_DEBUG "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/Debug/sfml-audio-d.lib"
-  IMPORTED_LOCATION_DEBUG "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/bin/Debug/sfml-audio-d-3.dll"
+  IMPORTED_IMPLIB_DEBUG "D:/Fizh & chips project/Solutions/lib/sfml/lib/Debug/sfml-audio-d.lib"
+  IMPORTED_LOCATION_DEBUG "D:/Fizh & chips project/Solutions/bin/Debug/sfml-audio-d-3.dll"
   )
 
 # Import target "SFML::System" for configuration "Release"
 set_property(TARGET SFML::System APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(SFML::System PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/Release/sfml-system.lib"
-  IMPORTED_LOCATION_RELEASE "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/bin/Release/sfml-system-3.dll"
+  IMPORTED_IMPLIB_RELEASE "D:/Fizh & chips project/Solutions/lib/sfml/lib/Release/sfml-system.lib"
+  IMPORTED_LOCATION_RELEASE "D:/Fizh & chips project/Solutions/bin/Release/sfml-system-3.dll"
   )
 
 # Import target "SFML::Main" for configuration "Release"
 set_property(TARGET SFML::Main APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(SFML::Main PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/Release/sfml-main.lib"
+  IMPORTED_LOCATION_RELEASE "D:/Fizh & chips project/Solutions/lib/sfml/lib/Release/sfml-main.lib"
   )
 
 # Import target "SFML::Window" for configuration "Release"
 set_property(TARGET SFML::Window APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(SFML::Window PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/Release/sfml-window.lib"
-  IMPORTED_LOCATION_RELEASE "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/bin/Release/sfml-window-3.dll"
+  IMPORTED_IMPLIB_RELEASE "D:/Fizh & chips project/Solutions/lib/sfml/lib/Release/sfml-window.lib"
+  IMPORTED_LOCATION_RELEASE "D:/Fizh & chips project/Solutions/bin/Release/sfml-window-3.dll"
   )
 
 # Import target "SFML::Network" for configuration "Release"
 set_property(TARGET SFML::Network APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(SFML::Network PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/Release/sfml-network.lib"
-  IMPORTED_LOCATION_RELEASE "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/bin/Release/sfml-network-3.dll"
+  IMPORTED_IMPLIB_RELEASE "D:/Fizh & chips project/Solutions/lib/sfml/lib/Release/sfml-network.lib"
+  IMPORTED_LOCATION_RELEASE "D:/Fizh & chips project/Solutions/bin/Release/sfml-network-3.dll"
   )
 
 # Import target "SFML::Graphics" for configuration "Release"
 set_property(TARGET SFML::Graphics APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(SFML::Graphics PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/Release/sfml-graphics.lib"
-  IMPORTED_LOCATION_RELEASE "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/bin/Release/sfml-graphics-3.dll"
+  IMPORTED_IMPLIB_RELEASE "D:/Fizh & chips project/Solutions/lib/sfml/lib/Release/sfml-graphics.lib"
+  IMPORTED_LOCATION_RELEASE "D:/Fizh & chips project/Solutions/bin/Release/sfml-graphics-3.dll"
   )
 
 # Import target "SFML::Audio" for configuration "Release"
 set_property(TARGET SFML::Audio APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(SFML::Audio PROPERTIES
-  IMPORTED_IMPLIB_RELEASE "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/Release/sfml-audio.lib"
-  IMPORTED_LOCATION_RELEASE "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/bin/Release/sfml-audio-3.dll"
+  IMPORTED_IMPLIB_RELEASE "D:/Fizh & chips project/Solutions/lib/sfml/lib/Release/sfml-audio.lib"
+  IMPORTED_LOCATION_RELEASE "D:/Fizh & chips project/Solutions/bin/Release/sfml-audio-3.dll"
   )
 
 # Import target "SFML::System" for configuration "MinSizeRel"
 set_property(TARGET SFML::System APPEND PROPERTY IMPORTED_CONFIGURATIONS MINSIZEREL)
 set_target_properties(SFML::System PROPERTIES
-  IMPORTED_IMPLIB_MINSIZEREL "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/MinSizeRel/sfml-system.lib"
-  IMPORTED_LOCATION_MINSIZEREL "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/bin/MinSizeRel/sfml-system-3.dll"
+  IMPORTED_IMPLIB_MINSIZEREL "D:/Fizh & chips project/Solutions/lib/sfml/lib/MinSizeRel/sfml-system.lib"
+  IMPORTED_LOCATION_MINSIZEREL "D:/Fizh & chips project/Solutions/bin/MinSizeRel/sfml-system-3.dll"
   )
 
 # Import target "SFML::Main" for configuration "MinSizeRel"
 set_property(TARGET SFML::Main APPEND PROPERTY IMPORTED_CONFIGURATIONS MINSIZEREL)
 set_target_properties(SFML::Main PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_MINSIZEREL "CXX"
-  IMPORTED_LOCATION_MINSIZEREL "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/MinSizeRel/sfml-main.lib"
+  IMPORTED_LOCATION_MINSIZEREL "D:/Fizh & chips project/Solutions/lib/sfml/lib/MinSizeRel/sfml-main.lib"
   )
 
 # Import target "SFML::Window" for configuration "MinSizeRel"
 set_property(TARGET SFML::Window APPEND PROPERTY IMPORTED_CONFIGURATIONS MINSIZEREL)
 set_target_properties(SFML::Window PROPERTIES
-  IMPORTED_IMPLIB_MINSIZEREL "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/MinSizeRel/sfml-window.lib"
-  IMPORTED_LOCATION_MINSIZEREL "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/bin/MinSizeRel/sfml-window-3.dll"
+  IMPORTED_IMPLIB_MINSIZEREL "D:/Fizh & chips project/Solutions/lib/sfml/lib/MinSizeRel/sfml-window.lib"
+  IMPORTED_LOCATION_MINSIZEREL "D:/Fizh & chips project/Solutions/bin/MinSizeRel/sfml-window-3.dll"
   )
 
 # Import target "SFML::Network" for configuration "MinSizeRel"
 set_property(TARGET SFML::Network APPEND PROPERTY IMPORTED_CONFIGURATIONS MINSIZEREL)
 set_target_properties(SFML::Network PROPERTIES
-  IMPORTED_IMPLIB_MINSIZEREL "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/MinSizeRel/sfml-network.lib"
-  IMPORTED_LOCATION_MINSIZEREL "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/bin/MinSizeRel/sfml-network-3.dll"
+  IMPORTED_IMPLIB_MINSIZEREL "D:/Fizh & chips project/Solutions/lib/sfml/lib/MinSizeRel/sfml-network.lib"
+  IMPORTED_LOCATION_MINSIZEREL "D:/Fizh & chips project/Solutions/bin/MinSizeRel/sfml-network-3.dll"
   )
 
 # Import target "SFML::Graphics" for configuration "MinSizeRel"
 set_property(TARGET SFML::Graphics APPEND PROPERTY IMPORTED_CONFIGURATIONS MINSIZEREL)
 set_target_properties(SFML::Graphics PROPERTIES
-  IMPORTED_IMPLIB_MINSIZEREL "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/MinSizeRel/sfml-graphics.lib"
-  IMPORTED_LOCATION_MINSIZEREL "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/bin/MinSizeRel/sfml-graphics-3.dll"
+  IMPORTED_IMPLIB_MINSIZEREL "D:/Fizh & chips project/Solutions/lib/sfml/lib/MinSizeRel/sfml-graphics.lib"
+  IMPORTED_LOCATION_MINSIZEREL "D:/Fizh & chips project/Solutions/bin/MinSizeRel/sfml-graphics-3.dll"
   )
 
 # Import target "SFML::Audio" for configuration "MinSizeRel"
 set_property(TARGET SFML::Audio APPEND PROPERTY IMPORTED_CONFIGURATIONS MINSIZEREL)
 set_target_properties(SFML::Audio PROPERTIES
-  IMPORTED_IMPLIB_MINSIZEREL "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/MinSizeRel/sfml-audio.lib"
-  IMPORTED_LOCATION_MINSIZEREL "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/bin/MinSizeRel/sfml-audio-3.dll"
+  IMPORTED_IMPLIB_MINSIZEREL "D:/Fizh & chips project/Solutions/lib/sfml/lib/MinSizeRel/sfml-audio.lib"
+  IMPORTED_LOCATION_MINSIZEREL "D:/Fizh & chips project/Solutions/bin/MinSizeRel/sfml-audio-3.dll"
   )
 
 # Import target "SFML::System" for configuration "RelWithDebInfo"
 set_property(TARGET SFML::System APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)
 set_target_properties(SFML::System PROPERTIES
-  IMPORTED_IMPLIB_RELWITHDEBINFO "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/RelWithDebInfo/sfml-system.lib"
-  IMPORTED_LOCATION_RELWITHDEBINFO "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/bin/RelWithDebInfo/sfml-system-3.dll"
+  IMPORTED_IMPLIB_RELWITHDEBINFO "D:/Fizh & chips project/Solutions/lib/sfml/lib/RelWithDebInfo/sfml-system.lib"
+  IMPORTED_LOCATION_RELWITHDEBINFO "D:/Fizh & chips project/Solutions/bin/RelWithDebInfo/sfml-system-3.dll"
   )
 
 # Import target "SFML::Main" for configuration "RelWithDebInfo"
 set_property(TARGET SFML::Main APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)
 set_target_properties(SFML::Main PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELWITHDEBINFO "CXX"
-  IMPORTED_LOCATION_RELWITHDEBINFO "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/RelWithDebInfo/sfml-main.lib"
+  IMPORTED_LOCATION_RELWITHDEBINFO "D:/Fizh & chips project/Solutions/lib/sfml/lib/RelWithDebInfo/sfml-main.lib"
   )
 
 # Import target "SFML::Window" for configuration "RelWithDebInfo"
 set_property(TARGET SFML::Window APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)
 set_target_properties(SFML::Window PROPERTIES
-  IMPORTED_IMPLIB_RELWITHDEBINFO "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/RelWithDebInfo/sfml-window.lib"
-  IMPORTED_LOCATION_RELWITHDEBINFO "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/bin/RelWithDebInfo/sfml-window-3.dll"
+  IMPORTED_IMPLIB_RELWITHDEBINFO "D:/Fizh & chips project/Solutions/lib/sfml/lib/RelWithDebInfo/sfml-window.lib"
+  IMPORTED_LOCATION_RELWITHDEBINFO "D:/Fizh & chips project/Solutions/bin/RelWithDebInfo/sfml-window-3.dll"
   )
 
 # Import target "SFML::Network" for configuration "RelWithDebInfo"
 set_property(TARGET SFML::Network APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)
 set_target_properties(SFML::Network PROPERTIES
-  IMPORTED_IMPLIB_RELWITHDEBINFO "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/RelWithDebInfo/sfml-network.lib"
-  IMPORTED_LOCATION_RELWITHDEBINFO "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/bin/RelWithDebInfo/sfml-network-3.dll"
+  IMPORTED_IMPLIB_RELWITHDEBINFO "D:/Fizh & chips project/Solutions/lib/sfml/lib/RelWithDebInfo/sfml-network.lib"
+  IMPORTED_LOCATION_RELWITHDEBINFO "D:/Fizh & chips project/Solutions/bin/RelWithDebInfo/sfml-network-3.dll"
   )
 
 # Import target "SFML::Graphics" for configuration "RelWithDebInfo"
 set_property(TARGET SFML::Graphics APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)
 set_target_properties(SFML::Graphics PROPERTIES
-  IMPORTED_IMPLIB_RELWITHDEBINFO "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/RelWithDebInfo/sfml-graphics.lib"
-  IMPORTED_LOCATION_RELWITHDEBINFO "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/bin/RelWithDebInfo/sfml-graphics-3.dll"
+  IMPORTED_IMPLIB_RELWITHDEBINFO "D:/Fizh & chips project/Solutions/lib/sfml/lib/RelWithDebInfo/sfml-graphics.lib"
+  IMPORTED_LOCATION_RELWITHDEBINFO "D:/Fizh & chips project/Solutions/bin/RelWithDebInfo/sfml-graphics-3.dll"
   )
 
 # Import target "SFML::Audio" for configuration "RelWithDebInfo"
 set_property(TARGET SFML::Audio APPEND PROPERTY IMPORTED_CONFIGURATIONS RELWITHDEBINFO)
 set_target_properties(SFML::Audio PROPERTIES
-  IMPORTED_IMPLIB_RELWITHDEBINFO "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/RelWithDebInfo/sfml-audio.lib"
-  IMPORTED_LOCATION_RELWITHDEBINFO "C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/bin/RelWithDebInfo/sfml-audio-3.dll"
+  IMPORTED_IMPLIB_RELWITHDEBINFO "D:/Fizh & chips project/Solutions/lib/sfml/lib/RelWithDebInfo/sfml-audio.lib"
+  IMPORTED_LOCATION_RELWITHDEBINFO "D:/Fizh & chips project/Solutions/bin/RelWithDebInfo/sfml-audio-3.dll"
   )
 
 # This file does not depend on other imported targets which have

@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/carlo/source/repos/Fizh-and-Chips/Cmake_stuff/lib/sfml/src/SFML
+# Install script for directory: D:/Fizh & chips project/Cmake_stuff/lib/sfml/src/SFML
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,12 +34,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/src/SFML/System/cmake_install.cmake")
-  include("C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/src/SFML/Main/cmake_install.cmake")
-  include("C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/src/SFML/Window/cmake_install.cmake")
-  include("C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/src/SFML/Network/cmake_install.cmake")
-  include("C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/src/SFML/Graphics/cmake_install.cmake")
-  include("C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/src/SFML/Audio/cmake_install.cmake")
+  include("D:/Fizh & chips project/Solutions/lib/sfml/src/SFML/System/cmake_install.cmake")
+  include("D:/Fizh & chips project/Solutions/lib/sfml/src/SFML/Main/cmake_install.cmake")
+  include("D:/Fizh & chips project/Solutions/lib/sfml/src/SFML/Window/cmake_install.cmake")
+  include("D:/Fizh & chips project/Solutions/lib/sfml/src/SFML/Network/cmake_install.cmake")
+  include("D:/Fizh & chips project/Solutions/lib/sfml/src/SFML/Graphics/cmake_install.cmake")
+  include("D:/Fizh & chips project/Solutions/lib/sfml/src/SFML/Audio/cmake_install.cmake")
 
 endif()
 

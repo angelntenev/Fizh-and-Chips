@@ -356,7 +356,6 @@ void Manager::Update(float& dt)
                 BossEnemy->drainHealth(5);
                 inactiveTimer = 2;
                 inactiveBoss = false;
-                chipsScore += 300;
             }
         }
 
@@ -453,6 +452,7 @@ void Manager::Update(float& dt)
             bossEnemy.erase(bossEnemy.begin() + i);
             noHunger = true;
             BossEnemy->bossActive = false;
+            chipsScore += 300;
         }
     }
 

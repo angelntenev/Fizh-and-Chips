@@ -1,50 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src\SFML\System\Clock.cpp" />
-    <ClCompile Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src\SFML\System\Err.cpp" />
-    <ClCompile Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src\SFML\System\Sleep.cpp" />
-    <ClCompile Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src\SFML\System\String.cpp" />
-    <ClCompile Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src\SFML\System\Time.cpp" />
-    <ClCompile Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src\SFML\System\FileInputStream.cpp" />
-    <ClCompile Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src\SFML\System\MemoryInputStream.cpp" />
-    <ClCompile Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src\SFML\System\Win32\SleepImpl.cpp">
+    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\System\Clock.cpp" />
+    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\System\Err.cpp" />
+    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\System\Sleep.cpp" />
+    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\System\String.cpp" />
+    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\System\Time.cpp" />
+    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\System\FileInputStream.cpp" />
+    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\System\MemoryInputStream.cpp" />
+    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\System\Win32\SleepImpl.cpp">
       <Filter>windows</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\Clock.hpp" />
-    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\Err.hpp" />
-    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\Export.hpp" />
-    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\InputStream.hpp" />
-    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\NativeActivity.hpp" />
-    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\Sleep.hpp" />
-    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\String.hpp" />
-    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\String.inl" />
-    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\Time.hpp" />
-    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\Time.inl" />
-    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\Utf.hpp" />
-    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\Utf.inl" />
-    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\Vector2.hpp" />
-    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\Vector2.inl" />
-    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\Vector3.hpp" />
-    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\Vector3.inl" />
-    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\FileInputStream.hpp" />
-    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\MemoryInputStream.hpp" />
-    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\SuspendAwareClock.hpp" />
-    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src\SFML\System\Win32\SleepImpl.hpp">
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\Clock.hpp" />
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\Err.hpp" />
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\Export.hpp" />
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\InputStream.hpp" />
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\NativeActivity.hpp" />
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\Sleep.hpp" />
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\String.hpp" />
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\String.inl" />
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\Time.hpp" />
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\Time.inl" />
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\Utf.hpp" />
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\Utf.inl" />
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\Vector2.hpp" />
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\Vector2.inl" />
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\Vector3.hpp" />
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\Vector3.inl" />
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\FileInputStream.hpp" />
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\MemoryInputStream.hpp" />
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\SuspendAwareClock.hpp" />
+    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\System\Win32\SleepImpl.hpp">
       <Filter>windows</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src\SFML\System\CMakeLists.txt" />
+    <CustomBuild Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\System\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Solutions\lib\sfml\src\SFML\System\sfml-system.rc" />
+    <ResourceCompile Include="D:\Fizh &amp; chips project\Solutions\lib\sfml\src\SFML\System\sfml-system.rc" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="windows">
-      <UniqueIdentifier>{B46FE126-380E-3547-8B86-A4A7F71BC90B}</UniqueIdentifier>
+      <UniqueIdentifier>{824B2743-B7E5-3CFF-A3AD-63976A3F8E98}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
