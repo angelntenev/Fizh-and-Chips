@@ -11,7 +11,7 @@ using namespace sf;
 
 
 
-Fish::Fish() : speed(0.45), Entity(IntRect(Vector2(32, 0), Vector2(32, 32)))
+Fish::Fish() : speed(0.60), Entity(IntRect(Vector2(32, 0), Vector2(32, 32)))
 {
     setOrigin(Vector2f(16, 16));
     startPoint = getRandomPos();

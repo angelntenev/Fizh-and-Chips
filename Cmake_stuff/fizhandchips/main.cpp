@@ -7,7 +7,7 @@
 #include "entity.h"
 #include "game.h"
 #include "fish.h"
-//#include "carnivore.h"
+#include "menu.h"
 #include "manager.h"
 using namespace std;
 using namespace sf;
@@ -25,11 +25,17 @@ sf::Texture target;
 sf::Texture spritesheetBackground;
 sf::Texture spritesheetSeaWeed;
 sf::Texture spritesheetRock;
+sf::Texture menuBackground;
+sf::Texture menuButton;
+sf::Texture dashBoard;
 
 //Generate manager
 shared_ptr<Manager> gameManager = make_shared<Manager>();
+Menu* menu = new Menu();
+bool pause = false;
+bool reset = false;
 
-
+Crosshair* crosshair = new Crosshair();
 
 
 //Fish* fish1 = new Fish();
@@ -45,8 +51,9 @@ void Load()
     spritesheetSeaWeed.loadFromFile("res/seaWEED.png");
     spritesheetRock.loadFromFile("res/1Rock.png");
     target.loadFromFile("res/Target.png");
-
-   
+    menuBackground.loadFromFile("res/menuBackground.png");
+    menuButton.loadFromFile("res/button.png");
+    dashBoard.loadFromFile("res/dashboard.png");
 }
 
 void Reset()
@@ -59,6 +66,11 @@ void Update(RenderWindow& window)
     static Clock clock;
     float dt = clock.restart().asSeconds();
     
+    if (pause == true)
+    {
+        menu->setActive(true);
+        pause = false;
+    }
 
     sf::Event event;
     while (window.pollEvent(event))
@@ -70,22 +82,34 @@ void Update(RenderWindow& window)
         }
     }
 
-    if (Keyboard::isKeyPressed(Keyboard::Escape))
+
+
+    if (menu->getActive() == true)
     {
-        window.close();
+        menu->Update(dt);
+    }
+    else
+    {
+        gameManager->Update(dt);
+
     }
 
-
-    gameManager->Update(dt);
-
-    //fish1->Update(dt);
+    crosshair->Update(dt);
 
 }
 
 void Render(RenderWindow& window)
 {
-    
-    gameManager->Render(window);
+    if (menu->getActive() == true)
+    {
+        window.draw(*menu);
+        menu->Render(window);
+    }
+    else
+    {
+        gameManager->Render(window);
+    }
+    window.draw(*crosshair);
 
 }
 

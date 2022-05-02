@@ -24,9 +24,9 @@ protected:
 	std::vector<Fish*> sharks;
 	std::vector<Fish*> bossEnemy;
 	std::vector<Anim*> bullets;
-	sf::Texture spritesheet2;
+	Sprite dashboard;
 	float buyTimer = 0.1, feedTimer = 0.1;
-	float bossTime = 100;
+	float bossTime = 120;
 	Sprite crossTarget;
 	void setTarget();
 	void putTargetAway();
@@ -35,7 +35,8 @@ protected:
 	bool inactiveBoss = false;
 	float inactiveTimer = 2;
 	Background* background = new Background();
-
+	void checkForReset();
+	
 public:
 	Manager();
 	//float bossTime = 3;
@@ -51,5 +52,6 @@ public:
 	int getChips();
 	void setChips(int chips);
 	void addChips(int chips);
+	void setupDashboard();
 	void Render(sf::RenderWindow& window);
 };

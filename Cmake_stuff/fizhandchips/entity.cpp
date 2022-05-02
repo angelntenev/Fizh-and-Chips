@@ -132,7 +132,7 @@ const sf::Vector2f Entity::getRandomPos()
     std::random_device dev;
     std::mt19937 rng(dev());
     std::uniform_int_distribution<std::mt19937::result_type> dist6(0, screenWidth); 
-    std::uniform_int_distribution<std::mt19937::result_type> dist7(0, screenHeight);
+    std::uniform_int_distribution<std::mt19937::result_type> dist7(120, screenHeight);
     return Vector2f(dist6(rng), dist7(rng));
 }
 

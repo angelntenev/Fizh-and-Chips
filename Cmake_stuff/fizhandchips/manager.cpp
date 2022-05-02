@@ -19,7 +19,7 @@ using namespace sf;
 
 
 //Generate crosshair
-Crosshair* crosshair = new Crosshair();
+
 bool noHunger = true;
 
 
@@ -41,19 +41,18 @@ const Keyboard::Key controls[11] =
 
 
 
-Manager::Manager() : chipsScore(80000000)
+Manager::Manager() : chipsScore(300)
 {
     font.loadFromFile("res/SupermercadoOne-Regular.ttf");
     scoreText.setFont(font);
     scoreText.setCharacterSize(24);
     scoreText.setString(std::to_string(chipsScore));
-    scoreText.setPosition(Vector2f(screenWidth - 100, 20));
-    Fish* fish = new Fish();
-    fishes.push_back(fish);
+    scoreText.setPosition(Vector2f(screenWidth - 100, 40));
     Fish* BossEnemy = new Fish();
     BossEnemy->setBossEnemySprite();
     setTarget();
     BossEnemy->setSpeed(0.1);
+    setupDashboard();
    // bossEnemy.push_back(BossEnemy);
 
 
@@ -66,6 +65,8 @@ void Manager::Update(float& dt)
 {
     crosshair->Update(dt);
 
+    checkForReset();
+
     if (inactiveTimer < 0)
     {
         inactiveBoss = true;
@@ -74,7 +75,6 @@ void Manager::Update(float& dt)
     {
         inactiveTimer -= dt;
     }
-    cout << bossTime << endl;
 
     if (noHunger == true)
     {
@@ -84,7 +84,7 @@ void Manager::Update(float& dt)
     scoreText.setString(std::to_string(chipsScore));
     if (Keyboard::isKeyPressed(controls[1]))
     {
-        if (buyTimer >= 0.1)
+        if (buyTimer >= 0.2)
         {
             if ((chipsScore - decorationPrice) >= 0)
             {
@@ -97,9 +97,9 @@ void Manager::Update(float& dt)
         }
     }
     scoreText.setString(std::to_string(chipsScore));
-    if (Keyboard::isKeyPressed(controls[6]))
+    if (Keyboard::isKeyPressed(controls[3]))
     {
-        if (buyTimer >= 0.1)
+        if (buyTimer >= 0.2)
         {
             int count = 0;
             for (auto& _decorations : background->decorations)
@@ -123,19 +123,31 @@ void Manager::Update(float& dt)
     scoreText.setString(std::to_string(chipsScore));
     if (Keyboard::isKeyPressed(controls[2]))
     {
-        if (buyTimer >= 0.1)
+        if (buyTimer >= 0.2)
         {
-            if ((chipsScore - 5) >= 0)
+            if ((chipsScore - 500) >= 0)
             {
                 Fish* shark = new Fish();
                 shark->setOrigin(Vector2f(64.f, 32.f));
                 shark->setSharkSprite();
                 sharks.push_back(shark);
-                addChips(-5);
+                addChips(-500);
                 scoreText.setString(std::to_string(chipsScore));
             }
             buyTimer = 0;
         }
+    }
+    if (Keyboard::isKeyPressed(Keyboard::A) && Keyboard::isKeyPressed(Keyboard::M))
+    {
+        if (buyTimer >= 0.2)
+        {
+            addChips(1000);
+            buyTimer = 0;
+        }
+    }
+    if (Keyboard::isKeyPressed(Keyboard::Escape))
+    {
+        pause = true;
     }
     buyTimer += dt;
     // bossTime += dt;
@@ -149,7 +161,7 @@ void Manager::Update(float& dt)
         BossEnemy->setHealth(100);
         BossEnemy->setBossEnemySprite();
         BossEnemy->bossActive = true;
-        bossTime = 20;
+        bossTime = 120;
         noHunger = false;
     }
 
@@ -308,10 +320,15 @@ void Manager::Update(float& dt)
                             delete fishes[i];
                             fishes.erase(fishes.begin() + i);
                             shark->playGulp();
+                            shark->setSharkNotHungry();
                         }
 
                     }
                 }
+            }
+            if (shark->getHungerTimer() < -10)
+            {
+                shark->setDeadShark();
             }
             if (shark->getHungerTimer() < -15)
             {
@@ -339,6 +356,7 @@ void Manager::Update(float& dt)
                 BossEnemy->drainHealth(5);
                 inactiveTimer = 2;
                 inactiveBoss = false;
+                chipsScore += 300;
             }
         }
 
@@ -447,6 +465,24 @@ void Manager::Update(float& dt)
             bullets.erase(bullets.begin() + i);
         }
     }
+
+    for (int i = foodObjects.size() - 1; i >= 0; i--)
+    {
+        if (foodObjects[i]->_fordeletion == true)
+        {
+            delete foodObjects[i];
+            foodObjects.erase(foodObjects.begin() + i);
+        }
+    }
+
+    for (int i = currencyObjects.size() - 1; i >= 0; i--)
+    {
+        if (currencyObjects[i]->_fordeletion == true)
+        {
+            delete currencyObjects[i];
+            currencyObjects.erase(currencyObjects.begin() + i);
+        }
+    }
 }
 
 
@@ -537,7 +573,7 @@ void Manager::moveToClosestShark(Fish& shark)
 void Manager::Render(RenderWindow& window)
 {
    window.draw(*background);
-    
+   window.draw(dashboard);
    
     for (const auto _decorations : background->decorations)
     {
@@ -616,4 +652,48 @@ void Manager::putTargetAway()
 void Manager::placeTarget(Vector2f loc)
 {
     crossTarget.setPosition(loc);
+}
+
+void Manager::checkForReset()
+{
+    if (reset == true)
+    {
+        for (auto& s : sharks)
+        {
+            s->_fordeletion = true;
+        }
+        for (auto& s : fishes)
+        {
+            s->_fordeletion = true;
+        }
+        for (auto& s : bossEnemy)
+        {
+            s->_fordeletion = true;
+        }
+        for (auto& s : background->decorations)
+        {
+            s.setActive(false);
+        }
+        for (auto& s : foodObjects)
+        {
+            s->_fordeletion = true;
+        }
+        for (auto& s : foodObjects)
+        {
+            s->_fordeletion = true;
+        }
+        for (auto& s : currencyObjects)
+        {
+            s->_fordeletion = true;
+        }
+        chipsScore = 300;
+    }
+    reset = false;
+}
+
+void Manager::setupDashboard()
+{
+    dashboard.setTexture(dashBoard);
+    dashboard.setTextureRect(IntRect(Vector2(0, 0), Vector2(1600, 80)));
+    dashboard.setPosition(Vector2f(0, 0));
 }
