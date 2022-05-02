@@ -22,7 +22,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{FFC221F3-1782-34DC-9BDD-C8075DCA2187}</ProjectGuid>
+    <ProjectGuid>{64F98A24-39DB-30EB-A160-7EF4AAE762C1}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
@@ -59,25 +59,25 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Fizh &amp; chips project\Solutions\bin\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\carlo\source\repos\Fizh-and-Chips\Solutions\bin\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sfml-system.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">sfml-system-d-3</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Fizh &amp; chips project\Solutions\bin\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\carlo\source\repos\Fizh-and-Chips\Solutions\bin\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sfml-system.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">sfml-system-3</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Fizh &amp; chips project\Solutions\bin\MinSizeRel\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\carlo\source\repos\Fizh-and-Chips\Solutions\bin\MinSizeRel\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">sfml-system.dir\MinSizeRel\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">sfml-system-3</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">.dll</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Fizh &amp; chips project\Solutions\bin\RelWithDebInfo\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\carlo\source\repos\Fizh-and-Chips\Solutions\bin\RelWithDebInfo\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">sfml-system.dir\RelWithDebInfo\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">sfml-system-3</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">.dll</TargetExt>
@@ -86,7 +86,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include;C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -104,10 +104,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_DEBUG;_WINDOWS;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Debug\";SFML_SYSTEM_EXPORTS</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include;C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include;C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -120,8 +120,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/Fizh &amp; chips project/Solutions/lib/sfml/lib/Debug/sfml-system-d.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/Fizh &amp; chips project/Solutions/lib/sfml/lib/Debug/sfml-system.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/Debug/sfml-system-d.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/Debug/sfml-system.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -130,7 +130,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include;C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
@@ -148,10 +148,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"Release\";SFML_SYSTEM_EXPORTS</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include;C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include;C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -164,8 +164,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/Fizh &amp; chips project/Solutions/lib/sfml/lib/Release/sfml-system.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/Fizh &amp; chips project/Solutions/lib/sfml/lib/Release/sfml-system.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/Release/sfml-system.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/Release/sfml-system.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -174,7 +174,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include;C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <ExceptionHandling>Sync</ExceptionHandling>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
@@ -192,10 +192,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"MinSizeRel\";SFML_SYSTEM_EXPORTS</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include;C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include;C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -208,8 +208,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/Fizh &amp; chips project/Solutions/lib/sfml/lib/MinSizeRel/sfml-system.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/Fizh &amp; chips project/Solutions/lib/sfml/lib/MinSizeRel/sfml-system.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/MinSizeRel/sfml-system.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/MinSizeRel/sfml-system.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -218,7 +218,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include;C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -235,10 +235,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;_CRT_SECURE_NO_DEPRECATE;_SCL_SECURE_NO_WARNINGS;CMAKE_INTDIR=\"RelWithDebInfo\";SFML_SYSTEM_EXPORTS</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include;C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include;D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include;C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -251,8 +251,8 @@
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>D:/Fizh &amp; chips project/Solutions/lib/sfml/lib/RelWithDebInfo/sfml-system.lib</ImportLibrary>
-      <ProgramDataBaseFile>D:/Fizh &amp; chips project/Solutions/lib/sfml/lib/RelWithDebInfo/sfml-system.pdb</ProgramDataBaseFile>
+      <ImportLibrary>C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/RelWithDebInfo/sfml-system.lib</ImportLibrary>
+      <ProgramDataBaseFile>C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/lib/RelWithDebInfo/sfml-system.pdb</ProgramDataBaseFile>
       <SubSystem>Console</SubSystem>
     </Link>
     <ProjectReference>
@@ -260,11 +260,11 @@
     </ProjectReference>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\System\CMakeLists.txt">
+    <CustomBuild Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src\SFML\System\CMakeLists.txt">
       <UseUtf8Encoding>Always</UseUtf8Encoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/Fizh ^&amp; chips project/Cmake_stuff/lib/sfml/src/SFML/System/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/carlo/source/repos/Fizh-and-Chips/Cmake_stuff/lib/sfml/src/SFML/System/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Fizh &amp; chips project/Cmake_stuff" "-BD:/Fizh &amp; chips project/Solutions" --check-stamp-file "D:/Fizh &amp; chips project/Solutions/lib/sfml/src/SFML/System/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/carlo/source/repos/Fizh-and-Chips/Cmake_stuff -BC:/Users/carlo/source/repos/Fizh-and-Chips/Solutions --check-stamp-file C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/src/SFML/System/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -272,12 +272,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\tools\windows\resource.rc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\Fizh &amp; chips project\Solutions\lib\sfml\src\SFML\System\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\tools\windows\resource.rc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\carlo\source\repos\Fizh-and-Chips\Solutions\lib\sfml\src\SFML\System\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/Fizh ^&amp; chips project/Cmake_stuff/lib/sfml/src/SFML/System/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/carlo/source/repos/Fizh-and-Chips/Cmake_stuff/lib/sfml/src/SFML/System/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Fizh &amp; chips project/Cmake_stuff" "-BD:/Fizh &amp; chips project/Solutions" --check-stamp-file "D:/Fizh &amp; chips project/Solutions/lib/sfml/src/SFML/System/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/carlo/source/repos/Fizh-and-Chips/Cmake_stuff -BC:/Users/carlo/source/repos/Fizh-and-Chips/Solutions --check-stamp-file C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/src/SFML/System/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -285,12 +285,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\tools\windows\resource.rc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\Fizh &amp; chips project\Solutions\lib\sfml\src\SFML\System\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\tools\windows\resource.rc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\carlo\source\repos\Fizh-and-Chips\Solutions\lib\sfml\src\SFML\System\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule D:/Fizh ^&amp; chips project/Cmake_stuff/lib/sfml/src/SFML/System/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Building Custom Rule C:/Users/carlo/source/repos/Fizh-and-Chips/Cmake_stuff/lib/sfml/src/SFML/System/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Fizh &amp; chips project/Cmake_stuff" "-BD:/Fizh &amp; chips project/Solutions" --check-stamp-file "D:/Fizh &amp; chips project/Solutions/lib/sfml/src/SFML/System/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/carlo/source/repos/Fizh-and-Chips/Cmake_stuff -BC:/Users/carlo/source/repos/Fizh-and-Chips/Solutions --check-stamp-file C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/src/SFML/System/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -298,12 +298,12 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\tools\windows\resource.rc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">D:\Fizh &amp; chips project\Solutions\lib\sfml\src\SFML\System\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\tools\windows\resource.rc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\carlo\source\repos\Fizh-and-Chips\Solutions\lib\sfml\src\SFML\System\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule D:/Fizh ^&amp; chips project/Cmake_stuff/lib/sfml/src/SFML/System/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Building Custom Rule C:/Users/carlo/source/repos/Fizh-and-Chips/Cmake_stuff/lib/sfml/src/SFML/System/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files\CMake\bin\cmake.exe" "-SD:/Fizh &amp; chips project/Cmake_stuff" "-BD:/Fizh &amp; chips project/Solutions" --check-stamp-file "D:/Fizh &amp; chips project/Solutions/lib/sfml/src/SFML/System/CMakeFiles/generate.stamp"
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/carlo/source/repos/Fizh-and-Chips/Cmake_stuff -BC:/Users/carlo/source/repos/Fizh-and-Chips/Solutions --check-stamp-file C:/Users/carlo/source/repos/Fizh-and-Chips/Solutions/lib/sfml/src/SFML/System/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -311,13 +311,13 @@ endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
 exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\tools\windows\resource.rc.in;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">D:\Fizh &amp; chips project\Solutions\lib\sfml\src\SFML\System\CMakeFiles\generate.stamp</Outputs>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\tools\windows\resource.rc.in;%(AdditionalInputs)</AdditionalInputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\carlo\source\repos\Fizh-and-Chips\Solutions\lib\sfml\src\SFML\System\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\System\Clock.cpp">
+    <ClCompile Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src\SFML\System\Clock.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -339,8 +339,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\Clock.hpp" />
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\System\Err.cpp">
+    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\Clock.hpp" />
+    <ClCompile Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src\SFML\System\Err.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -362,11 +362,11 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\Err.hpp" />
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\Export.hpp" />
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\InputStream.hpp" />
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\NativeActivity.hpp" />
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\System\Sleep.cpp">
+    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\Err.hpp" />
+    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\Export.hpp" />
+    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\InputStream.hpp" />
+    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\NativeActivity.hpp" />
+    <ClCompile Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src\SFML\System\Sleep.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -388,8 +388,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\Sleep.hpp" />
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\System\String.cpp">
+    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\Sleep.hpp" />
+    <ClCompile Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src\SFML\System\String.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -411,9 +411,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\String.hpp" />
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\String.inl" />
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\System\Time.cpp">
+    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\String.hpp" />
+    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\String.inl" />
+    <ClCompile Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src\SFML\System\Time.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -435,15 +435,15 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\Time.hpp" />
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\Time.inl" />
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\Utf.hpp" />
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\Utf.inl" />
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\Vector2.hpp" />
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\Vector2.inl" />
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\Vector3.hpp" />
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\Vector3.inl" />
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\System\FileInputStream.cpp">
+    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\Time.hpp" />
+    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\Time.inl" />
+    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\Utf.hpp" />
+    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\Utf.inl" />
+    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\Vector2.hpp" />
+    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\Vector2.inl" />
+    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\Vector3.hpp" />
+    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\Vector3.inl" />
+    <ClCompile Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src\SFML\System\FileInputStream.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -465,8 +465,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\FileInputStream.hpp" />
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\System\MemoryInputStream.cpp">
+    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\FileInputStream.hpp" />
+    <ClCompile Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src\SFML\System\MemoryInputStream.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -488,9 +488,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\MemoryInputStream.hpp" />
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\include\SFML\System\SuspendAwareClock.hpp" />
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\System\Win32\SleepImpl.cpp">
+    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\MemoryInputStream.hpp" />
+    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\include\SFML\System\SuspendAwareClock.hpp" />
+    <ClCompile Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src\SFML\System\Win32\SleepImpl.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalOptions) /w14242 /w14254 /w14263 /w14265 /w14287 /w14296 /w14311 /w14545 /w14546 /w14547 /w14549 /w14555 /w14619 /w14640 /w14826 /w14905 /w14906 /w14928</AdditionalOptions>
       <DisableSpecificWarnings Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4996;4068;4505;4800;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <TreatSpecificWarningsAsErrors Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4289</TreatSpecificWarningsAsErrors>
@@ -512,12 +512,12 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <TreatWarningAsError Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">true</TreatWarningAsError>
       <WarningLevel Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Level4</WarningLevel>
     </ClCompile>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\lib\sfml\src\SFML\System\Win32\SleepImpl.hpp" />
-    <ResourceCompile Include="D:\Fizh &amp; chips project\Solutions\lib\sfml\src\SFML\System\sfml-system.rc" />
+    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\lib\sfml\src\SFML\System\Win32\SleepImpl.hpp" />
+    <ResourceCompile Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Solutions\lib\sfml\src\SFML\System\sfml-system.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="D:\Fizh &amp; chips project\Solutions\ZERO_CHECK.vcxproj">
-      <Project>{2E42D8FD-8508-3445-81CD-E1B200D13171}</Project>
+    <ProjectReference Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Solutions\ZERO_CHECK.vcxproj">
+      <Project>{4C72CA0B-5444-38CE-B4BD-2253947924DF}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>

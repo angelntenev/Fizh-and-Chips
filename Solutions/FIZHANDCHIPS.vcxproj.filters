@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\animations.cpp">
+    <ClCompile Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\fizhandchips\animations.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\background.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -14,18 +15,24 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\entity.cpp">
+=======
+    <ClCompile Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\fizhandchips\crosshair.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\fallingObjects.cpp">
+    <ClCompile Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\fizhandchips\entity.cpp">
+>>>>>>> ef3e805928d2c87b057c1ba1ff68ac238705b17c
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\fish.cpp">
+    <ClCompile Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\fizhandchips\fallingObjects.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\main.cpp">
+    <ClCompile Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\fizhandchips\fish.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\manager.cpp">
+    <ClCompile Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\fizhandchips\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\fizhandchips\manager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\menu.cpp">
@@ -33,9 +40,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\animations.h">
+    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\fizhandchips\animations.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+<<<<<<< HEAD
     <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\background.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -46,18 +54,24 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\entity.h">
+=======
+    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\fizhandchips\crosshair.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\fallingObjects.h">
+    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\fizhandchips\entity.h">
+>>>>>>> ef3e805928d2c87b057c1ba1ff68ac238705b17c
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\fish.h">
+    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\fizhandchips\fallingObjects.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\game.h">
+    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\fizhandchips\fish.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\manager.h">
+    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\fizhandchips\game.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\fizhandchips\manager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="D:\Fizh &amp; chips project\Cmake_stuff\fizhandchips\menu.h">
@@ -65,14 +79,14 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\Fizh &amp; chips project\Cmake_stuff\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\carlo\source\repos\Fizh-and-Chips\Cmake_stuff\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Header Files">
-      <UniqueIdentifier>{00B55782-0272-3FC9-8258-0E726B4E886A}</UniqueIdentifier>
+      <UniqueIdentifier>{B56DC44F-E186-3B81-8299-84127B14D606}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{1DD9A7AF-BE4D-3CFC-A5C8-66006F076C84}</UniqueIdentifier>
+      <UniqueIdentifier>{947628C3-4943-3D6A-B919-7F0ADA005E4E}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
